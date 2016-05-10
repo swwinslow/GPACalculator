@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551E83D81C324EB8003CCA4C /* WeightCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551E83D71C324EB8003CCA4C /* WeightCategory.swift */; };
+		551E83DA1C325123003CCA4C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551E83D91C325123003CCA4C /* TableViewCell.swift */; };
+		551E83DC1C326652003CCA4C /* CourseHelpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551E83DB1C326652003CCA4C /* CourseHelpScreen.swift */; };
+		551E83DE1C326D71003CCA4C /* CoursePlanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551E83DD1C326D71003CCA4C /* CoursePlanScreen.swift */; };
+		5527CBA41C913B7C009034FC /* SubGPAMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527CBA31C913B7C009034FC /* SubGPAMenu.swift */; };
+		553EDAAD1C3A52200063DD50 /* GraduationGPADisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553EDAAC1C3A52200063DD50 /* GraduationGPADisplay.swift */; };
+		553EDAAF1C3A57F50063DD50 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553EDAAE1C3A57F50063DD50 /* Social.framework */; };
+		554B33871C8C02F300529306 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554B33861C8C02F300529306 /* iAd.framework */; };
+		554B33891C8D487C00529306 /* FinalExamScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B33881C8D487C00529306 /* FinalExamScores.swift */; };
+		557CAEDD1C35F51600309AAB /* FinalExamGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CAEDC1C35F51600309AAB /* FinalExamGrade.swift */; };
+		559800D51CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559800D41CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift */; };
+		559800D71CB0EBC6007E0D1C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559800D61CB0EBC6007E0D1C /* ContentViewController.swift */; };
+		559800DD1CB0F687007E0D1C /* ViewPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559800DC1CB0F687007E0D1C /* ViewPageController.swift */; };
 		55AC03E71C3106B800093A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC03E61C3106B800093A08 /* AppDelegate.swift */; };
 		55AC03E91C3106B800093A08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC03E81C3106B800093A08 /* ViewController.swift */; };
 		55AC03EC1C3106B800093A08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AC03EA1C3106B800093A08 /* Main.storyboard */; };
@@ -15,6 +28,12 @@
 		55AC03F41C3106B800093A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AC03F21C3106B800093A08 /* LaunchScreen.storyboard */; };
 		55AC03FF1C3106B800093A08 /* GPACalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC03FE1C3106B800093A08 /* GPACalculatorTests.swift */; };
 		55AC040A1C3106B800093A08 /* GPACalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC04091C3106B800093A08 /* GPACalculatorUITests.swift */; };
+		55AC041C1C310F8E00093A08 /* CategoryAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC041B1C310F8E00093A08 /* CategoryAddition.swift */; };
+		55C1A5531C38AAA2006CFBB0 /* CourseSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A5521C38AAA2006CFBB0 /* CourseSelection.swift */; };
+		55C1A5551C38B7EC006CFBB0 /* GPAAdditionCourseCOLLEGE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A5541C38B7EC006CFBB0 /* GPAAdditionCourseCOLLEGE.swift */; };
+		55C1A5571C38EC78006CFBB0 /* FinalGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A5561C38EC78006CFBB0 /* FinalGPA.swift */; };
+		55C1A5591C390443006CFBB0 /* DisplayGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A5581C390443006CFBB0 /* DisplayGPA.swift */; };
+		55C1A55B1C3A3A5D006CFBB0 /* TargetGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A55A1C3A3A5D006CFBB0 /* TargetGPA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551E83D71C324EB8003CCA4C /* WeightCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightCategory.swift; sourceTree = "<group>"; };
+		551E83D91C325123003CCA4C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		551E83DB1C326652003CCA4C /* CourseHelpScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseHelpScreen.swift; sourceTree = "<group>"; };
+		551E83DD1C326D71003CCA4C /* CoursePlanScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePlanScreen.swift; sourceTree = "<group>"; };
+		5527CBA31C913B7C009034FC /* SubGPAMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubGPAMenu.swift; path = ../SubGPAMenu.swift; sourceTree = "<group>"; };
+		553EDAAC1C3A52200063DD50 /* GraduationGPADisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraduationGPADisplay.swift; sourceTree = "<group>"; };
+		553EDAAE1C3A57F50063DD50 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		553EDAB01C3A5CFB0063DD50 /* GPACalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GPACalculator.entitlements; sourceTree = "<group>"; };
+		554B33861C8C02F300529306 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		554B33881C8D487C00529306 /* FinalExamScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalExamScores.swift; sourceTree = "<group>"; };
+		557CAEDC1C35F51600309AAB /* FinalExamGrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalExamGrade.swift; sourceTree = "<group>"; };
+		559800D41CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAAdditionCourseHS.swift; sourceTree = "<group>"; };
+		559800D61CB0EBC6007E0D1C /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		559800DC1CB0F687007E0D1C /* ViewPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPageController.swift; sourceTree = "<group>"; };
 		55AC03E31C3106B800093A08 /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC03E61C3106B800093A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55AC03E81C3106B800093A08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +82,12 @@
 		55AC04051C3106B800093A08 /* GPACalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPACalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC04091C3106B800093A08 /* GPACalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPACalculatorUITests.swift; sourceTree = "<group>"; };
 		55AC040B1C3106B800093A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55AC041B1C310F8E00093A08 /* CategoryAddition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryAddition.swift; sourceTree = "<group>"; };
+		55C1A5521C38AAA2006CFBB0 /* CourseSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSelection.swift; sourceTree = "<group>"; };
+		55C1A5541C38B7EC006CFBB0 /* GPAAdditionCourseCOLLEGE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAAdditionCourseCOLLEGE.swift; sourceTree = "<group>"; };
+		55C1A5561C38EC78006CFBB0 /* FinalGPA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalGPA.swift; sourceTree = "<group>"; };
+		55C1A5581C390443006CFBB0 /* DisplayGPA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayGPA.swift; sourceTree = "<group>"; };
+		55C1A55A1C3A3A5D006CFBB0 /* TargetGPA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetGPA.swift; path = ../TargetGPA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554B33871C8C02F300529306 /* iAd.framework in Frameworks */,
+				553EDAAF1C3A57F50063DD50 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +120,8 @@
 		55AC03DA1C3106B800093A08 = {
 			isa = PBXGroup;
 			children = (
+				554B33861C8C02F300529306 /* iAd.framework */,
+				553EDAAE1C3A57F50063DD50 /* Social.framework */,
 				55AC03E51C3106B800093A08 /* GPACalculator */,
 				55AC03FD1C3106B800093A08 /* GPACalculatorTests */,
 				55AC04081C3106B800093A08 /* GPACalculatorUITests */,
@@ -99,9 +142,27 @@
 		55AC03E51C3106B800093A08 /* GPACalculator */ = {
 			isa = PBXGroup;
 			children = (
+				553EDAB01C3A5CFB0063DD50 /* GPACalculator.entitlements */,
 				55AC03E61C3106B800093A08 /* AppDelegate.swift */,
 				55AC03E81C3106B800093A08 /* ViewController.swift */,
+				55AC041B1C310F8E00093A08 /* CategoryAddition.swift */,
+				5527CBA31C913B7C009034FC /* SubGPAMenu.swift */,
 				55AC03EA1C3106B800093A08 /* Main.storyboard */,
+				559800D61CB0EBC6007E0D1C /* ContentViewController.swift */,
+				553EDAAC1C3A52200063DD50 /* GraduationGPADisplay.swift */,
+				55C1A5581C390443006CFBB0 /* DisplayGPA.swift */,
+				559800DC1CB0F687007E0D1C /* ViewPageController.swift */,
+				55C1A5561C38EC78006CFBB0 /* FinalGPA.swift */,
+				55C1A5541C38B7EC006CFBB0 /* GPAAdditionCourseCOLLEGE.swift */,
+				559800D41CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift */,
+				55C1A5521C38AAA2006CFBB0 /* CourseSelection.swift */,
+				557CAEDC1C35F51600309AAB /* FinalExamGrade.swift */,
+				554B33881C8D487C00529306 /* FinalExamScores.swift */,
+				551E83DD1C326D71003CCA4C /* CoursePlanScreen.swift */,
+				551E83DB1C326652003CCA4C /* CourseHelpScreen.swift */,
+				551E83D91C325123003CCA4C /* TableViewCell.swift */,
+				551E83D71C324EB8003CCA4C /* WeightCategory.swift */,
+				55C1A55A1C3A3A5D006CFBB0 /* TargetGPA.swift */,
 				55AC03F01C3106B800093A08 /* Assets.xcassets */,
 				55AC03F21C3106B800093A08 /* LaunchScreen.storyboard */,
 				55AC03F51C3106B800093A08 /* Info.plist */,
@@ -197,6 +258,11 @@
 					55AC03E21C3106B800093A08 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = K57G8L8D3Y;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					55AC03F91C3106B800093A08 = {
 						CreatedOnToolsVersion = 7.2;
@@ -262,9 +328,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557CAEDD1C35F51600309AAB /* FinalExamGrade.swift in Sources */,
+				559800D51CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift in Sources */,
+				551E83D81C324EB8003CCA4C /* WeightCategory.swift in Sources */,
 				55AC03E91C3106B800093A08 /* ViewController.swift in Sources */,
+				55C1A5531C38AAA2006CFBB0 /* CourseSelection.swift in Sources */,
+				559800DD1CB0F687007E0D1C /* ViewPageController.swift in Sources */,
+				554B33891C8D487C00529306 /* FinalExamScores.swift in Sources */,
+				55C1A5551C38B7EC006CFBB0 /* GPAAdditionCourseCOLLEGE.swift in Sources */,
+				5527CBA41C913B7C009034FC /* SubGPAMenu.swift in Sources */,
+				55C1A5591C390443006CFBB0 /* DisplayGPA.swift in Sources */,
+				559800D71CB0EBC6007E0D1C /* ContentViewController.swift in Sources */,
+				551E83DC1C326652003CCA4C /* CourseHelpScreen.swift in Sources */,
 				55AC03EF1C3106B800093A08 /* GPACalculator.xcdatamodeld in Sources */,
+				55C1A5571C38EC78006CFBB0 /* FinalGPA.swift in Sources */,
+				55C1A55B1C3A3A5D006CFBB0 /* TargetGPA.swift in Sources */,
 				55AC03E71C3106B800093A08 /* AppDelegate.swift in Sources */,
+				553EDAAD1C3A52200063DD50 /* GraduationGPADisplay.swift in Sources */,
+				551E83DE1C326D71003CCA4C /* CoursePlanScreen.swift in Sources */,
+				551E83DA1C325123003CCA4C /* TableViewCell.swift in Sources */,
+				55AC041C1C310F8E00093A08 /* CategoryAddition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,10 +489,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GPACalculator/GPACalculator.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GPACalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -417,10 +504,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GPACalculator/GPACalculator.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GPACalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -491,6 +582,7 @@
 				55AC04101C3106B800093A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55AC04111C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +591,7 @@
 				55AC04131C3106B800093A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55AC04141C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +600,7 @@
 				55AC04161C3106B800093A08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
