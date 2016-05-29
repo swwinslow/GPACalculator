@@ -48,9 +48,7 @@ class GPAAdditionCourseCOLLEGE: UIViewController, ADBannerViewDelegate, UIPicker
     @IBOutlet weak var C8Label: UILabel!
     @IBOutlet weak var C8Grade: UITextField!
     @IBOutlet weak var C8Credit: UITextField!
-    
-   
-    
+
     var getCredit: [Double] = []
     var getScores: [String] = []
     var calc = []
