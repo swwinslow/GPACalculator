@@ -72,9 +72,7 @@ class GPAAdditionCourseCOLLEGE: UIViewController, ADBannerViewDelegate, UIPicker
         
         picker1.delegate = self
         picker1.dataSource = self
-        
-        
-        
+    
         C1Grade.inputView = picker
         C2Grade.inputView = picker
         C3Grade.inputView = picker
