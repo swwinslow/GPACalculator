@@ -21,9 +21,7 @@ class GraduationGPADisplay: UIViewController, ADBannerViewDelegate  {
     @IBOutlet weak var adBanner: ADBannerView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.canDisplayBannerAds = true
-        self.adBanner?.delegate = self
-        self.adBanner?.hidden = true
+       
         print(finalGPA)
         
    
@@ -69,27 +67,4 @@ class GraduationGPADisplay: UIViewController, ADBannerViewDelegate  {
     func generateNewNumber() -> UInt32 {
         return arc4random_uniform(5) + 1
     }
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
-        
     }
-    
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        
-        self.adBanner?.hidden = false
-        
-    }
-    
-    func bannerViewActionDidFinish(banner: ADBannerView!) {
-        
-    }
-    
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-        return true
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        
-        self.adBanner?.hidden = true
-        
-    }
-}

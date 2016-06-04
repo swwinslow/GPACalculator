@@ -61,9 +61,7 @@ class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         getCredit.removeAll()
         getScores.removeAll()
-        self.canDisplayBannerAds = true
-        self.adBanner?.delegate = self
-        self.adBanner?.hidden = true
+        
         
         self.navigationItem.title = "Semester"
         
@@ -612,30 +610,7 @@ class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewD
         totalCredits = 0
     }
     
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
         
-    }
-    
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        
-        self.adBanner?.hidden = false
-        
-    }
-    
-    func bannerViewActionDidFinish(banner: ADBannerView!) {
-        
-    }
-    
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-        return true
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        
-        self.adBanner?.hidden = true
-        
-    }
-    
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -13,14 +13,10 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.canDisplayBannerAds = true
-        self.adBanner?.delegate = self
-        self.adBanner?.hidden = true
-
     }
     
     
-    @IBOutlet weak var adBanner: ADBannerView?
+   
     @IBOutlet weak var currentGradeTextBox: UITextField!
     @IBOutlet weak var finalWeightTextBox: UITextField!
     
@@ -182,7 +178,7 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
         let final = checkNumbers()
         let score = checkScore()
         
-        let courseEvealuation = score * Double(final.course/100)
+        let courseEvealuation = score / 100
         let remainder:Double = (0.65 - courseEvealuation) * 100
         
         let value:Double = (remainder / final.final)
@@ -203,7 +199,7 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
         let final = checkNumbers()
         let score = checkScore()
         
-        let courseEvealuation = score * Double(final.course/100)
+        let courseEvealuation = score / 100
         
         let remainder:Double = (0.60 - courseEvealuation) * 100
         
@@ -324,29 +320,8 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
         
     }
     
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
-        
-    }
-    
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        
-        self.adBanner?.hidden = false
-        
-    }
-    
-    func bannerViewActionDidFinish(banner: ADBannerView!) {
-        
-    }
-    
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-        return true
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        
-        self.adBanner?.hidden = true
-        
-    }
+   
+
     
     
     

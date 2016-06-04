@@ -16,9 +16,6 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.canDisplayBannerAds = true
-        self.adBanner?.delegate = self
-        self.adBanner?.hidden = true
         
     }
 
@@ -80,29 +77,4 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
         return false
         ;
     }
-    
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
-        
-    }
-    
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
-        
-        self.adBanner?.hidden = false
-        
-    }
-    
-    func bannerViewActionDidFinish(banner: ADBannerView!) {
-        
-    }
-    
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-        return true
-    }
-    
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        
-        self.adBanner?.hidden = true
-        
-    }
-    
 }
