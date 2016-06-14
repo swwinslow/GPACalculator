@@ -17,9 +17,12 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
     }
 
-    @IBOutlet weak var adBanner: ADBannerView?
+
     @IBOutlet weak var cummaliveGPA: UITextField!
   
     @IBOutlet weak var hoursCompleted: UITextField!
@@ -61,6 +64,11 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
      print(finalGPA)
         
         
+    }
+    
+    func dismissKeyboard() {
+       
+        view.endEditing(true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

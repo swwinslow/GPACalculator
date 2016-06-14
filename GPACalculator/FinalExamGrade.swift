@@ -219,9 +219,9 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     
     func checkScore() -> Double {
         
-        let number = currentGradeTextBox.text
+        let currentGrade = currentGradeTextBox.text
         
-        var x:Bool = isNumeric(number!)
+        var x:Bool = isNumeric(currentGrade!)
         if(currentGradeTextBox.text != "" && x == true){
             let currentGrade = currentGradeTextBox.text! as String
             let doubleCurrentScore:Double = Double(currentGrade)!
@@ -284,33 +284,16 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        
-        let nextView = segue.destinationViewController as! FinalExamScores
-        
-            let s100: String = calculate100()
-            let s95:String = calculate95()
-            let s90:String  = calculate90()
-            let s85:String = calculate85()
-            let s80:String  = calculate80()
-            let s75:String = calculate75()
-            let s70:String  = calculate70()
-            let s65:String = calculate65()
-            let s60:String  = calculate60()
 
-     
+        var currentCourseScore:Double = checkScore()
+        var score = checkNumbers()
         
-       
+        let nextView = segue.destinationViewController as! FinalExamTableView
         
-        nextView.s100 = s100
-        nextView.s95 = s95
-        nextView.s90 = s90
-        nextView.s85 = s85
-        nextView.s80 = s80
-        nextView.s75 = s75
-        nextView.s70 = s70
-        nextView.s65 = s65
-        nextView.s60 = s60
-
+        nextView.finalExamWorth = score.final
+        nextView.finalCourseWorth = score.course
+        nextView.orginalScore = currentCourseScore
+        
 //
 //        nextView.currentGradeLabel.text = "Current Grade"
 //        nextView.finalExamLabel.text = "Final Exam"

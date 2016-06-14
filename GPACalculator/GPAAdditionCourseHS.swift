@@ -9,13 +9,16 @@
 import UIKit
 import iAd
 
-class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
+class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
     
     var classNumber:String = "0"
     var totalRaw:Double = 0
     var totalCredits:Double = 0
     
+    var type = String();
+    
     @IBOutlet weak var adBanner: ADBannerView?
+    @IBOutlet weak var ScrollView: UIScrollView!
     
     @IBOutlet weak var C1Grade: UITextField!
     @IBOutlet weak var C1Label: UILabel!
@@ -51,6 +54,7 @@ class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewD
     
     
     
+    
     var getCredit: [Double] = []
     var getScores: [String] = []
     var calc = []
@@ -58,8 +62,51 @@ class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewD
     var picker = UIPickerView()
     var picker1 = UIPickerView()
     
+    
+    
+    
+//    -(void)textFieldDidBeginEditing:(UITextF­ield *)textField { CGPoint scrollPoint = CGPointMake(0, textField.frame.origin.y); [scrollView setContentOffset:scrollPoint animated:YES];
+//    
+//    
+//    
+//    
+//    }
+//    
+//    -(void) textFieldDidEndEditing:(UITextField *)textField { [scrollView setContentOffset:CGPointZero animated:YES];
+//    
+//    
+//    
+//    
+//    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        let point: CGPoint = CGPointMake(0, 100)
+        
+        
+        ScrollView.setContentOffset(point, animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        ScrollView.setContentOffset(CGPointZero, animated: true)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        self.tabBarController?.navigationItem.title = "Profile Settings"
+        
+    }
+
+    
     override func viewDidLoad() {
+        
+        self.C8Grade.delegate = self
+        self.C8Credit.delegate = self
+        
+        self.C7Grade.delegate = self
+        self.C7Credit.delegate = self
         getCredit.removeAll()
+        
         getScores.removeAll()
         
         
@@ -92,7 +139,9 @@ class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewD
         C8Credit.inputView = picker1
         
     
-
+        
+    
+        
         
         
         picker1.selectRow(0, inComponent: 0, animated: true)
@@ -110,6 +159,11 @@ class GPAAdditionCourseHS: UIViewController, ADBannerViewDelegate, UIPickerViewD
         
         
     }
+    
+
+    
+    
+
     
     var changed:Bool = false
     
