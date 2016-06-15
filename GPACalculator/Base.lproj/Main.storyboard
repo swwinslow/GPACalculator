@@ -315,25 +315,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-Pd-khb">
-                                <rect key="frame" x="20" y="265" width="560" height="51"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU3-b9-aIa">
-                                <rect key="frame" x="20" y="206" width="560" height="51"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
-                                <state key="normal" title="Calculate Score">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7JV-D8-7DV" kind="show" id="gLV-Lx-9S6"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="74.6" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYX-Rw-i17">
                                 <rect key="frame" x="20" y="101" width="560" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
@@ -346,36 +327,77 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vmg-J8-1T3">
+                                <rect key="frame" x="20" y="235" width="560" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter the percentage(%) you want:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wea-3O-3Pk">
+                                <rect key="frame" x="20" y="206" width="560" height="24"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-Pd-khb">
+                                <rect key="frame" x="20" y="332" width="560" height="51"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU3-b9-aIa">
+                                <rect key="frame" x="20" y="273" width="560" height="51"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Calculate Score">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7JV-D8-7DV" kind="show" id="gLV-Lx-9S6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ABi-Pd-khb" firstAttribute="top" secondItem="YU3-b9-aIa" secondAttribute="bottom" constant="8" id="1fC-F9-LVs"/>
                             <constraint firstItem="ABi-Pd-khb" firstAttribute="centerX" secondItem="MBh-df-B4G" secondAttribute="centerX" id="3XT-Ul-KuB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Vmg-J8-1T3" secondAttribute="leading" id="5uo-aZ-rGL"/>
                             <constraint firstItem="VbU-zg-LwG" firstAttribute="top" secondItem="ZYX-Rw-i17" secondAttribute="bottom" constant="8" id="8DY-YF-OtU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mur-Rz-xK7" secondAttribute="trailing" id="Ble-EI-3Bv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ABi-Pd-khb" secondAttribute="trailing" id="CA6-k9-6hr"/>
                             <constraint firstItem="VbU-zg-LwG" firstAttribute="centerX" secondItem="ZYX-Rw-i17" secondAttribute="centerX" id="FNY-XN-gv1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wea-3O-3Pk" secondAttribute="trailing" id="Gud-BV-fX6"/>
+                            <constraint firstItem="Vmg-J8-1T3" firstAttribute="centerX" secondItem="Wea-3O-3Pk" secondAttribute="centerX" id="IPb-d7-VvT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VbU-zg-LwG" secondAttribute="trailing" id="IQy-YT-4vT"/>
                             <constraint firstItem="YU3-b9-aIa" firstAttribute="height" secondItem="ABi-Pd-khb" secondAttribute="height" id="KZK-he-Khh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZYX-Rw-i17" secondAttribute="trailing" id="Mnd-Vm-dpo"/>
-                            <constraint firstItem="YU3-b9-aIa" firstAttribute="centerX" secondItem="Mur-Rz-xK7" secondAttribute="centerX" id="MoH-yZ-Arz"/>
+                            <constraint firstItem="Vmg-J8-1T3" firstAttribute="top" secondItem="Wea-3O-3Pk" secondAttribute="bottom" constant="8" id="OkY-kk-74m"/>
+                            <constraint firstItem="Wea-3O-3Pk" firstAttribute="top" secondItem="Mur-Rz-xK7" secondAttribute="bottom" constant="8" id="Pek-gW-bfx"/>
                             <constraint firstItem="YU3-b9-aIa" firstAttribute="centerX" secondItem="ABi-Pd-khb" secondAttribute="centerX" id="Tnp-gK-Ayp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ABi-Pd-khb" secondAttribute="leading" id="VAg-pI-V6W"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Mur-Rz-xK7" secondAttribute="leading" id="X5e-gy-2VS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ZYX-Rw-i17" secondAttribute="leading" id="Xor-cy-eFy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vmg-J8-1T3" secondAttribute="trailing" id="Y6u-fl-ID5"/>
                             <constraint firstItem="Bxk-5O-F1S" firstAttribute="top" secondItem="3VW-rn-Kpq" secondAttribute="bottom" constant="8" id="YRH-Jg-gB3"/>
                             <constraint firstItem="ZYX-Rw-i17" firstAttribute="centerX" secondItem="Bxk-5O-F1S" secondAttribute="centerX" id="Ywk-SC-beU"/>
+                            <constraint firstItem="YU3-b9-aIa" firstAttribute="top" secondItem="Vmg-J8-1T3" secondAttribute="bottom" constant="8" id="aPs-dv-quf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YU3-b9-aIa" secondAttribute="trailing" id="c8Z-j1-gGO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="YU3-b9-aIa" secondAttribute="leading" id="djn-1S-0iY"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Bxk-5O-F1S" secondAttribute="leading" id="eOh-ZR-hrb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Wea-3O-3Pk" secondAttribute="leading" id="mwY-oH-6qM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VbU-zg-LwG" secondAttribute="leading" id="o2B-DJ-NlE"/>
                             <constraint firstItem="YU3-b9-aIa" firstAttribute="width" secondItem="ABi-Pd-khb" secondAttribute="width" id="owQ-em-ZgE"/>
                             <constraint firstItem="ZYX-Rw-i17" firstAttribute="top" secondItem="Bxk-5O-F1S" secondAttribute="bottom" constant="8" id="vqT-n6-W68"/>
                             <constraint firstItem="Mur-Rz-xK7" firstAttribute="top" secondItem="VbU-zg-LwG" secondAttribute="bottom" constant="8" id="wbm-EB-exl"/>
-                            <constraint firstItem="YU3-b9-aIa" firstAttribute="top" secondItem="Mur-Rz-xK7" secondAttribute="bottom" constant="8" id="xdF-Od-Uxu"/>
                             <constraint firstItem="Mur-Rz-xK7" firstAttribute="centerX" secondItem="VbU-zg-LwG" secondAttribute="centerX" id="yVF-8U-NcQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="currentGradeTextBox" destination="ZYX-Rw-i17" id="9JD-4O-hq5"/>
                         <outlet property="finalWeightTextBox" destination="Mur-Rz-xK7" id="byM-cQ-Kbt"/>
+                        <outlet property="percentage" destination="Vmg-J8-1T3" id="XCH-tx-O7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWJ-HF-TJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -539,12 +561,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cba-02-lC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="-1809"/>
+            <point key="canvasLocation" x="1468" y="-1831"/>
         </scene>
         <!--Final Exam Table View-->
         <scene sceneID="snH-gn-4GQ">
             <objects>
-                <viewController id="7JV-D8-7DV" customClass="FinalExamTableView" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7JV-D8-7DV" customClass="FinalExamTableView" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bsy-XZ-mnx"/>
                         <viewControllerLayoutGuide type="bottom" id="Xfz-rO-FP6"/>
@@ -562,13 +584,6 @@
                                     <outlet property="delegate" destination="7JV-D8-7DV" id="GAq-Io-mPs"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Final Exam:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mk-hk-0Fy">
-                                <rect key="frame" x="20" y="101" width="560" height="28"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Grade:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozv-2w-iXA">
                                 <rect key="frame" x="20" y="72" width="560" height="28"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -587,6 +602,13 @@
                                     <segue destination="Vit-iE-0d8" kind="show" id="Zk5-LQ-7Mj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Final Exam:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mk-hk-0Fy">
+                                <rect key="frame" x="20" y="101" width="560" height="28"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.071741149341799759" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -608,6 +630,8 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="currentGrade" destination="Ozv-2w-iXA" id="645-nE-XIP"/>
+                        <outlet property="finalExamLabel" destination="0mk-hk-0Fy" id="it7-C1-rCO"/>
                         <outlet property="tableView" destination="dvi-Nk-LCS" id="0oQ-wN-BVg"/>
                     </connections>
                 </viewController>
@@ -935,6 +959,14 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzW-O9-fV6">
+                                <rect key="frame" x="20" y="523" width="560" height="51"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1015,6 +1047,7 @@
                                 <connections>
                                     <action selector="newCourse:" destination="utm-kC-cY6" eventType="touchUpInside" id="7sK-Yk-8Pa"/>
                                     <action selector="shareTwitter:" destination="afQ-PP-kGO" eventType="touchUpInside" id="ev5-LI-Zde"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="To3-Yw-GLS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1038,7 +1071,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiK-q2-NVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2656" y="-3942"/>
+            <point key="canvasLocation" x="2428" y="-3942"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v5a-Gy-XId">
@@ -1138,19 +1171,19 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Class Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly8-vC-bV0">
                                                     <rect key="frame" x="8" y="17" width="165" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="4 Credit Hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ose-V0-ROj">
                                                     <rect key="frame" x="332" y="17" width="220" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jp4-St-25l">
                                                     <rect key="frame" x="181" y="17" width="143" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1200,6 +1233,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MWq-Dt-qce"/>
+        <segue reference="To3-Yw-GLS"/>
+        <segue reference="Zk5-LQ-7Mj"/>
     </inferredMetricsTieBreakers>
 </document>

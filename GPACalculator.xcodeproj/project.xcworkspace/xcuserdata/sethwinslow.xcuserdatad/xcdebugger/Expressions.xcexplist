@@ -3,10 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "FinalExamTableView.viewDidLoad() -&gt; ():FinalExamTableView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "orginalScore">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "GPAAdditionCourseHS.textFieldDidBeginEditing(UITextField) -&gt; ():GPAAdditionCourseHS.swift">
          <PersistentStrings>
             <PersistentString
                value = "type">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FinalExamTableView.shouldCheckArray() -&gt; Bool:FinalExamTableView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "percent">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

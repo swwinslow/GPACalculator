@@ -13,10 +13,12 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Final Exam"
     }
     
     
    
+    @IBOutlet weak var percentage: UITextField!
     @IBOutlet weak var currentGradeTextBox: UITextField!
     @IBOutlet weak var finalWeightTextBox: UITextField!
     
@@ -279,6 +281,37 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
         return (0.0, 0.0)
         
     }
+    
+    func percentCheck() -> Double {
+        
+        let percent = percentage.text
+        
+        var x:Bool = isNumeric(percent!)
+        if(percentage.text != "" && x == true){
+            let currentGrade = percentage.text! as String
+            let doubleCurrentScore:Double = Double(currentGrade)!
+            
+            if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
+            {
+                //needs to issue an alert about the low or the large number
+            }
+            else{
+                return doubleCurrentScore
+            }
+        }
+        else{
+            
+            
+            let alertView = UIAlertController(title: "No Number", message: "The value you entered is not a number", preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alertView, animated: true, completion: nil)
+        }
+        return 0.0
+    }
+    
+   
+    
+    
 
     
     
@@ -287,12 +320,14 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
 
         var currentCourseScore:Double = checkScore()
         var score = checkNumbers()
+        var percentNumber = percentCheck()
         
         let nextView = segue.destinationViewController as! FinalExamTableView
         
         nextView.finalExamWorth = score.final
         nextView.finalCourseWorth = score.course
         nextView.orginalScore = currentCourseScore
+        nextView.addPercent = percentNumber
         
 //
 //        nextView.currentGradeLabel.text = "Current Grade"
