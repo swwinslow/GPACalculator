@@ -2,7 +2,7 @@
 //  DataController.swift
 //  GPACalculator
 //
-//  Created by Seth Winslow on 6/12/16.
+//  Created by Seth Winslow on 6/15/16.
 //  Copyright © 2016 Seth Winslow. All rights reserved.
 //
 
@@ -10,12 +10,11 @@ import UIKit
 import CoreData
 class DataController: NSObject {
     
-    
     var managedObjectContext: NSManagedObjectContext
     
     override  init() {
         // This resource is the same name as your xcdatamodeld contained in your project.
-        guard let modelURL = NSBundle.mainBundle().URLForResource("Up_and_Running_With_Core_Data", withExtension:"momd") else {
+        guard let modelURL = NSBundle.mainBundle().URLForResource("courseDataModel", withExtension:"momd") else {
             fatalError("Error loading model from bundle")
         }
         // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
@@ -31,7 +30,7 @@ class DataController: NSObject {
         /* The directory the application uses to store the Core Data store file.
          This code uses a file named "DataModel.sqlite" in the application's documents directory.
          */
-        let storeURL = docURL.URLByAppendingPathComponent("Up_and_Running_With_Core_Data.sqlite")
+        let storeURL = docURL.URLByAppendingPathComponent("courseDataModel.sqlite")
         do {
             try psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
         } catch {
@@ -39,6 +38,4 @@ class DataController: NSObject {
         }
         
     }
-    
-
 }

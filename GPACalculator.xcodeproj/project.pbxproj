@@ -30,6 +30,11 @@
 		55C1A5571C38EC78006CFBB0 /* FinalGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A5561C38EC78006CFBB0 /* FinalGPA.swift */; };
 		55C1A5591C390443006CFBB0 /* DisplayGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A5581C390443006CFBB0 /* DisplayGPA.swift */; };
 		55C1A55B1C3A3A5D006CFBB0 /* TargetGPA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C1A55A1C3A3A5D006CFBB0 /* TargetGPA.swift */; };
+		6D08FF6F1D1233980007BBA9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08FF6E1D1233980007BBA9 /* DataController.swift */; };
+		6D08FF721D13B1950007BBA9 /* GPACalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D08FF701D13B1950007BBA9 /* GPACalculator.xcdatamodeld */; };
+		6D08FF751D13B1E20007BBA9 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08FF731D13B1E20007BBA9 /* Course+CoreDataProperties.swift */; };
+		6D08FF761D13B1E20007BBA9 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08FF741D13B1E20007BBA9 /* Course.swift */; };
+		6D08FF781D16549E0007BBA9 /* EditCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08FF771D16549E0007BBA9 /* EditCourseViewController.swift */; };
 		6D14215A1D0FC213004982A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1421581D0FC213004982A6 /* Main.storyboard */; };
 		6D703D601D03712A009E1593 /* FinalExamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */; };
 		6D8317501D07BAB400A08DB1 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D83174F1D07BAB400A08DB1 /* ScrollView.swift */; };
@@ -37,9 +42,6 @@
 		6DBD40951D0D1E74000565F3 /* CourseGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40941D0D1E74000565F3 /* CourseGrade.swift */; };
 		6DBD40991D0D1FE1000565F3 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40981D0D1FE1000565F3 /* CustomCellTableViewCell.swift */; };
 		6DBD409B1D0D2595000565F3 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD409A1D0D2595000565F3 /* CourseCell.swift */; };
-		6DBD40A51D0E1F51000565F3 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40A31D0E1F51000565F3 /* Course+CoreDataProperties.swift */; };
-		6DBD40A61D0E1F51000565F3 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40A41D0E1F51000565F3 /* Course.swift */; };
-		6DBD40AB1D0E2AE9000565F3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40AA1D0E2AE9000565F3 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,11 @@
 		55C1A5561C38EC78006CFBB0 /* FinalGPA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalGPA.swift; sourceTree = "<group>"; };
 		55C1A5581C390443006CFBB0 /* DisplayGPA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayGPA.swift; sourceTree = "<group>"; };
 		55C1A55A1C3A3A5D006CFBB0 /* TargetGPA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetGPA.swift; path = ../TargetGPA.swift; sourceTree = "<group>"; };
+		6D08FF6E1D1233980007BBA9 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		6D08FF711D13B1950007BBA9 /* GPACalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPACalculator.xcdatamodel; sourceTree = "<group>"; };
+		6D08FF731D13B1E20007BBA9 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6D08FF741D13B1E20007BBA9 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		6D08FF771D16549E0007BBA9 /* EditCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCourseViewController.swift; sourceTree = "<group>"; };
 		6D1421591D0FC213004982A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalExamTableView.swift; path = ../FinalExamTableView.swift; sourceTree = "<group>"; };
 		6D83174F1D07BAB400A08DB1 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = ../ScrollView.swift; sourceTree = "<group>"; };
@@ -98,9 +105,6 @@
 		6DBD40981D0D1FE1000565F3 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		6DBD409A1D0D2595000565F3 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseCell.swift; path = ../CourseCell.swift; sourceTree = "<group>"; };
 		6DBD409C1D0E1F1C000565F3 /* GPACalculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPACalculator-Bridging-Header.h"; sourceTree = "<group>"; };
-		6DBD40A31D0E1F51000565F3 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "../Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6DBD40A41D0E1F51000565F3 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Course.swift; path = ../Course.swift; sourceTree = "<group>"; };
-		6DBD40AA1D0E2AE9000565F3 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,16 +160,16 @@
 		55AC03E51C3106B800093A08 /* GPACalculator */ = {
 			isa = PBXGroup;
 			children = (
-				6DBD40A31D0E1F51000565F3 /* Course+CoreDataProperties.swift */,
-				6DBD40A41D0E1F51000565F3 /* Course.swift */,
+				6D08FF731D13B1E20007BBA9 /* Course+CoreDataProperties.swift */,
+				6D08FF741D13B1E20007BBA9 /* Course.swift */,
 				6DBD409A1D0D2595000565F3 /* CourseCell.swift */,
 				553EDAB01C3A5CFB0063DD50 /* GPACalculator.entitlements */,
 				6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */,
 				55AC03E61C3106B800093A08 /* AppDelegate.swift */,
 				55AC03E81C3106B800093A08 /* ViewController.swift */,
 				5527CBA31C913B7C009034FC /* SubGPAMenu.swift */,
-				6DBD40AA1D0E2AE9000565F3 /* DataController.swift */,
 				6D1421581D0FC213004982A6 /* Main.storyboard */,
+				6D08FF771D16549E0007BBA9 /* EditCourseViewController.swift */,
 				6DBD40981D0D1FE1000565F3 /* CustomCellTableViewCell.swift */,
 				6DBD40941D0D1E74000565F3 /* CourseGrade.swift */,
 				6DBD40921D0A7E78000565F3 /* sub2.swift */,
@@ -187,6 +191,8 @@
 				55AC03F01C3106B800093A08 /* Assets.xcassets */,
 				55AC03F21C3106B800093A08 /* LaunchScreen.storyboard */,
 				55AC03F51C3106B800093A08 /* Info.plist */,
+				6D08FF701D13B1950007BBA9 /* GPACalculator.xcdatamodeld */,
+				6D08FF6E1D1233980007BBA9 /* DataController.swift */,
 			);
 			path = GPACalculator;
 			sourceTree = "<group>";
@@ -348,24 +354,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBD40A61D0E1F51000565F3 /* Course.swift in Sources */,
+				6D08FF761D13B1E20007BBA9 /* Course.swift in Sources */,
 				557CAEDD1C35F51600309AAB /* FinalExamGrade.swift in Sources */,
 				6D8317501D07BAB400A08DB1 /* ScrollView.swift in Sources */,
 				559800D51CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift in Sources */,
-				6DBD40AB1D0E2AE9000565F3 /* DataController.swift in Sources */,
+				6D08FF6F1D1233980007BBA9 /* DataController.swift in Sources */,
 				6D703D601D03712A009E1593 /* FinalExamTableView.swift in Sources */,
 				55AC03E91C3106B800093A08 /* ViewController.swift in Sources */,
+				6D08FF721D13B1950007BBA9 /* GPACalculator.xcdatamodeld in Sources */,
 				55C1A5531C38AAA2006CFBB0 /* CourseSelection.swift in Sources */,
 				559800DD1CB0F687007E0D1C /* ViewPageController.swift in Sources */,
 				6DBD40951D0D1E74000565F3 /* CourseGrade.swift in Sources */,
+				6D08FF781D16549E0007BBA9 /* EditCourseViewController.swift in Sources */,
 				554B33891C8D487C00529306 /* FinalExamScores.swift in Sources */,
 				55C1A5551C38B7EC006CFBB0 /* GPAAdditionCourseCOLLEGE.swift in Sources */,
+				6D08FF751D13B1E20007BBA9 /* Course+CoreDataProperties.swift in Sources */,
 				5527CBA41C913B7C009034FC /* SubGPAMenu.swift in Sources */,
 				55C1A5591C390443006CFBB0 /* DisplayGPA.swift in Sources */,
 				6DBD409B1D0D2595000565F3 /* CourseCell.swift in Sources */,
 				559800D71CB0EBC6007E0D1C /* ContentViewController.swift in Sources */,
 				551E83DC1C326652003CCA4C /* CourseHelpScreen.swift in Sources */,
-				6DBD40A51D0E1F51000565F3 /* Course+CoreDataProperties.swift in Sources */,
 				55C1A5571C38EC78006CFBB0 /* FinalGPA.swift in Sources */,
 				55C1A55B1C3A3A5D006CFBB0 /* TargetGPA.swift in Sources */,
 				6DBD40931D0A7E78000565F3 /* sub2.swift in Sources */,
@@ -634,6 +642,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6D08FF701D13B1950007BBA9 /* GPACalculator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6D08FF711D13B1950007BBA9 /* GPACalculator.xcdatamodel */,
+			);
+			currentVersion = 6D08FF711D13B1950007BBA9 /* GPACalculator.xcdatamodel */;
+			path = GPACalculator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55AC03DB1C3106B800093A08 /* Project object */;
 }

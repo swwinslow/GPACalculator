@@ -28,6 +28,10 @@ class FinalExamTableView: UIViewController, UITableViewDelegate, UITableViewData
         finalExamLabel.text = "Final Exam: \(finalExamWorth)"
         self.navigationItem.title = "Final Exam"
         
+        
+        
+        
+        
         let shouldAddPercentage: Bool = shouldCheckArray()
         if(shouldAddPercentage == false){
             
@@ -163,7 +167,7 @@ class FinalExamTableView: UIViewController, UITableViewDelegate, UITableViewData
         }
         else{
             
-            return String("\(str)% on final to achieve a -> ")
+            return String("\(str)% on final to get -> ")
         }
     }
     

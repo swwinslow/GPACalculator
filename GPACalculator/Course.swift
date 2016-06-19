@@ -1,15 +1,17 @@
 //
-//  Course.m
+//  Course.swift
 //  GPACalculator
 //
-//  Created by Seth Winslow on 6/12/16.
+//  Created by Seth Winslow on 6/17/16.
 //  Copyright © 2016 Seth Winslow. All rights reserved.
 //
 
-#import "Course.h"
+import Foundation
+import CoreData
 
-@implementation Course
+
+class Course: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 
-@end
+}

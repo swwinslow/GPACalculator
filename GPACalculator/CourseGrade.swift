@@ -9,59 +9,92 @@
 import UIKit
 import CoreData
 
-class CourseGrade: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CourseGrade: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
-    var course = [NSManagedObjectContext]()
-    
+    var course = ["hello", "this", "is"]
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
+    
+    var fetchedResultsController: NSFetchedResultsController!
+    
+    
+    
+    override func viewDidLoad() {
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addCourse")
+        
+        
+    }
+    
+    func addCourse(){
+        course.append("Hello")
+        print("we are here")
+        self.tableView.reloadData()
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            course.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            
+        }
+    }
+    
+   
+    
+    func saveData(){
+        let appDelgation: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let context: NSManagedObjectContext = appDelgation.managedObjectContext
+        
+        let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
+        
+        newCourse.setValue("Math 161", forKey: "courseName")
+        newCourse.setValue("A+", forKey: "courseGrade")
+        newCourse.setValue("3", forKey: "courseCredit")
+        
+        do{
+            try context.save()
+        } catch {
+            print("Error")
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return course.count;
     }
     
-    override func viewDidLoad() {
-        seedPerson()
-    }
-    
-    
-    func seedPerson() {
-        
-        // create an instance of our managedObjectContext
-        let moc = DataController().managedObjectContext
-        
-        // we set up our entity by selecting the entity and context that we're targeting
-        let entity = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: moc) as! Course
-        
-        // add our data
-        entity.setValue("Math", forKey: "courseName")
-        entity.setValue("3 hours", forKey: "courseCredit")
-        entity.setValue("A+", forKey: "courseGrade")
-        
-        // we save our entity
-        do {
-            try moc.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
-    }
-    
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCellTableViewCell
+      
         
-        //let cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        let singleCourse = course[indexPath.row]
-        cell.className.text = singleCourse.valueForKey("courseName") as? String
-        cell.classCredit.text = singleCourse.valueForKey("courseCredit") as? String
-        cell.classGrade.text = singleCourse.valueForKey("courseGrade") as? String
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as! CustomCellTableViewCell
         
-//        cell.className.text = course[indexPath.row]
-//        cell.classGrade.text = grade[indexPath.row]
-//        cell.classCredit.text = credit[indexPath.row]
         
-//        cell.className.text = course[indexPath.row]
-//        cell.classCredit.text = credit[indexPath.row]
-//        cell.classGrade.text = grade[indexPath.row]
+      
+        
+        
+        let singleCourse = self.course[indexPath.row]
+        
+        print(singleCourse)
+        
+       // cell.textLabel?.text = singleCourse
+        cell.className.text = "Hey"
+        cell.classGrade.text = "A+"
+
+        cell.classCredit.text = "3 Hours"
+        
         
         
         
