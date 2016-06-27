@@ -3,6 +3,25 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "FinalExamTableView.shouldCheckArray() -&gt; Bool:FinalExamTableView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "percent">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CourseTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():CourseTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "creditArray">
+            </PersistentString>
+            <PersistentString
+               value = "gradeArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "FinalExamTableView.viewDidLoad() -&gt; ():FinalExamTableView.swift">
          <PersistentStrings>
             <PersistentString
@@ -19,10 +38,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "FinalExamTableView.shouldCheckArray() -&gt; Bool:FinalExamTableView.swift">
+         contextName = "SingleCourseDetails.saveCourse(AnyObject) -&gt; ():SingleCourseDetails.swift">
          <PersistentStrings>
             <PersistentString
-               value = "percent">
+               value = "oldCourse">
+            </PersistentString>
+            <PersistentString
+               value = "singleCourse">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

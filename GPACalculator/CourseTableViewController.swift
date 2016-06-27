@@ -15,6 +15,10 @@ class CourseTableViewController: UITableViewController {
 
     var courses = [Course]()
     
+    var creditArray = [String]()
+    var gradeArray = [String]()
+    
+    
     override func viewDidAppear(animated: Bool) {
         
         var error: NSError?
@@ -71,12 +75,38 @@ class CourseTableViewController: UITableViewController {
         
         let course = courses[indexPath.row]
         
-        var x:String = course.courseName!
+        var className = course.courseName
+        var classCredit = course.courseCredit
+        var classGrade = course.courseGrade
+        
+         var cc : String = ""
+        
+        if let className2 = course.courseCredit{
+            cc = className2
+            if cc == "1"{
+                cc.appendContentsOf(" credit")
+
+            } else {
+                cc.appendContentsOf(" credits")
+
+            }
+        }
+//        if classCredit == "1"{
+//            classCredit.appendContentsOf(" Hour")
+//
+//        } else {
+//            classCredit.appendContentsOf(" Hours")
+//
+//        }
         
         
-        cell.className?.text = x
-        cell.classGrade?.text = course.courseGrade
-        cell.classCredit?.text = course.courseCredit
+        creditArray.append(classCredit!)
+        gradeArray.append(classGrade!)
+        
+        cell.className?.text = className
+        cell.classGrade?.text = classGrade
+        cell.classCredit?.text = cc
+        
         //cell.className.textColor = UIColor.whiteColor()
         
 
@@ -139,9 +169,87 @@ class CourseTableViewController: UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow
             let row = indexPath?.row
             
-            nextViewController.singleCourse = courses[row!]
+            nextViewController.oldCourse = courses[row!]
         }
+        if segue.identifier == "calc"{
+            let nextViewController = segue.destinationViewController as! DisplayGPA
+            nextViewController.totalRawScore = calculateGPA()
+            
+        }
+        
     }
     
+    func calculateGPA() -> Double {
+        //caculate the GPA with the Core Data
+        var totalRaw: Double = 0.0
+        var totalCredits: Double = 0.0
+        
+        for singleCourse in courses {
+            var singleCreditHour: Double = Double(singleCourse.courseCredit!)!
+            var singleGrade: String = singleCourse.courseGrade!
+            
+            var representGrade: Double = findNumberToGrade(singleGrade)
+            var representCredit: Double = singleCreditHour
+            var singleRawCourse: Double = representGrade * representCredit
+            
+            totalRaw += singleRawCourse
+            totalCredits += singleCreditHour
+            
+            
+        }
+        
+        print(totalRaw)
+        print(totalCredits)
+        return totalRaw
+        
+        
+    }
+    
+    func findNumberToGrade(grade: String)-> Double{
+        if(grade == "A+"){
+            return 4.0
+        }
+        if(grade == "A"){
+            return 4.0
+        }
+        if(grade == "A-"){
+            return 3.667
+        }
+        if(grade == "B+"){
+            return 3.33
+        }
+        if(grade == "B"){
+            return 3.0
+        }
+        if(grade == "B-"){
+            return 2.667
+        }
+        if(grade == "C+"){
+            return 2.33
+        }
+        if(grade == "C"){
+            return 2
+        }
+        if(grade == "C-"){
+            return 1.667
+        }
+        if(grade == "D+"){
+            return 1.333
+        }
+        if(grade == "D"){
+            return 1
+        }
+        if(grade == "D-"){
+            return 0.667
+        }
+        if(grade == "F"){
+            return 0.0
+            
+        }
+        
+        
+        
+        return 0.0
+    }
 
 }

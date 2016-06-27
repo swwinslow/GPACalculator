@@ -18,32 +18,131 @@ class SingleCourseDetails : UIViewController{
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
-     var singleCourse : Course?
+     var oldCourse : Course?
     
     override func viewDidLoad() {
-        if let c = singleCourse{
+        self.navigationItem.title = "Single Course"
+        if let c = oldCourse{
             courseNameTextbox.text = c.courseName
             courseGradeTextbox.text = c.courseGrade
             courseCreditTextbox.text = c.courseCredit
         }
     }
     
+    func checkInformation()-> Bool {
+        
+        var creditBoolean: Bool
+        
+        var gradeBoolean: Bool
+        
+        var nameBoolean: Bool
+        
+        var checkCredit: String = courseCreditTextbox.text!
+        var num = Int(checkCredit)
+        if num != nil {
+            creditBoolean = true
+        }
+        else {
+            
+            creditBoolean = false
+
+        }
+    
+    
+ 
+        var name: String = courseNameTextbox.text!
+        
+        if name != ""{
+            nameBoolean =  true
+        } else {
+            
+            nameBoolean =  false
+        }
+        
+        var grade: String = courseGradeTextbox.text!
+        if grade == "A+" || grade == "A" || grade == "A-" || grade == "B+" || grade == "B" ||
+            grade == "B-" || grade == "C+" || grade == "C" || grade == "C-" || grade == "D+" || 
+            grade == "D" || grade == "D-" || grade == "F" {
+            gradeBoolean =  true
+        } else {
+            
+            gradeBoolean = false
+        }
+        
+        
+        if(creditBoolean == false && gradeBoolean == false && nameBoolean == false){
+            let alert = UIAlertView(title: "Error", message: "Please enter all Information", delegate: nil, cancelButtonTitle: "Try again")
+            
+            alert.show()
+            return false
+            
+        } else if (creditBoolean == false && nameBoolean == false) {
+            let alert = UIAlertView(title: "Error", message: "Please enter a name and credits", delegate: nil, cancelButtonTitle: "Try again")
+            
+            alert.show()
+            return false
+        } else if (creditBoolean == false && gradeBoolean == false){
+        let alert = UIAlertView(title: "Error", message: "Please enter a grade and credits", delegate: nil, cancelButtonTitle: "Try again")
+        
+            alert.show()
+            return false
+        } else if (gradeBoolean == false && nameBoolean == false){
+            let alert = UIAlertView(title: "Error", message: "Please enter a grade and name", delegate: nil, cancelButtonTitle: "Try again")
+            
+            alert.show()
+            return false
+            
+        } else if (gradeBoolean == false){
+            let alert = UIAlertView(title: "Error", message: "Please enter a grade", delegate: nil, cancelButtonTitle: "Try again")
+            
+            alert.show()
+            return false
+        } else if (nameBoolean == false){
+            let alert = UIAlertView(title: "Error", message: "Please enter a name", delegate: nil, cancelButtonTitle: "Try again")
+            
+            alert.show()
+            return false
+        } else if (creditBoolean == false){
+            let alert = UIAlertView(title: "Error", message: "Please enter the credits", delegate: nil, cancelButtonTitle: "Try again")
+            
+            alert.show()
+            return false
+        } else {
+            return true
+        }
+    
+    
+       
+}
+
+
+        
+      
+        
+    
     
     
     @IBAction func saveCourse(sender: AnyObject) {
         
-        if singleCourse == nil {
+        var isCorrectInformation: Bool = checkInformation()
+        
+        if(isCorrectInformation == true){
+            
+        
+        
+        if oldCourse == nil {
         
             let newCourse = NSEntityDescription.entityForName("Course", inManagedObjectContext: managedObjectContext)
         
-            let singleCourse = Course(entity: newCourse!, insertIntoManagedObjectContext: managedObjectContext)
+            oldCourse = Course(entity: newCourse!, insertIntoManagedObjectContext: managedObjectContext)
         
         }
         
         
-        singleCourse?.courseName = courseNameTextbox.text
-        singleCourse?.courseGrade = courseGradeTextbox.text
-        singleCourse?.courseCredit = courseCreditTextbox.text
+        oldCourse?.courseName = courseNameTextbox.text!
+        oldCourse?.courseGrade = courseGradeTextbox.text!
+        oldCourse?.courseCredit = courseCreditTextbox.text!
+        
         var error: NSError?
         
         do{
@@ -52,8 +151,12 @@ class SingleCourseDetails : UIViewController{
             let alert = UIAlertView(title: "Alert", message: "There is an error saving", delegate: nil, cancelButtonTitle: "Try again")
         }
         
-        print("It worked")
-        
+          
+            let alert = UIAlertView(title: "Success", message: "Course Updated", delegate: nil, cancelButtonTitle: "Done")
+            
+            alert.show()
+            
+        }
         
         
     }

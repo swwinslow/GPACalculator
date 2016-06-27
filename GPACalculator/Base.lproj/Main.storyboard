@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--GPA HELPER-->
@@ -125,17 +126,6 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMH-2l-E3L">
                                 <rect key="frame" x="455" y="600" width="158" height="38"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmy-LH-Xb2">
-                                <rect key="frame" x="20" y="291" width="560" height="52"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
-                                <state key="normal" title="Share to Twitter">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareTwitter:" destination="afQ-PP-kGO" eventType="touchUpInside" id="eGH-QO-9Kv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total GPA Raw Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4M-lf-2b4">
                                 <rect key="frame" x="20" y="110" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,7 +133,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgQ-sB-Obw">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgQ-sB-Obw">
                                 <rect key="frame" x="20" y="351" width="560" height="52"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
@@ -159,20 +149,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="jmy-LH-Xb2" secondAttribute="trailing" id="1VN-gK-DRN"/>
                             <constraint firstAttribute="leadingMargin" secondItem="EgQ-sB-Obw" secondAttribute="leading" id="221-Ka-5C3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tg9-CN-OCP" secondAttribute="trailing" id="4Cq-ee-gPr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Tg9-CN-OCP" secondAttribute="leading" id="8bg-Ed-f8q"/>
                             <constraint firstAttribute="leadingMargin" secondItem="y4M-lf-2b4" secondAttribute="leading" id="DcP-Dr-Bq3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y4M-lf-2b4" secondAttribute="trailing" id="HKz-2z-y4a"/>
-                            <constraint firstItem="EgQ-sB-Obw" firstAttribute="top" secondItem="jmy-LH-Xb2" secondAttribute="bottom" constant="8" id="I6a-dk-sSz"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="jmy-LH-Xb2" secondAttribute="leading" id="Ogi-k2-5X7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EgQ-sB-Obw" secondAttribute="trailing" id="Vuu-e3-lFK"/>
                             <constraint firstItem="WdW-3w-C2g" firstAttribute="top" secondItem="zQs-Jr-pk0" secondAttribute="bottom" constant="8" id="bfj-Vd-afM"/>
                             <constraint firstItem="y4M-lf-2b4" firstAttribute="top" secondItem="Tg9-CN-OCP" secondAttribute="bottom" constant="8" id="fNF-xs-pyE"/>
                             <constraint firstAttribute="leadingMargin" secondItem="zQs-Jr-pk0" secondAttribute="leading" id="fNx-Hn-JhN"/>
                             <constraint firstItem="Tg9-CN-OCP" firstAttribute="top" secondItem="i9r-dL-peo" secondAttribute="bottom" constant="8" id="g4D-ja-Kxh"/>
-                            <constraint firstItem="jmy-LH-Xb2" firstAttribute="top" secondItem="WdW-3w-C2g" secondAttribute="bottom" constant="8" id="ky5-JR-Kwk"/>
                             <constraint firstItem="zQs-Jr-pk0" firstAttribute="top" secondItem="y4M-lf-2b4" secondAttribute="bottom" constant="8" id="obe-m7-x5y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zQs-Jr-pk0" secondAttribute="trailing" id="rsl-Qa-DaD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WdW-3w-C2g" secondAttribute="trailing" id="si5-k8-2xM"/>
@@ -187,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZ8-eM-Oky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3789" y="-2532"/>
+            <point key="canvasLocation" x="3241" y="-3902"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pRP-Qr-fin">
@@ -1062,7 +1048,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.74" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="z51-So-6I9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MATH 101" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="z51-So-6I9">
                                 <rect key="frame" x="316" y="72" width="264" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -1081,7 +1067,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.74" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="t7n-Vo-46C">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="B+" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="t7n-Vo-46C">
                                 <rect key="frame" x="316" y="148" width="264" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -1098,7 +1084,7 @@
                                     <action selector="saveCourse:" destination="Oxu-HQ-cFE" eventType="touchUpInside" id="BkO-wG-8C7"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.74" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Jcd-88-wbY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Jcd-88-wbY">
                                 <rect key="frame" x="316" y="110" width="264" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -1141,7 +1127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YG7-pf-Hv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3596" y="-3280"/>
+            <point key="canvasLocation" x="3690" y="-3117"/>
         </scene>
         <!--Sub2-->
         <scene sceneID="lJg-fd-5Ho">
@@ -1261,11 +1247,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="WeB-GS-b5H">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NJu-Os-j1G">
-                            <connections>
-                                <segue destination="Oxu-HQ-cFE" kind="show" id="niv-rd-nBo"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="NJu-Os-j1G">
+                                <connections>
+                                    <segue destination="Oxu-HQ-cFE" kind="show" id="niv-rd-nBo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Calculate " id="JPr-zX-G1k">
+                                <connections>
+                                    <action selector="calculateGPA:" destination="Aeq-7b-amJ" id="gjr-Ek-M2R"/>
+                                    <segue destination="utm-kC-cY6" kind="show" identifier="calc" id="TTV-oe-6yV"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sh-Tp-Zh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1275,8 +1269,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="QKd-Ni-YsT"/>
-        <segue reference="Zk5-LQ-7Mj"/>
+        <segue reference="MWq-Dt-qce"/>
         <segue reference="cJt-0S-uOr"/>
-        <segue reference="niv-rd-nBo"/>
+        <segue reference="Tog-YS-6ti"/>
     </inferredMetricsTieBreakers>
 </document>
