@@ -24,19 +24,19 @@ class sub2: UIViewController{
     
     @IBAction func college(sender: AnyObject) {
         
-        x = "college"
+        x = "College GPA"
     }
     
     @IBAction func highschool(sender: AnyObject) {
-        x = "High School"
+        x = "HS GPA"
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         
         
-        if let vc = segue.destinationViewController as? GPAAdditionCourseHS {
-            vc.type = x
+        if let vc = segue.destinationViewController as? CourseTableViewController {
+            vc.education = x
         }
     }
 }

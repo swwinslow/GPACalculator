@@ -9,25 +9,101 @@
 import UIKit
 import CoreData
 
-class SingleCourseDetails : UIViewController{
+class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     @IBOutlet weak var courseNameTextbox: UITextField!
     
     @IBOutlet weak var courseCreditTextbox: UITextField!
     @IBOutlet weak var courseGradeTextbox: UITextField!
     
+    var highSchoolPicker = ["A+",  "A","A-", "B+", "B", "B-", "C+","C", "C-", "D+", "D", "D-", "F"]
+    
+    var highSchoolPickerTypes = ["","(AP)", "(Hons)"]
+    
+    var didValueChange: String = "A+"
+    var didValueChange1: String = ""
+    var change: Bool = false
+    var change1: Bool = false
+
+    
+    var education: String = ""
+    
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
      var oldCourse : Course?
     
     override func viewDidLoad() {
+        
         self.navigationItem.title = "Single Course"
         if let c = oldCourse{
             courseNameTextbox.text = c.courseName
             courseGradeTextbox.text = c.courseGrade
             courseCreditTextbox.text = c.courseCredit
         }
+        
+        var pickerView = UIPickerView()
+        
+        pickerView.delegate = self
+        
+        courseGradeTextbox.inputView = pickerView
     }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (component == 0){
+        return highSchoolPicker.count
+        } else {
+            return highSchoolPickerTypes.count
+        }
+    }
+   
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (component == 0){
+            return highSchoolPicker[row]
+        } else {
+            return highSchoolPickerTypes[row]
+        }
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        
+        
+        var part1: String = ""
+        var part2: String = ""
+        if (component == 0){
+            change = true
+            part1 =  highSchoolPicker[row]
+            if(part1 == didValueChange){
+                
+            }else{
+                didValueChange = part1
+            }
+        } else {
+            part2 =  highSchoolPickerTypes[row]
+            if(part2 == didValueChange1){
+                
+            }else{
+                didValueChange1 = part2
+            }
+
+        }
+        
+        
+        //todo LOOK AT THE CHANGE OF THE VALUE -> THEN LOOK AT SAVING THE OBJECT
+        
+        if part2 == "" && part1 == "" {
+            courseGradeTextbox.text = didValueChange
+        } else if (didValueChange1 == "") {
+            courseGradeTextbox.text = part1 + " " + part2
+
+        }
+        change = false
+        change1 = false
+    }
+    
     
     func checkInformation()-> Bool {
         

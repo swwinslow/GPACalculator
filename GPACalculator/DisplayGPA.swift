@@ -18,6 +18,8 @@ class DisplayGPA: UIViewController, ADBannerViewDelegate{
     @IBOutlet weak var GPARaw: UILabel!
     @IBOutlet weak var creditLabel: UILabel!
     
+    var education: String = ""
+    
 
     
     
@@ -41,8 +43,13 @@ class DisplayGPA: UIViewController, ADBannerViewDelegate{
         print("total: \(c)") // c: 1.5
         
         
-        
-        creditLabel.text = String("Total Credit Hours: \(a)")
+        if education == "HS GPA"{
+            creditLabel.text = String("Total Classes: \(a)")
+
+        } else {
+            creditLabel.text = String("Total Credit Hours: \(a)")
+
+        }
         GPARaw.text = String("Total Raw Score \(b)")
         display.text = String(c)
         

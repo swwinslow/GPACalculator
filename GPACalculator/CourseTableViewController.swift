@@ -14,12 +14,15 @@ class CourseTableViewController: UITableViewController {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     var courses = [Course]()
+    var education: String = ""
     
     var creditArray = [String]()
     var gradeArray = [String]()
     
     
     override func viewDidAppear(animated: Bool) {
+        
+        self.navigationItem.title = education
         
         var error: NSError?
         
@@ -79,25 +82,30 @@ class CourseTableViewController: UITableViewController {
         var classCredit = course.courseCredit
         var classGrade = course.courseGrade
         
+        
          var cc : String = ""
         
-        if let className2 = course.courseCredit{
-            cc = className2
-            if cc == "1"{
-                cc.appendContentsOf(" credit")
-
-            } else {
-                cc.appendContentsOf(" credits")
-
+        
+        if education == "HS GPA"{
+            if let className2 = course.courseCredit {
+                cc = className2
+                cc = "1 Credit"
+            }
+        
+        
+        } else {
+            if let className2 = course.courseCredit{
+                cc = className2
+                if cc == "1"{
+                    cc.appendContentsOf(" Credit")
+                    
+                } else {
+                    cc.appendContentsOf(" Credits")
+                    
+                }
             }
         }
-//        if classCredit == "1"{
-//            classCredit.appendContentsOf(" Hour")
-//
-//        } else {
-//            classCredit.appendContentsOf(" Hours")
-//
-//        }
+        
         
         
         creditArray.append(classCredit!)
@@ -173,19 +181,30 @@ class CourseTableViewController: UITableViewController {
         }
         if segue.identifier == "calc"{
             let nextViewController = segue.destinationViewController as! DisplayGPA
-            nextViewController.totalRawScore = calculateGPA()
+            nextViewController.totalRawScore = calculateGPA().raw
+            nextViewController.totalCredits = calculateGPA().credits
+            nextViewController.education = education
             
         }
         
     }
     
-    func calculateGPA() -> Double {
+    func calculateGPA() -> (credits: Double, raw: Double) {
         //caculate the GPA with the Core Data
         var totalRaw: Double = 0.0
         var totalCredits: Double = 0.0
         
         for singleCourse in courses {
-            var singleCreditHour: Double = Double(singleCourse.courseCredit!)!
+            
+            var singleCreditHour: Double = 0.0
+            if education == "HS GPA"{
+                singleCreditHour = 1
+            } else {
+               singleCreditHour =  Double(singleCourse.courseCredit!)!
+
+            }
+            
+             Double(singleCourse.courseCredit!)!
             var singleGrade: String = singleCourse.courseGrade!
             
             var representGrade: Double = findNumberToGrade(singleGrade)
@@ -200,7 +219,7 @@ class CourseTableViewController: UITableViewController {
         
         print(totalRaw)
         print(totalCredits)
-        return totalRaw
+        return (totalCredits, totalRaw)
         
         
     }
