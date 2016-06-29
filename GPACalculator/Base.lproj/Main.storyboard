@@ -1073,7 +1073,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM4-jM-a1v">
-                                <rect key="frame" x="20" y="186" width="560" height="57"/>
+                                <rect key="frame" x="20" y="224" width="560" height="57"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
                                 <state key="normal" title="Save Course">
@@ -1089,38 +1089,59 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Course Honors:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itD-ku-Jwz">
+                                <rect key="frame" x="20" y="186" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AP" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rul-MT-oaj">
+                                <rect key="frame" x="316" y="186" width="264" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.071741149340000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="t7n-Vo-46C" firstAttribute="top" secondItem="Jcd-88-wbY" secondAttribute="bottom" constant="8" id="1Ob-V1-NeW"/>
+                            <constraint firstItem="itD-ku-Jwz" firstAttribute="top" secondItem="izn-1c-EN1" secondAttribute="bottom" constant="8" id="1xI-AZ-jZk"/>
                             <constraint firstItem="8pG-DF-4Wn" firstAttribute="top" secondItem="EWh-eJ-Art" secondAttribute="bottom" constant="8" id="33u-W7-aMN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z51-So-6I9" secondAttribute="trailing" id="BXU-LY-iGx"/>
                             <constraint firstItem="izn-1c-EN1" firstAttribute="height" secondItem="t7n-Vo-46C" secondAttribute="height" id="BXr-1h-SO7"/>
                             <constraint firstItem="izn-1c-EN1" firstAttribute="width" secondItem="t7n-Vo-46C" secondAttribute="width" id="Bq1-XF-e23"/>
                             <constraint firstItem="Jcd-88-wbY" firstAttribute="leading" secondItem="iQf-vP-1Ge" secondAttribute="trailing" constant="8" id="CCK-rH-Q6R"/>
                             <constraint firstItem="t7n-Vo-46C" firstAttribute="leading" secondItem="izn-1c-EN1" secondAttribute="trailing" constant="8" id="F1J-bH-9LJ"/>
-                            <constraint firstItem="IM4-jM-a1v" firstAttribute="top" secondItem="t7n-Vo-46C" secondAttribute="bottom" constant="8" id="GuN-wf-ep2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="IM4-jM-a1v" secondAttribute="leading" id="Igh-uW-nFA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="itD-ku-Jwz" secondAttribute="leading" id="Kpf-HX-djV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IM4-jM-a1v" secondAttribute="trailing" id="NYa-2i-Lon"/>
+                            <constraint firstItem="rul-MT-oaj" firstAttribute="leading" secondItem="itD-ku-Jwz" secondAttribute="trailing" constant="8" id="NeW-wN-WD6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="izn-1c-EN1" secondAttribute="leading" id="Oa0-Qs-m2y"/>
                             <constraint firstItem="iQf-vP-1Ge" firstAttribute="height" secondItem="Jcd-88-wbY" secondAttribute="height" id="Oiw-en-JmS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="z51-So-6I9" secondAttribute="trailing" id="Pcz-NY-DMh"/>
                             <constraint firstItem="8pG-DF-4Wn" firstAttribute="height" secondItem="z51-So-6I9" secondAttribute="height" id="SNY-uU-Qeh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rul-MT-oaj" secondAttribute="trailing" id="VCv-O1-xYF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="8pG-DF-4Wn" secondAttribute="leading" id="aUR-3p-bM8"/>
+                            <constraint firstItem="itD-ku-Jwz" firstAttribute="height" secondItem="rul-MT-oaj" secondAttribute="height" id="bCW-p6-itV"/>
                             <constraint firstAttribute="leadingMargin" secondItem="iQf-vP-1Ge" secondAttribute="leading" id="cex-Us-mZN"/>
                             <constraint firstItem="z51-So-6I9" firstAttribute="top" secondItem="EWh-eJ-Art" secondAttribute="bottom" constant="8" id="e1s-9j-Wtu"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="IM4-jM-a1v" secondAttribute="leading" id="eWa-Ys-TtH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jcd-88-wbY" secondAttribute="trailing" id="f7P-ZK-5au"/>
                             <constraint firstItem="izn-1c-EN1" firstAttribute="top" secondItem="iQf-vP-1Ge" secondAttribute="bottom" constant="8" id="gYT-RT-EbO"/>
                             <constraint firstItem="Jcd-88-wbY" firstAttribute="top" secondItem="z51-So-6I9" secondAttribute="bottom" constant="8" id="hHI-fj-k49"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IM4-jM-a1v" secondAttribute="trailing" id="hbK-yV-dFm"/>
-                            <constraint firstItem="IM4-jM-a1v" firstAttribute="top" secondItem="izn-1c-EN1" secondAttribute="bottom" constant="8" id="tk2-eE-0Rf"/>
+                            <constraint firstItem="itD-ku-Jwz" firstAttribute="width" secondItem="rul-MT-oaj" secondAttribute="width" id="iym-eK-gwG"/>
+                            <constraint firstItem="IM4-jM-a1v" firstAttribute="top" secondItem="EWh-eJ-Art" secondAttribute="bottom" constant="160" id="lny-sM-ccR"/>
+                            <constraint firstItem="IM4-jM-a1v" firstAttribute="top" secondItem="itD-ku-Jwz" secondAttribute="bottom" constant="8" id="oN0-JF-Psq"/>
                             <constraint firstItem="8pG-DF-4Wn" firstAttribute="width" secondItem="z51-So-6I9" secondAttribute="width" id="tvL-xK-uNO"/>
+                            <constraint firstItem="IM4-jM-a1v" firstAttribute="top" secondItem="rul-MT-oaj" secondAttribute="bottom" constant="8" id="uMR-YL-Uuu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t7n-Vo-46C" secondAttribute="trailing" id="umU-QI-5zG"/>
                             <constraint firstItem="iQf-vP-1Ge" firstAttribute="top" secondItem="8pG-DF-4Wn" secondAttribute="bottom" constant="8" id="urb-YN-kS7"/>
                             <constraint firstItem="iQf-vP-1Ge" firstAttribute="width" secondItem="Jcd-88-wbY" secondAttribute="width" id="vHb-jS-Q7l"/>
+                            <constraint firstItem="rul-MT-oaj" firstAttribute="top" secondItem="t7n-Vo-46C" secondAttribute="bottom" constant="8" id="yPq-S6-xuj"/>
                             <constraint firstItem="z51-So-6I9" firstAttribute="leading" secondItem="8pG-DF-4Wn" secondAttribute="trailing" constant="8" id="zea-Q8-XWF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="courseCreditTextbox" destination="Jcd-88-wbY" id="TEc-bE-dB5"/>
+                        <outlet property="courseExtraTextBox" destination="itD-ku-Jwz" id="4X0-JT-Pa4"/>
                         <outlet property="courseGradeTextbox" destination="t7n-Vo-46C" id="M6E-GA-QT5"/>
                         <outlet property="courseNameTextbox" destination="z51-So-6I9" id="oQo-X3-UH8"/>
                     </connections>

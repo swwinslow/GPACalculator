@@ -17,5 +17,6 @@ extension Course {
     @NSManaged var courseCredit: String?
     @NSManaged var courseGrade: String?
     @NSManaged var courseName: String?
+    @NSManaged var courseExtra: String?
 
 }

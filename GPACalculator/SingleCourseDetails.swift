@@ -16,6 +16,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var courseCreditTextbox: UITextField!
     @IBOutlet weak var courseGradeTextbox: UITextField!
     
+    @IBOutlet weak var courseExtraTextBox: UILabel!
     var highSchoolPicker = ["A+",  "A","A-", "B+", "B", "B-", "C+","C", "C-", "D+", "D", "D-", "F"]
     
     var highSchoolPickerTypes = ["","(AP)", "(Hons)"]
@@ -218,6 +219,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         oldCourse?.courseName = courseNameTextbox.text!
         oldCourse?.courseGrade = courseGradeTextbox.text!
         oldCourse?.courseCredit = courseCreditTextbox.text!
+        oldCourse?.courseExtra = "YES"
         
         var error: NSError?
         

@@ -81,6 +81,7 @@ class CourseTableViewController: UITableViewController {
         var className = course.courseName
         var classCredit = course.courseCredit
         var classGrade = course.courseGrade
+        var classExtra = course.courseExtra
         
         
          var cc : String = ""
