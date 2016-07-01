@@ -34,6 +34,8 @@
 		6D08FF721D13B1950007BBA9 /* GPACalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D08FF701D13B1950007BBA9 /* GPACalculator.xcdatamodeld */; };
 		6D08FF781D16549E0007BBA9 /* EditCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D08FF771D16549E0007BBA9 /* EditCourseViewController.swift */; };
 		6D14215A1D0FC213004982A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1421581D0FC213004982A6 /* Main.storyboard */; };
+		6D1F2A821D24B69D00FD9073 /* HSCourse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F2A801D24B69D00FD9073 /* HSCourse+CoreDataProperties.swift */; };
+		6D1F2A831D24B69D00FD9073 /* HSCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1F2A811D24B69D00FD9073 /* HSCourse.swift */; };
 		6D31F0261D1E4E5F0024793A /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31F0241D1E4E5F0024793A /* Course+CoreDataProperties.swift */; };
 		6D31F0271D1E4E5F0024793A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31F0251D1E4E5F0024793A /* Course.swift */; };
 		6D31F0291D1E4E850024793A /* SingleCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31F0281D1E4E850024793A /* SingleCourseDetails.swift */; };
@@ -98,6 +100,8 @@
 		6D08FF711D13B1950007BBA9 /* GPACalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPACalculator.xcdatamodel; sourceTree = "<group>"; };
 		6D08FF771D16549E0007BBA9 /* EditCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCourseViewController.swift; sourceTree = "<group>"; };
 		6D1421591D0FC213004982A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D1F2A801D24B69D00FD9073 /* HSCourse+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HSCourse+CoreDataProperties.swift"; path = "../HSCourse+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6D1F2A811D24B69D00FD9073 /* HSCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSCourse.swift; path = ../HSCourse.swift; sourceTree = "<group>"; };
 		6D31F0241D1E4E5F0024793A /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6D31F0251D1E4E5F0024793A /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		6D31F0281D1E4E850024793A /* SingleCourseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCourseDetails.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		55AC03E51C3106B800093A08 /* GPACalculator */ = {
 			isa = PBXGroup;
 			children = (
+				6D1F2A801D24B69D00FD9073 /* HSCourse+CoreDataProperties.swift */,
+				6D1F2A811D24B69D00FD9073 /* HSCourse.swift */,
 				6D31F0241D1E4E5F0024793A /* Course+CoreDataProperties.swift */,
 				6D31F0251D1E4E5F0024793A /* Course.swift */,
 				6DBD409A1D0D2595000565F3 /* CourseCell.swift */,
@@ -367,6 +373,7 @@
 				6D31F0291D1E4E850024793A /* SingleCourseDetails.swift in Sources */,
 				55AC03E91C3106B800093A08 /* ViewController.swift in Sources */,
 				6D08FF721D13B1950007BBA9 /* GPACalculator.xcdatamodeld in Sources */,
+				6D1F2A821D24B69D00FD9073 /* HSCourse+CoreDataProperties.swift in Sources */,
 				6D31F0271D1E4E5F0024793A /* Course.swift in Sources */,
 				6D31F02B1D1F4F120024793A /* CourseTableViewController.swift in Sources */,
 				55C1A5531C38AAA2006CFBB0 /* CourseSelection.swift in Sources */,
@@ -378,6 +385,7 @@
 				5527CBA41C913B7C009034FC /* SubGPAMenu.swift in Sources */,
 				55C1A5591C390443006CFBB0 /* DisplayGPA.swift in Sources */,
 				6DBD409B1D0D2595000565F3 /* CourseCell.swift in Sources */,
+				6D1F2A831D24B69D00FD9073 /* HSCourse.swift in Sources */,
 				559800D71CB0EBC6007E0D1C /* ContentViewController.swift in Sources */,
 				551E83DC1C326652003CCA4C /* CourseHelpScreen.swift in Sources */,
 				55C1A5571C38EC78006CFBB0 /* FinalGPA.swift in Sources */,

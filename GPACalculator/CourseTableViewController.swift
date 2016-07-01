@@ -14,34 +14,64 @@ class CourseTableViewController: UITableViewController {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     var courses = [Course]()
+    var HighSchoolCourse = [HSCourse]()
     var education: String = ""
     
     var creditArray = [String]()
     var gradeArray = [String]()
     
     
+    
     override func viewDidAppear(animated: Bool) {
         
         self.navigationItem.title = education
         
+        print(education)
+        
         var error: NSError?
         
-        let request = NSFetchRequest(entityName: "Course")
         
-        do {
-            courses = try managedObjectContext.executeFetchRequest(request) as! [Course]
-            // success ...
-        } catch let error as NSError {
-            // failure
-            print("Fetch failed: \(error.localizedDescription)")
+        //HIGH SCHOOL DATA
+        if education == "HS GPA"{
+            let request = NSFetchRequest(entityName: "HSCourse")
+            
+            do {
+                HighSchoolCourse = try managedObjectContext.executeFetchRequest(request) as! [HSCourse]
+                // success ...
+            } catch let error as NSError {
+                // failure
+                print("Fetch failed: \(error.localizedDescription)")
+            }
+            self.tableView.reloadData()
+            
+            print(HighSchoolCourse.count)
+
+        
         }
-        self.tableView.reloadData()
-        print(courses.count)
+        
+        //COLLEGE DATA
+        if education == "College GPA"{
+            let request = NSFetchRequest(entityName: "Course")
+            
+            do {
+                courses = try managedObjectContext.executeFetchRequest(request) as! [Course]
+                // success ...
+            } catch let error as NSError {
+                // failure
+                print("Fetch failed: \(error.localizedDescription)")
+            }
+            self.tableView.reloadData()
+
+        
+        }
+        
+                print(courses.count)
         
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewDidAppear(false)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -66,7 +96,15 @@ class CourseTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-                return courses.count
+        if education == "College GPA"{
+            return courses.count
+        }
+        if education == "HS GPA"{
+            return HighSchoolCourse.count
+        }
+        else {
+            return 0
+        }
     }
 
     
@@ -76,45 +114,54 @@ class CourseTableViewController: UITableViewController {
         // Configure the cell...
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CustomCellTableViewCell
         
+      
+     
+        
+        if education == "College GPA"{
+            
         let course = courses[indexPath.row]
         
-        var className = course.courseName
-        var classCredit = course.courseCredit
-        var classGrade = course.courseGrade
-        var classExtra = course.courseExtra
+         var className = course.courseName
+         var classCredit = course.courseCredit
+         var classGrade = course.courseGrade
+         var classExtra = course.courseExtra
+            
+            creditArray.append(classCredit!)
+            gradeArray.append(classGrade!)
+            
+            cell.className?.text = className
+            cell.classGrade?.text = classGrade
+            cell.classCredit?.text = classCredit
         
         
-         var cc : String = ""
-        
-        
-        if education == "HS GPA"{
-            if let className2 = course.courseCredit {
-                cc = className2
-                cc = "1 Credit"
-            }
-        
-        
-        } else {
-            if let className2 = course.courseCredit{
-                cc = className2
-                if cc == "1"{
-                    cc.appendContentsOf(" Credit")
-                    
-                } else {
-                    cc.appendContentsOf(" Credits")
-                    
-                }
-            }
         }
         
+        if education == "HS GPA"{
+            let highSchoolSingleCourse = HighSchoolCourse[indexPath.row]
+            var className = highSchoolSingleCourse.courseName
+            var classCredit = highSchoolSingleCourse.courseCredit
+             var classGrade = highSchoolSingleCourse.courseGrade
+             var classExtra = highSchoolSingleCourse.courseExtra
+            
+            creditArray.append(classCredit!)
+            gradeArray.append(classGrade!)
+            
+            cell.className?.text = className
+            cell.classGrade?.text = classGrade
+            cell.classCredit?.text = classCredit
+            
+        }
+        
+      
         
         
-        creditArray.append(classCredit!)
-        gradeArray.append(classGrade!)
         
-        cell.className?.text = className
-        cell.classGrade?.text = classGrade
-        cell.classCredit?.text = cc
+       //
+//        
+//       LOOK AT THE COURSE EXTRA AND ADDING SOMETHING TO THE MARK
+//        
+//        
+        
         
         //cell.className.textColor = UIColor.whiteColor()
         
@@ -134,7 +181,11 @@ class CourseTableViewController: UITableViewController {
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
         if editingStyle == .Delete {
+            if education == "College GPA" {
+                
+            
             // Delete the row from the data source
             let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let context:NSManagedObjectContext = appDel.managedObjectContext
@@ -146,6 +197,25 @@ class CourseTableViewController: UITableViewController {
             } catch _ {
             }
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
+            
+            if education == "HS GPA"{
+                
+                
+                // Delete the row from the data source
+                let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let context:NSManagedObjectContext = appDel.managedObjectContext
+                context.deleteObject(HighSchoolCourse[indexPath.row])
+                HighSchoolCourse.removeAtIndex(indexPath.row)
+                
+                do {
+                    try context.save()
+                } catch _ {
+                }
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+           
+            }
+            
 
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -174,18 +244,40 @@ class CourseTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "editCourse" {
+            if education == "College GPA"{
+                
             let nextViewController = segue.destinationViewController as! SingleCourseDetails
             let indexPath = self.tableView.indexPathForSelectedRow
             let row = indexPath?.row
             
             nextViewController.oldCourse = courses[row!]
+                nextViewController.education = education
+
+            }
+            
+            if education == "HS GPA"{
+                let nextViewController = segue.destinationViewController as! SingleCourseDetails
+                let indexPath = self.tableView.indexPathForSelectedRow
+                let row = indexPath?.row
+                
+                
+                nextViewController.education = education
+                nextViewController.oldHighSchoolCourse = HighSchoolCourse[row!]
+                nextViewController.education = education
+            
+            }
         }
         if segue.identifier == "calc"{
             let nextViewController = segue.destinationViewController as! DisplayGPA
             nextViewController.totalRawScore = calculateGPA().raw
             nextViewController.totalCredits = calculateGPA().credits
-            nextViewController.education = education
+//            nextViewController.education = education
             
+        }
+        
+        if segue.identifier == "add"{
+            let nextViewController = segue.destinationViewController as! SingleCourseDetails
+            nextViewController.education = education
         }
         
     }
@@ -198,12 +290,7 @@ class CourseTableViewController: UITableViewController {
         for singleCourse in courses {
             
             var singleCreditHour: Double = 0.0
-            if education == "HS GPA"{
-                singleCreditHour = 1
-            } else {
-               singleCreditHour =  Double(singleCourse.courseCredit!)!
-
-            }
+           
             
              Double(singleCourse.courseCredit!)!
             var singleGrade: String = singleCourse.courseGrade!

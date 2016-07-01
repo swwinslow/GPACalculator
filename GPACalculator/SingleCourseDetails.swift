@@ -16,7 +16,8 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var courseCreditTextbox: UITextField!
     @IBOutlet weak var courseGradeTextbox: UITextField!
     
-    @IBOutlet weak var courseExtraTextBox: UILabel!
+    
+    @IBOutlet weak var courseExtraTextBox: UITextField!
     var highSchoolPicker = ["A+",  "A","A-", "B+", "B", "B-", "C+","C", "C-", "D+", "D", "D-", "F"]
     
     var highSchoolPickerTypes = ["","(AP)", "(Hons)"]
@@ -27,19 +28,43 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
     var change1: Bool = false
 
     
-    var education: String = ""
+    var education:String = ""
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
      var oldCourse : Course?
+    var oldHighSchoolCourse : HSCourse?
+    
     
     override func viewDidLoad() {
         
+        courseExtraTextBox.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        
         self.navigationItem.title = "Single Course"
+        
+        if education == "College GPA"{
+            
+        
         if let c = oldCourse{
             courseNameTextbox.text = c.courseName
             courseGradeTextbox.text = c.courseGrade
             courseCreditTextbox.text = c.courseCredit
+        }
+            
+        }
+        
+        if education == "HS GPA"{
+            
+            
+            if let hs = oldHighSchoolCourse{
+                courseNameTextbox.text = hs.courseName
+                courseGradeTextbox.text = hs.courseGrade
+                courseCreditTextbox.text = hs.courseCredit
+            }
+            courseCreditTextbox.userInteractionEnabled = false;
+            courseCreditTextbox.text = "1"
+
+            
         }
         
         var pickerView = UIPickerView()
@@ -47,26 +72,46 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         pickerView.delegate = self
         
         courseGradeTextbox.inputView = pickerView
+        
+        var pickerView2 = UIPickerView()
+        
+        pickerView2.delegate = self
+        courseExtraTextBox.inputView  = pickerView
+    }
+    
+    func textFieldDidChange(textField: UITextField)->Bool{
+        return true
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 2
+        return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if (component == 0){
-        return highSchoolPicker.count
+        
+        if courseExtraTextBox.isFirstResponder(){
+            return highSchoolPicker.count
+        } else if courseGradeTextbox.isFirstResponder(){
+            return highSchoolPicker.count
         } else {
-            return highSchoolPickerTypes.count
+            return 0
         }
     }
    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if (component == 0){
+//        if courseExtraTextBox.isFirstResponder(){
+//            return highSchoolPickerTypes[row]
+//        }
+        if courseExtraTextBox.did{
             return highSchoolPicker[row]
-        } else {
+        }
+         else {
             return highSchoolPickerTypes[row]
         }
+        
     }
+    
+    
+
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
@@ -114,6 +159,8 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         
         var nameBoolean: Bool
         
+        var extraBoolean: Bool
+        
         var checkCredit: String = courseCreditTextbox.text!
         var num = Int(checkCredit)
         if num != nil {
@@ -146,8 +193,20 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
             gradeBoolean = false
         }
         
+        var extra: String = courseExtraTextBox.text!
+        if extra != ""{
+            // Making sure that it is the correct Extra that could be choosen
+            if extra == "(AP)" || extra == "(Hons)"{
+                extraBoolean = true
+            } else {
+                extraBoolean = false
+            }
+        } else {
+            extraBoolean = true
+        }
         
-        if(creditBoolean == false && gradeBoolean == false && nameBoolean == false){
+        
+        if(creditBoolean == false && gradeBoolean == false && nameBoolean == false && extraBoolean == false){
             let alert = UIAlertView(title: "Error", message: "Please enter all Information", delegate: nil, cancelButtonTitle: "Try again")
             
             alert.show()
@@ -165,6 +224,12 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
             return false
         } else if (gradeBoolean == false && nameBoolean == false){
             let alert = UIAlertView(title: "Error", message: "Please enter a grade and name", delegate: nil, cancelButtonTitle: "Try again")
+            
+            alert.show()
+            return false
+            
+        } else if (gradeBoolean == false && nameBoolean == false && extraBoolean == false){
+            let alert = UIAlertView(title: "Error", message: "Please enter proper grade, name, and extra", delegate: nil, cancelButtonTitle: "Try again")
             
             alert.show()
             return false
@@ -192,6 +257,12 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
        
 }
 
+    
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+        if let viewController = viewController as? CourseTableViewController {
+           viewController.education = education
+        }
+    }
 
         
       
@@ -205,7 +276,10 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         
         if(isCorrectInformation == true){
             
-        
+            print(education)
+            
+        if education == "College GPA"
+        {
         
         if oldCourse == nil {
         
@@ -220,22 +294,74 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         oldCourse?.courseGrade = courseGradeTextbox.text!
         oldCourse?.courseCredit = courseCreditTextbox.text!
         oldCourse?.courseExtra = "YES"
-        
-        var error: NSError?
-        
-        do{
-            try managedObjectContext.save()
-        } catch {
-            let alert = UIAlertView(title: "Alert", message: "There is an error saving", delegate: nil, cancelButtonTitle: "Try again")
-        }
-        
-          
+            
+            var error: NSError?
+            
+            do{
+                try managedObjectContext.save()
+            } catch {
+                let alert = UIAlertView(title: "Alert", message: "There is an error saving", delegate: nil, cancelButtonTitle: "Try again")
+            }
+            
+            
             let alert = UIAlertView(title: "Success", message: "Course Updated", delegate: nil, cancelButtonTitle: "Done")
             
             alert.show()
             
         }
-        
-        
+    
+        if education == "HS GPA"{
+            if oldHighSchoolCourse == nil {
+                
+                let newCourse = NSEntityDescription.entityForName("HSCourse", inManagedObjectContext: managedObjectContext)
+                
+                oldHighSchoolCourse = HSCourse(entity: newCourse!, insertIntoManagedObjectContext: managedObjectContext)
+                
+            }
+            
+            
+            oldHighSchoolCourse?.courseName = courseNameTextbox.text!
+            print(courseNameTextbox.text)
+            oldHighSchoolCourse?.courseGrade = courseGradeTextbox.text!
+            oldHighSchoolCourse?.courseCredit = courseCreditTextbox.text!
+            oldHighSchoolCourse?.courseExtra = "YES"
+
+            
+            
+            var error: NSError?
+            
+            do{
+                try managedObjectContext.save()
+            } catch {
+                let alert = UIAlertView(title: "Alert", message: "There is an error saving", delegate: nil, cancelButtonTitle: "Try again")
+            }
+            
+            
+            let alert = UIAlertView(title: "Success", message: "Course Updated", delegate: nil, cancelButtonTitle: "Done")
+            
+            alert.show()
+            
+            }
+            
+            var HighSchoolCourse = [HSCourse]()
+            
+            let request = NSFetchRequest(entityName: "HSCourse")
+            
+            do {
+                HighSchoolCourse = try managedObjectContext.executeFetchRequest(request) as! [HSCourse]
+                // success ...
+            } catch let error as NSError {
+                // failure
+                print("Fetch failed: \(error.localizedDescription)")
+            }
+            
+            print(HighSchoolCourse.count)
+            
+            print(HighSchoolCourse.first?.courseName)
+            print(HighSchoolCourse.first?.courseExtra)
+            print(HighSchoolCourse.first?.courseGrade)
+
+            
+        }
     }
 }

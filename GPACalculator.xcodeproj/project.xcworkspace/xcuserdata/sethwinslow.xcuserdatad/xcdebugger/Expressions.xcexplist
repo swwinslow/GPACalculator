@@ -3,10 +3,32 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SingleCourseDetails.viewDidLoad() -&gt; ():SingleCourseDetails.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "education">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "FinalExamTableView.shouldCheckArray() -&gt; Bool:FinalExamTableView.swift">
          <PersistentStrings>
             <PersistentString
                value = "percent">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SingleCourseDetails.saveCourse(AnyObject) -&gt; ():SingleCourseDetails.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "education">
+            </PersistentString>
+            <PersistentString
+               value = "oldCourse">
+            </PersistentString>
+            <PersistentString
+               value = "singleCourse">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,6 +52,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "CourseTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:CourseTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SingleCourseDetails.checkInformation() -&gt; Bool:SingleCourseDetails.swift">
+      </ContextState>
+      <ContextState
          contextName = "GPAAdditionCourseHS.textFieldDidBeginEditing(UITextField) -&gt; ():GPAAdditionCourseHS.swift">
          <PersistentStrings>
             <PersistentString
@@ -38,15 +66,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SingleCourseDetails.saveCourse(AnyObject) -&gt; ():SingleCourseDetails.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "oldCourse">
-            </PersistentString>
-            <PersistentString
-               value = "singleCourse">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "sub2.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():sub2.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

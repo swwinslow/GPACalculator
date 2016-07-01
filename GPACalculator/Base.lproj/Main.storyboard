@@ -1141,7 +1141,7 @@
                     </view>
                     <connections>
                         <outlet property="courseCreditTextbox" destination="Jcd-88-wbY" id="TEc-bE-dB5"/>
-                        <outlet property="courseExtraTextBox" destination="itD-ku-Jwz" id="4X0-JT-Pa4"/>
+                        <outlet property="courseExtraTextBox" destination="rul-MT-oaj" id="QrA-uR-HAg"/>
                         <outlet property="courseGradeTextbox" destination="t7n-Vo-46C" id="M6E-GA-QT5"/>
                         <outlet property="courseNameTextbox" destination="z51-So-6I9" id="oQo-X3-UH8"/>
                     </connections>
@@ -1183,7 +1183,7 @@
                                 </state>
                                 <connections>
                                     <action selector="highschool:" destination="MaT-g2-bHN" eventType="touchUpInside" id="JFG-eh-G6w"/>
-                                    <segue destination="Aeq-7b-amJ" kind="show" id="8U4-Db-oGf"/>
+                                    <segue destination="Aeq-7b-amJ" kind="show" id="L58-mE-DMi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1271,7 +1271,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="NJu-Os-j1G">
                                 <connections>
-                                    <segue destination="Oxu-HQ-cFE" kind="show" id="niv-rd-nBo"/>
+                                    <segue destination="Oxu-HQ-cFE" kind="show" identifier="add" id="niv-rd-nBo"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Calculate " id="JPr-zX-G1k">
@@ -1291,7 +1291,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="QKd-Ni-YsT"/>
         <segue reference="MWq-Dt-qce"/>
-        <segue reference="8U4-Db-oGf"/>
-        <segue reference="Tog-YS-6ti"/>
+        <segue reference="L58-mE-DMi"/>
+        <segue reference="niv-rd-nBo"/>
     </inferredMetricsTieBreakers>
 </document>
