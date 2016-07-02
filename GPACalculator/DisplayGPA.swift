@@ -44,13 +44,13 @@ class DisplayGPA: UIViewController, ADBannerViewDelegate{
         
         
         if education == "HS GPA"{
-            creditLabel.text = String("Total Classes: \(a)")
+            creditLabel.text = String("\(a)")
 
         } else {
-            creditLabel.text = String("Total Credit Hours: \(a)")
+            creditLabel.text = String("\(a)")
 
         }
-        GPARaw.text = String("Total Raw Score \(b)")
+        GPARaw.text = String("\(b)")
         display.text = String(c)
         
         totalCredits = 0

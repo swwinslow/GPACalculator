@@ -33,6 +33,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "gradeArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CourseTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():CourseTableViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -56,6 +64,11 @@
       </ContextState>
       <ContextState
          contextName = "CourseTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:CourseTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "creditArray">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "SingleCourseDetails.checkInformation() -&gt; Bool:SingleCourseDetails.swift">

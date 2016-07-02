@@ -6,6 +6,9 @@
 //  Copyright © 2016 Seth Winslow. All rights reserved.
 //
 
+// todo: look at updating the value of the grade if it is alreay set
+// look at getting rid of the x on the textfields
+
 import UIKit
 import CoreData
 
@@ -86,6 +89,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                 courseNameTextbox.text = hs.courseName
                 courseGradeTextbox.text = hs.courseGrade
                 courseCreditTextbox.text = hs.courseCredit
+                courseExtraTextBox.text = hs.courseExtra
             }
             
             // DISABLE THE COURSE CREDIT TEXTBOX
@@ -321,7 +325,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                 oldHighSchoolCourse?.courseName = courseNameTextbox.text!
                 oldHighSchoolCourse?.courseGrade = courseGradeTextbox.text!
                 oldHighSchoolCourse?.courseCredit = "1"
-                oldHighSchoolCourse?.courseExtra = courseCreditTextbox.text!
+                oldHighSchoolCourse?.courseExtra = courseExtraTextBox.text!
                 
                 // INIT AN ERROR WITH SAVING
                 var error: NSError?
@@ -359,6 +363,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
             print(HighSchoolCourse.first?.courseName)
             print(HighSchoolCourse.first?.courseExtra)
             print(HighSchoolCourse.first?.courseGrade)
+            print(HighSchoolCourse.first?.courseExtra)
         }
     }
 }
