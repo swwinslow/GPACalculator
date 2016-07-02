@@ -36,6 +36,9 @@
          contextName = "CourseTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():CourseTableViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = "education">
+            </PersistentString>
+            <PersistentString
                value = "creditArray">
             </PersistentString>
             <PersistentString
