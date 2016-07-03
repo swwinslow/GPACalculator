@@ -82,7 +82,7 @@ class CourseTableViewController: UITableViewController {
             }
             
             // RELOADING THE TABLE WITH THE NEW DATA
-            //self.tableView.reloadData()
+            self.tableView.reloadData()
         }
         
     }

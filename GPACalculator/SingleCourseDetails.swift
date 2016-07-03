@@ -6,7 +6,7 @@
 //  Copyright © 2016 Seth Winslow. All rights reserved.
 //
 
-// todo: look at updating the value of the grade if it is alreay set
+// todo: look up the AP and honrs crdits
 // look at getting rid of the x on the textfields
 
 import UIKit
@@ -62,6 +62,8 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         // IF THE EDUCATION IS COLLEGE
         if education == "College GPA"{
             
+            var setGrade : String = ""
+            
             // SETTING THE TEXTBOX OF THE GRADEE
             self.courseExtraTextBox.text = "N/A"
             self.courseGradeTextbox.text = "A+"
@@ -71,7 +73,15 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                 courseNameTextbox.text = c.courseName
                 courseGradeTextbox.text = c.courseGrade
                 courseCreditTextbox.text = c.courseCredit
+                
+                setGrade = c.courseGrade!
+                
             }
+            
+            // SET THE VALUE FOR THE PICKER VIEW
+            let rowPicker: Int = findRowForPickerGrade(setGrade)
+            gradePickerView.selectRow(rowPicker, inComponent: 0, animated: false)
+
             
             // DISABLE THE COURSE EXTRA TEXT FIELD
             courseExtraTextBox.userInteractionEnabled = false
@@ -82,7 +92,11 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         // IF THE EDUCATION IS HIGH SCHOOL
         if education == "HS GPA"{
             
-            // SETTING THE TEXT FIELD 
+            // SETTING THE TEXT FIELD
+            
+            var setExtra : String = ""
+            var setGrade : String = ""
+            
             
             // SEE IF PULLING IN SINLGE HIGH SCHOOL DATA COURSE
             if let hs = oldHighSchoolCourse{
@@ -90,7 +104,18 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                 courseGradeTextbox.text = hs.courseGrade
                 courseCreditTextbox.text = hs.courseCredit
                 courseExtraTextBox.text = hs.courseExtra
+            
+                setExtra = hs.courseExtra!
+                setGrade = hs.courseGrade!
             }
+            
+            // SET THE VALUE FOR THE PICKER VIEW
+            let rowPickerExtra: Int = findRowPickerExtra(setExtra)
+            extraPickerView.selectRow(rowPickerExtra, inComponent: 0, animated: true)
+            
+            let rowPickerGrade : Int = findRowForPickerGrade(setGrade)
+            gradePickerView.selectRow(rowPickerGrade, inComponent: 0, animated: true)
+
             
             // DISABLE THE COURSE CREDIT TEXTBOX
             courseCreditTextbox.userInteractionEnabled = false;
@@ -253,6 +278,66 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         } else {
             return true
         }
+    }
+    
+    func findRowPickerExtra(extra: String) -> Int {
+        if extra == "N/A" {
+            return 0
+        }
+        if extra == "AP"{
+            return 1
+        }
+        if extra == "Honors"{
+            return 2
+        }
+        return 0
+    }
+    
+    func findRowForPickerGrade(grade: String) -> Int {
+        if(grade == "A+"){
+            return 0
+        }
+        if(grade == "A"){
+            return 1
+        }
+        if(grade == "A-"){
+            return 2
+        }
+        if(grade == "B+"){
+            return 3
+        }
+        if(grade == "B"){
+            return 4
+        }
+        if(grade == "B-"){
+            return 5
+        }
+        if(grade == "C+"){
+            return 6
+        }
+        if(grade == "C"){
+            return 7
+        }
+        if(grade == "C-"){
+            return 8
+        }
+        if(grade == "D+"){
+            return 9
+        }
+        if(grade == "D"){
+            return 10
+        }
+        if(grade == "D-"){
+            return 11
+        }
+        if(grade == "F"){
+            return 12
+            
+        }
+        return 0
+        
+        
+        return 0
     }
 
     // SENDING BACK THE EDUCATION TO THE LAST VIEW CONTROLLER
