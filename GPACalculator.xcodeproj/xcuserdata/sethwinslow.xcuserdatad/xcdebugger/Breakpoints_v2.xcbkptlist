@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GPACalculator/FinalExamGrade.swift"
-            timestampString = "487657353.411233"
+            timestampString = "489296793.435526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "calculate60()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GPACalculator/FinalExamGrade.swift"
-            timestampString = "487657353.411233"
+            timestampString = "489296793.435526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
             landmarkName = "calculate65()"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GPACalculator/FinalExamGrade.swift"
-            timestampString = "487657353.411233"
+            timestampString = "489296793.435526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "calculate70()"
             landmarkType = "5">
          </BreakpointContent>
@@ -121,22 +121,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GPACalculator/SingleCourseDetails.swift"
-            timestampString = "489215922.053481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>

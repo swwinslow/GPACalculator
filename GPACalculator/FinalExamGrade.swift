@@ -6,6 +6,9 @@
 //  Copyright © 2015 Seth Winslow. All rights reserved.
 //
 
+// todo : String checking with the textboxes empty
+// making sure that the % gets deleted and then added again
+
 import UIKit
 import iAd
 
@@ -21,6 +24,59 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     @IBOutlet weak var percentage: UITextField!
     @IBOutlet weak var currentGradeTextBox: UITextField!
     @IBOutlet weak var finalWeightTextBox: UITextField!
+    
+    @IBAction func editingDidEndCurrentGrade(sender: AnyObject) {
+        currentGradeTextBox.text?.appendContentsOf("%")
+    }
+   
+    @IBAction func editingDidEndGradePercentage(sender: AnyObject) {
+        percentage.text?.appendContentsOf("%")
+    }
+   
+    
+    
+    @IBAction func editingDidBeginCurrentGrade(sender: AnyObject) {
+        if currentGradeTextBox.text != "" {
+            let currentText = currentGradeTextBox.text
+            currentGradeTextBox.text = currentText?.substringToIndex((currentText?.endIndex.predecessor())!)
+        }
+
+    }
+    
+    
+    @IBAction func editingDidBeginGradePercentage(sender: AnyObject) {
+        if percentage.text != "" {
+            let currentText = percentage.text
+            percentage.text = currentText?.substringToIndex((currentText?.endIndex.predecessor())!)
+        }
+        
+    }
+    @IBAction func editingDidBeingFinalExamWorth(sender: AnyObject) {
+        if finalWeightTextBox.text != "" {
+            let currentText = finalWeightTextBox.text
+            percentage.text = currentText?.substringToIndex((currentText?.endIndex.predecessor())!)
+        }
+    }
+    
+    
+    
+    @IBAction func editingDidEndFinalExam(sender: AnyObject) {
+        if finalWeightTextBox.text == "" {
+            
+        } else {
+            finalWeightTextBox.text?.appendContentsOf("%")
+
+        }
+    }
+    
+    
+    @IBAction func editingDidBeginFinalExam(sender: AnyObject) {
+        if finalWeightTextBox.text != "" {
+            let currentText = finalWeightTextBox.text
+            finalWeightTextBox.text = currentText?.substringToIndex((currentText?.endIndex.predecessor())!)
+        }
+        
+    }
     
     func calculate100() -> String{
         //final - 1)for the final... 2) for the course)
@@ -221,12 +277,12 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     
     func checkScore() -> Double {
         
-        let currentGrade = currentGradeTextBox.text
+        let currentText = currentGradeTextBox.text
+        let currrentGradeString : String = (currentText?.substringToIndex((currentText?.endIndex.predecessor())!))!
         
-        var x:Bool = isNumeric(currentGrade!)
+        let x:Bool = isNumeric(currrentGradeString)
         if(currentGradeTextBox.text != "" && x == true){
-            let currentGrade = currentGradeTextBox.text! as String
-            let doubleCurrentScore:Double = Double(currentGrade)!
+            let doubleCurrentScore:Double = Double(currrentGradeString)!
             
             if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
             {
@@ -252,13 +308,14 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     
     
     func checkNumbers() ->(final: Double, course: Double){
-        let number = finalWeightTextBox.text
-  
-        var x:Bool = isNumeric(number!)
+        let currentFinalExam = finalWeightTextBox.text
+        let currrentFinalString : String = (currentFinalExam?.substringToIndex((currentFinalExam?.endIndex.predecessor())!))!
+        
+        var x:Bool = isNumeric(currrentFinalString)
         
         if(finalWeightTextBox.text != "" && x == true){
-            let finalExamPercentage = finalWeightTextBox.text! as String
-            let doubleFinalExamPercentage:Double = Double(finalExamPercentage)!
+           
+            let doubleFinalExamPercentage:Double = Double(currrentFinalString)!
             
             if(doubleFinalExamPercentage < 0 || doubleFinalExamPercentage > 100 )
             {
