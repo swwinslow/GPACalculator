@@ -9,9 +9,9 @@
 //todo CHECK THE NUMBERS
 
 import UIKit
-import iAd
 
-class TargetGPA: UIViewController, ADBannerViewDelegate{
+
+class TargetGPA: UIViewController{
     
     var finalGPA:Double = 0.0
     var goal:Double = 0.0
@@ -40,54 +40,101 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
     var currentHoursString: String = ""
     var goalGPAString : String = ""
     var remainingHoursString :String = ""
+    var finalGPAString:String = ""
+    
+    var currentGPABoolean:Bool = false
+    var goalGPABolean: Bool = false
+    var currentHoursBoolean : Bool = false
+    var remainingHoursBoolean: Bool = false
     
     
    
-    func isCurrentGPACorrect() -> Bool{
+    func checkCurrentGPACorrect(){
         if currentGPATextField.text != "" {
-            currentGPAString = currentGPATextField.text!
-            return true
+            self.currentGPAString = currentGPATextField.text!
+            if currentGPAString >= "0" && currentGPAString < "5" {
+                currentGPABoolean = true
+            } else {
+                currentGPABoolean = false
+            }
+            
         } else {
-            return false
+            currentGPABoolean = false
         }
-        
-        
     }
     
-    func isGoalGPACorrect() -> Bool{
+    func checkGoalGPACorrect(){
         if goalGPATextField.text != "" {
-            goalGPAString = goalGPATextField.text!
-            return true
+            self.goalGPAString = goalGPATextField.text!
+            if goalGPAString >= "0" && goalGPAString < "5" {
+                goalGPABolean = true
+            } else {
+                goalGPABolean = false
+            }
         } else {
-            return false
+            goalGPABolean = false
         }
     }
     
-    func isCurrentHoursCorrect() -> Bool{
+    func checkCurrentHoursCorrect(){
         if currentHoursTextField.text != "" {
-            currentHoursString = currentHoursTextField.text!
-            return true
+            self.currentHoursString = currentHoursTextField.text!
+            if currentHoursString >= "1"{
+                currentHoursBoolean = true
+            } else {
+                currentHoursBoolean = false
+            }
         } else {
-            return false
+            currentHoursBoolean =  false
         }
     }
     
-    func isRemainingHoursCorrect() -> Bool{
+    func checkRemainingHoursCorrect(){
         if remainingHoursTextField.text != "" {
             remainingHoursString = remainingHoursTextField.text!
-            return true
+            if remainingHoursString >= "1"{
+                remainingHoursBoolean = true
+            } else {
+                remainingHoursBoolean = false
+            }
         } else {
-            return false
+            remainingHoursBoolean = false
         }
     }
     
-    @IBAction func calculateGPA(sender: AnyObject) {
-        var x:String = currentHoursTextField.text!
-        var currentGPA:Double = Double(x)!
-        
-        
+    func currentGPAToDouble() -> Double{
+        var currentGPAString:String = currentHoursTextField.text!
+        var currentGPADouble:Double = Double(currentGPAString)!
+        return currentGPADouble
+    }
+    
+    func currentHoursToDouble() -> Double {
         var y:String = currentHoursTextField.text!
-        var currentHours:Double = Double(y)!
+        var currentHoursDouble:Double = Double(y)!
+        return currentHoursDouble
+    }
+    
+    func goalGPAToDouble() -> Double {
+        var z:String = goalGPATextField.text!
+        var goalGPADouble:Double = Double(z)!
+        return goalGPADouble
+    }
+    
+    func remaingHoursToDouble() -> Double{
+        var a:String = remainingHoursTextField.text!
+        var hourRemaining:Double = Double(a)!
+        return hourRemaining
+    }
+    
+    
+   
+    @IBAction func calculateGPA(sender: AnyObject) {
+        //var x:String = currentHoursTextField.text!
+        var currentGPA:Double = currentGPAToDouble()
+        
+        
+        //  var y:String = currentHoursTextField.text!
+        var currentHours:Double = currentHoursToDouble()
         
         
         var z:String = goalGPATextField.text!
@@ -96,8 +143,8 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
         var targetGPA:Double = Double(z)!
         goal = Double(z)!
         
-        var a:String = remainingHoursTextField.text!
-        var hourRemaining:Double = Double(a)!
+        // var a:String = remainingHoursTextField.text!
+        var hourRemaining:Double = remaingHoursToDouble()
         
         var currentRawScore:Double = currentGPA * currentHours
         
@@ -109,8 +156,38 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
         
         finalGPA = aim / hourRemaining
         
-        print(finalGPA)
-
+        finalGPAString = "\(finalGPA)"
+    }
+    
+    func calculateGPA(){
+        //var x:String = currentHoursTextField.text!
+        var currentGPA:Double = currentG PAToDouble()
+        
+        
+        //  var y:String = currentHoursTextField.text!
+        var currentHours:Double = currentHoursToDouble()
+        
+        
+        var z:String = goalGPATextField.text!
+        
+        
+        var targetGPA:Double = Double(z)!
+        goal = Double(z)!
+        
+        // var a:String = remainingHoursTextField.text!
+        var hourRemaining:Double = remaingHoursToDouble()
+        
+        var currentRawScore:Double = currentGPA * currentHours
+        
+        var totalHours:Double = hourRemaining + currentHours
+        
+        var newRawScore:Double = totalHours * targetGPA
+        
+        var aim:Double = newRawScore - currentRawScore
+        
+        finalGPA = aim / hourRemaining
+        
+        finalGPAString = "\(finalGPA)"
     }
   
    
@@ -121,11 +198,13 @@ class TargetGPA: UIViewController, ADBannerViewDelegate{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        calculateGPA()
          let nextViewController = segue.destinationViewController as! GraduationGPADisplay
-        nextViewController.finalGPA = self.finalGPA
-        nextViewController.goal = self.goal
-        nextViewController.goalGPA.text = self.goalGPATextField.text
-        nextViewController.currentGPA.text = self.currentGPATextField.text
+        
+        nextViewController.goalGPAStringLoad = self.goalGPAString
+        nextViewController.targetGPAStringLoad = self.finalGPAString
+        nextViewController.currentGPAStringLoad = self.currentGPAString
         
 
     }

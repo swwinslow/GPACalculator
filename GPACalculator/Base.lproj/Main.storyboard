@@ -635,11 +635,6 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="59" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N8D-5t-3B0">
-                                <rect key="frame" x="316" y="110" width="264" height="30"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Remaining Hours:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-rO-bar">
                                 <rect key="frame" x="20" y="186" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -653,15 +648,14 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVX-If-Hz8">
-                                <rect key="frame" x="316" y="225" width="264" height="57"/>
+                                <rect key="frame" x="316" y="224" width="264" height="57"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
                                 <state key="normal" title="Help">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateGPA:" destination="h01-Pe-7bW" eventType="touchUpInside" id="f4U-89-ddn"/>
-                                    <action selector="saveCourse:" destination="Oxu-HQ-cFE" eventType="touchUpInside" id="Kxm-Ok-IjF"/>
+                                    <segue destination="uXi-1c-80J" kind="show" id="x4h-ln-OBw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuc-v5-Y6G">
@@ -672,12 +666,16 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="calculateGPA:" destination="h01-Pe-7bW" eventType="touchUpInside" id="BVl-yE-vye"/>
-                                    <action selector="saveCourse:" destination="Oxu-HQ-cFE" eventType="touchUpInside" id="bkP-fm-gh5"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="R6K-Re-vy1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2.76" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-MK-Jjy">
                                 <rect key="frame" x="316" y="72" width="264" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="59" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N8D-5t-3B0">
+                                <rect key="frame" x="316" y="110" width="264" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
@@ -724,21 +722,21 @@
                     <navigationItem key="navigationItem" title="Title" id="ZIR-Es-CqX">
                         <barButtonItem key="rightBarButtonItem" title="Calculate " id="Es5-xQ-x1c">
                             <connections>
-                                <action selector="calculateGPA:" destination="h01-Pe-7bW" id="6pL-Ib-qRg"/>
+                                <action selector="calculateGPA:" destination="h01-Pe-7bW" id="mnw-er-wFb"/>
                                 <segue destination="afQ-PP-kGO" kind="show" id="bLX-Ke-BX7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cummaliveGPA" destination="sl6-MK-Jjy" id="EY6-bc-U3f"/>
-                        <outlet property="goalGPA" destination="MV0-iW-jhl" id="55n-4O-EFo"/>
-                        <outlet property="hoursCompleted" destination="N8D-5t-3B0" id="nB1-uE-QDa"/>
-                        <outlet property="hoursRemaining" destination="nrB-Ko-Fb9" id="Vcj-Vs-qlM"/>
+                        <outlet property="currentGPATextField" destination="sl6-MK-Jjy" id="Nz2-zt-Bgc"/>
+                        <outlet property="currentHoursTextField" destination="N8D-5t-3B0" id="5uY-SA-OPg"/>
+                        <outlet property="goalGPATextField" destination="MV0-iW-jhl" id="TMs-P5-h2L"/>
+                        <outlet property="remainingHoursTextField" destination="nrB-Ko-Fb9" id="hVX-hv-pyn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UN2-pF-6L8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="-3942"/>
+            <point key="canvasLocation" x="1573" y="-4024"/>
         </scene>
         <!--Title-->
         <scene sceneID="5RZ-fl-t7F">
@@ -852,14 +850,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="b7U-j6-Ekn"/>
                     <connections>
-                        <outlet property="currentGPA" destination="GXt-Cu-4gz" id="72v-pH-yFS"/>
-                        <outlet property="final" destination="TyP-Od-mzB" id="x1d-is-sIA"/>
-                        <outlet property="goalGPA" destination="S13-Pn-DGM" id="xT1-cH-b5x"/>
+                        <outlet property="currentGPALabel" destination="GXt-Cu-4gz" id="Ng3-IP-5rI"/>
+                        <outlet property="goalGPALabel" destination="S13-Pn-DGM" id="tRq-KP-4UO"/>
+                        <outlet property="targetGPALabel" destination="TyP-Od-mzB" id="Qz1-SI-znM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiK-q2-NVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="-3942"/>
+            <point key="canvasLocation" x="2429" y="-4024"/>
         </scene>
         <!--Single Course Details-->
         <scene sceneID="v5a-Gy-XId">
@@ -1122,6 +1120,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cJt-0S-uOr"/>
+        <segue reference="R6K-Re-vy1"/>
+        <segue reference="x4h-ln-OBw"/>
         <segue reference="niv-rd-nBo"/>
     </inferredMetricsTieBreakers>
 </document>
