@@ -4,6 +4,9 @@
 //
 //  Created by Dennis Winslow on 1/4/16.
 //  Copyright © 2016 Seth Winslow. All rights reserved.
+
+// todo hook up the gps's + the final results
+
 //
 
 import UIKit
@@ -14,6 +17,9 @@ class GraduationGPADisplay: UIViewController, ADBannerViewDelegate  {
     
     
     @IBOutlet weak var final: UILabel!
+    @IBOutlet weak var currentGPA: UILabel!
+    @IBOutlet weak var goalGPA: UILabel!
+    
     var goal:Double = 0
     var finalGPA:Double = 0
     var p:String = ""
@@ -24,6 +30,7 @@ class GraduationGPADisplay: UIViewController, ADBannerViewDelegate  {
        
         print(finalGPA)
         
+        self.navigationItem.title = "Graduation GPA"
    
        
         var x:String = String(finalGPA)
