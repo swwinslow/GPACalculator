@@ -22,6 +22,17 @@
          contextName = "SingleCourseDetails.checkInformation() -&gt; Bool:SingleCourseDetails.swift">
       </ContextState>
       <ContextState
+         contextName = "GraduationGPADisplay.viewDidLoad() -&gt; ():GraduationGPADisplay.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "goalGPAString">
+            </PersistentString>
+            <PersistentString
+               value = "targetGPAStringLoad">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "mach_msg_trap:(null)">
          <PersistentStrings>
             <PersistentString
@@ -46,6 +57,9 @@
       <ContextState
          contextName = "TargetGPA.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TargetGPA.swift">
          <PersistentStrings>
+            <PersistentString
+               value = "currentGPAString">
+            </PersistentString>
             <PersistentString
                value = "finalGPAString">
             </PersistentString>

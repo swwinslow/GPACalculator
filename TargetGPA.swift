@@ -16,20 +16,8 @@ class TargetGPA: UIViewController{
     var finalGPA:Double = 0.0
     var goal:Double = 0.0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
-        
-        self.navigationItem.title = "Graduation GPA"
-        
-        
-    }
-
-
     @IBOutlet weak var currentGPATextField: UITextField!
-  
+    
     @IBOutlet weak var currentHoursTextField: UITextField!
     
     @IBOutlet weak var goalGPATextField: UITextField!
@@ -45,7 +33,26 @@ class TargetGPA: UIViewController{
     var currentGPABoolean:Bool = false
     var goalGPABolean: Bool = false
     var currentHoursBoolean : Bool = false
-    var remainingHoursBoolean: Bool = false
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        self.navigationItem.title = "Graduation GPA"
+        
+        currentGPATextField.text = "2.76"
+        currentHoursTextField.text = "59"
+        goalGPATextField.text = "3.0"
+        remainingHoursTextField.text = "61"
+        
+        
+    }
+
+
+      var remainingHoursBoolean: Bool = false
     
     
    
@@ -103,91 +110,84 @@ class TargetGPA: UIViewController{
     }
     
     func currentGPAToDouble() -> Double{
-        var currentGPAString:String = currentHoursTextField.text!
-        var currentGPADouble:Double = Double(currentGPAString)!
+        let currentGPAString:String = currentGPATextField.text!
+        let currentGPADouble:Double = Double(currentGPAString)!
         return currentGPADouble
     }
     
     func currentHoursToDouble() -> Double {
-        var y:String = currentHoursTextField.text!
-        var currentHoursDouble:Double = Double(y)!
+        let y:String = currentHoursTextField.text!
+        let currentHoursDouble:Double = Double(y)!
         return currentHoursDouble
     }
     
     func goalGPAToDouble() -> Double {
-        var z:String = goalGPATextField.text!
-        var goalGPADouble:Double = Double(z)!
+        let z:String = goalGPATextField.text!
+        let goalGPADouble:Double = Double(z)!
         return goalGPADouble
     }
     
     func remaingHoursToDouble() -> Double{
-        var a:String = remainingHoursTextField.text!
-        var hourRemaining:Double = Double(a)!
+        let a:String = remainingHoursTextField.text!
+        let hourRemaining:Double = Double(a)!
         return hourRemaining
+    }
+    
+    func checkValues() -> Bool {
+        checkGoalGPACorrect()
+        checkCurrentGPACorrect()
+        checkRemainingHoursCorrect()
+        checkCurrentHoursCorrect()
+        
+        if currentGPABoolean == true && currentHoursBoolean == true && goalGPABolean == true && remainingHoursBoolean == true{
+            return true
+        } else {
+            return false
+        }
     }
     
     
    
-    @IBAction func calculateGPA(sender: AnyObject) {
-        //var x:String = currentHoursTextField.text!
-        var currentGPA:Double = currentGPAToDouble()
-        
-        
-        //  var y:String = currentHoursTextField.text!
-        var currentHours:Double = currentHoursToDouble()
-        
-        
-        var z:String = goalGPATextField.text!
-        
-        
-        var targetGPA:Double = Double(z)!
-        goal = Double(z)!
-        
-        // var a:String = remainingHoursTextField.text!
-        var hourRemaining:Double = remaingHoursToDouble()
-        
-        var currentRawScore:Double = currentGPA * currentHours
-        
-        var totalHours:Double = hourRemaining + currentHours
-        
-        var newRawScore:Double = totalHours * targetGPA
-        
-        var aim:Double = newRawScore - currentRawScore
-        
-        finalGPA = aim / hourRemaining
-        
-        finalGPAString = "\(finalGPA)"
-    }
+    
     
     func calculateGPA(){
-        //var x:String = currentHoursTextField.text!
-        var currentGPA:Double = currentG PAToDouble()
+        
+        let isValuesCorrect : Bool = checkValues()
+        
+        if isValuesCorrect == true {
+            
+        
+        
+        let currentGPA:Double = currentGPAToDouble()
         
         
         //  var y:String = currentHoursTextField.text!
-        var currentHours:Double = currentHoursToDouble()
+        let currentHours:Double = currentHoursToDouble()
         
         
-        var z:String = goalGPATextField.text!
+        let z:String = goalGPATextField.text!
         
         
-        var targetGPA:Double = Double(z)!
+        let targetGPA:Double = Double(z)!
         goal = Double(z)!
         
         // var a:String = remainingHoursTextField.text!
-        var hourRemaining:Double = remaingHoursToDouble()
+        let hourRemaining:Double = remaingHoursToDouble()
         
-        var currentRawScore:Double = currentGPA * currentHours
+        let currentRawScore:Double = currentGPA * currentHours
         
-        var totalHours:Double = hourRemaining + currentHours
+        let totalHours:Double = hourRemaining + currentHours
         
-        var newRawScore:Double = totalHours * targetGPA
+        let newRawScore:Double = totalHours * targetGPA
         
-        var aim:Double = newRawScore - currentRawScore
+        let aim:Double = newRawScore - currentRawScore
         
         finalGPA = aim / hourRemaining
         
         finalGPAString = "\(finalGPA)"
+        } else {
+             print ("there is an error")
+        }
     }
   
    

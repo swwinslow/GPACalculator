@@ -23,26 +23,27 @@ class GraduationGPADisplay: UIViewController  {
     var currentGPADouble:Double = 0.0
     var currentGPAStringLoad:String = "2.76"
     var targerGPADouble:Double = 0.0
-    var targetGPAStringLoad:String = "3.5"
+    var targetGPAStringLoad:String = "3.23"
     
      override func viewDidLoad() {
         super.viewDidLoad()
        
-       // print(finalGPA)
-        
+        print(self.targetGPAStringLoad)
+        print(self.currentGPAStringLoad)
+        print(self.goalGPAStringLoad)
         self.navigationItem.title = "Graduation GPA"
         
+    
+        let targetGPADouble: Double = Double(targetGPAStringLoad)!
         
-        var targetGPAString:String = (String(format: "%.2f", targetGPAStringLoad))
-        targetGPALabel.text = "\(targetGPAString)"
+        targetGPALabel.text = String(format: "%.2f", targetGPADouble)
         
-        var currentGPAString:String = (String(format: "%.2f", currentGPAStringLoad))
+       // var currentGPAString:String = (String(format: "%.2f", currentGPAStringLoad))
 
-        currentGPALabel.text = "\(currentGPAString)"
+        currentGPALabel.text = "\(currentGPAStringLoad)"
         
-        var goalGPAString:String = (String(format: "%.2f", goalGPAStringLoad))
 
-        goalGPALabel.text = "\(goalGPAString)"
+        goalGPALabel.text = "\(goalGPAStringLoad)"
        
         
        
