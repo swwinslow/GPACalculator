@@ -117,5 +117,41 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "TargetGPA.checkCurrentGPACorrect() -&gt; ():TargetGPA.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentGPABoolean">
+            </PersistentString>
+            <PersistentString
+               value = "currentGPAString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TargetGPA.checkValues() -&gt; Bool:TargetGPA.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "goalGPABolean">
+            </PersistentString>
+            <PersistentString
+               value = "currentGPABoolean">
+            </PersistentString>
+            <PersistentString
+               value = "remainingHoursBoolean">
+            </PersistentString>
+            <PersistentString
+               value = "currentHoursBoolean">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TargetGPA.shouldPerformSegueWithIdentifier(String, sender : AnyObject?) -&gt; Bool:TargetGPA.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "isValuesCorrect">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

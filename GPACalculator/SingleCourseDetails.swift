@@ -335,9 +335,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
             
         }
         return 0
-        
-        
-        return 0
+    
     }
 
     // SENDING BACK THE EDUCATION TO THE LAST VIEW CONTROLLER
