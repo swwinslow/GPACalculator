@@ -31,7 +31,7 @@ class GraduationGPADisplay: UIViewController  {
         print(self.targetGPAStringLoad)
         print(self.currentGPAStringLoad)
         print(self.goalGPAStringLoad)
-        self.navigationItem.title = "Graduation GPA"
+        self.navigationItem.title = "Results"
         
     
         let targetGPADouble: Double = Double(targetGPAStringLoad)!

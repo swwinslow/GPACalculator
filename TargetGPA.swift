@@ -54,13 +54,11 @@ class TargetGPA: UIViewController{
 
       var remainingHoursBoolean: Bool = false
     
-    
-   
     func checkCurrentGPACorrect(){
         if currentGPATextField.text != "" {
             self.currentGPAString = currentGPATextField.text!
             if let currentGPADouble = Double(currentGPAString) {
-                if currentGPADouble >= 0 && currentGPADouble < 5 {
+                if currentGPADouble >= 0 && currentGPADouble <= 5 {
                     currentGPABoolean = true
                 } else {
                     currentGPABoolean = false
@@ -79,7 +77,7 @@ class TargetGPA: UIViewController{
             self.goalGPAString = goalGPATextField.text!
             
             if let goalGPADouble = Double(goalGPAString) {
-                if goalGPADouble >= 0 && goalGPADouble < 5 {
+                if goalGPADouble >= 0 {
                     goalGPABolean = true
                 } else {
                     goalGPABolean = false
@@ -97,7 +95,7 @@ class TargetGPA: UIViewController{
             self.currentHoursString = currentHoursTextField.text!
             if let currentHoursDouble = Double(currentHoursString) {
                 
-                if currentHoursDouble >= 0 {
+                if currentHoursDouble >= 0 && currentHoursDouble <= 200 {
                     currentHoursBoolean = true
                 } else {
                     currentHoursBoolean = false
@@ -115,8 +113,8 @@ class TargetGPA: UIViewController{
             remainingHoursString = remainingHoursTextField.text!
             
             if let remaingHoursDouble = Double(remainingHoursString) {
-               
-                if remaingHoursDouble >= 0 {
+                
+                if remaingHoursDouble >= 0  {
                     remainingHoursBoolean = true
                 } else {
                     remainingHoursBoolean = false
@@ -127,6 +125,14 @@ class TargetGPA: UIViewController{
         } else {
             remainingHoursBoolean = false
         }
+        
+    }
+    
+    func checkValues(){
+        checkRemainingHoursCorrect()
+        checkCurrentHoursCorrect()
+        checkGoalGPACorrect()
+        checkCurrentGPACorrect()
         
     }
     
@@ -153,33 +159,38 @@ class TargetGPA: UIViewController{
         let hourRemaining:Double = Double(a)!
         return hourRemaining
     }
+
     
-    func checkValues() -> Bool {
-        checkGoalGPACorrect()
-        checkCurrentGPACorrect()
-        checkRemainingHoursCorrect()
-        checkCurrentHoursCorrect()
-        
+   
+    
+    
+    
+    
+    func sendAlert(){
+    
         if currentGPABoolean == true && currentHoursBoolean == true && goalGPABolean == true && remainingHoursBoolean == true{
-            return true
-        } else if currentGPABoolean == false && currentHoursBoolean == false && goalGPABolean == false && remainingHoursBoolean == false{
+            // do nothing.. data fine
+        } else {
+            if currentGPABoolean == false && currentHoursBoolean == false && goalGPABolean == false && remainingHoursBoolean == false{
             let alert = UIAlertView(title: "Error", message: "Please fill in data to compute your graduation GPA", delegate: nil, cancelButtonTitle: "Try again")
             alert.show()
-            return false
-            
-        } else if currentGPABoolean == false || goalGPABolean == false {
-            let alert = UIAlertView(title: "Error - GPA", message: "GPAs are not in range", delegate: nil, cancelButtonTitle: "Try Again")
-            alert.show()
-            return false
-           
-        } else if currentHoursBoolean == false || remainingHoursBoolean == false {
-            var alert = UIAlertView(title: "Error - Hours", message: "Hours are not in range", delegate: nil, cancelButtonTitle: "Try again")
-            alert.show()
-            return false
-        }  else {
-            return false
+                
+            } else {
+                if currentGPABoolean == false || goalGPABolean == false {
+                    let alert = UIAlertView(title: "Error - GPA", message: "GPAs are not in range", delegate: nil, cancelButtonTitle: "Try Again")
+                    alert.show()
+                } else {
+                    if currentHoursBoolean == false || remainingHoursBoolean == false {
+                        var alert = UIAlertView(title: "Error - Hours", message: "Hours are not in range", delegate: nil, cancelButtonTitle: "Try again")
+                        alert.show()
+                    }  else {
+                    }
+                }
+            }
         }
     }
+    
+    
     
     
    
@@ -188,33 +199,35 @@ class TargetGPA: UIViewController{
     
     
     @IBAction func calculateGPAButton(sender: AnyObject) {
-        isValuesCorrect = checkValues()
-        
-        if isValuesCorrect == true {
+       
+        checkValues()
+        if remainingHoursBoolean == true && currentHoursBoolean == true && goalGPABolean == true && currentGPABoolean == true{
             
             
             
-            let currentGPA:Double = currentGPAToDouble()
+            let currentGPADouble:Double = currentGPAToDouble()
             
             
-            //  var y:String = currentHoursTextField.text!
-            let currentHours:Double = currentHoursToDouble()
+            let currentHoursDouble:Double = currentHoursToDouble()
             
             
-            let z:String = goalGPATextField.text!
+            let goalGPADouble:Double = goalGPAToDouble()
+            
+            let hoursRemainingDouble:Double = remaingHoursToDouble()
             
             
-            let targetGPA:Double = Double(z)!
-            goal = Double(z)!
+           
+             
             
-            // var a:String = remainingHoursTextField.text!
+            
+            
             let hourRemaining:Double = remaingHoursToDouble()
             
-            let currentRawScore:Double = currentGPA * currentHours
+            let currentRawScore:Double = currentGPADouble * currentHoursDouble
             
-            let totalHours:Double = hourRemaining + currentHours
+            let totalHours:Double = hoursRemainingDouble + currentHoursDouble
             
-            let newRawScore:Double = totalHours * targetGPA
+            let newRawScore:Double = totalHours * goalGPADouble
             
             let aim:Double = newRawScore - currentRawScore
             
@@ -222,70 +235,27 @@ class TargetGPA: UIViewController{
             
             self.finalGPAString = "\(finalGPA)"
             
-            //performSegueWithIdentifier("calculate", sender: self)
+           performSegueWithIdentifier("calculate", sender: self)
+
             
             
         } else {
             print ("there is an error")
-            self.shouldPerformSegueWithIdentifier("calculate", sender: self)
+            sendAlert()
 
         }
 
     }
     
-    func checkGPAFunction() {
-        isValuesCorrect = checkValues()
-        
-        if isValuesCorrect == true {
-            
-            
-            
-            let currentGPA:Double = currentGPAToDouble()
-            
-            
-            //  var y:String = currentHoursTextField.text!
-            let currentHours:Double = currentHoursToDouble()
-            
-            
-            let z:String = goalGPATextField.text!
-            
-            
-            let targetGPA:Double = Double(z)!
-            goal = Double(z)!
-            
-            // var a:String = remainingHoursTextField.text!
-            let hourRemaining:Double = remaingHoursToDouble()
-            
-            let currentRawScore:Double = currentGPA * currentHours
-            
-            let totalHours:Double = hourRemaining + currentHours
-            
-            let newRawScore:Double = totalHours * targetGPA
-            
-            let aim:Double = newRawScore - currentRawScore
-            
-            finalGPA = aim / hourRemaining
-            
-            self.finalGPAString = "\(finalGPA)"
-            
-            //performSegueWithIdentifier("calculate", sender: self)
-            
-            
-        } else {
-            print ("there is an error")
-            self.shouldPerformSegueWithIdentifier("calculate", sender: self)
-            
-        }
-        
-    }
-
+    
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "calculate"{
-            isValuesCorrect = checkValues()
-            checkGPAFunction()
+            //bisValuesCorrect = checkValues()
+            //checkGPAFunction()
             if isValuesCorrect == false {
                 print("we have stopped it ")
+                sendAlert()
                 return false
             } else {
                 return true

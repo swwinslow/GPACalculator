@@ -40,6 +40,8 @@
 		6D31F0271D1E4E5F0024793A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31F0251D1E4E5F0024793A /* Course.swift */; };
 		6D31F0291D1E4E850024793A /* SingleCourseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31F0281D1E4E850024793A /* SingleCourseDetails.swift */; };
 		6D31F02B1D1F4F120024793A /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31F02A1D1F4F120024793A /* CourseTableViewController.swift */; };
+		6D41234F1D2CA6C3004B3A23 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D41234E1D2CA6C3004B3A23 /* CollectionViewController.swift */; };
+		6D4123511D2CB076004B3A23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4123501D2CB076004B3A23 /* MainViewController.swift */; };
 		6D703D601D03712A009E1593 /* FinalExamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */; };
 		6D8317501D07BAB400A08DB1 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D83174F1D07BAB400A08DB1 /* ScrollView.swift */; };
 		6DBD40931D0A7E78000565F3 /* sub2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40921D0A7E78000565F3 /* sub2.swift */; };
@@ -106,6 +108,8 @@
 		6D31F0251D1E4E5F0024793A /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		6D31F0281D1E4E850024793A /* SingleCourseDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCourseDetails.swift; sourceTree = "<group>"; };
 		6D31F02A1D1F4F120024793A /* CourseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
+		6D41234E1D2CA6C3004B3A23 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		6D4123501D2CB076004B3A23 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalExamTableView.swift; path = ../FinalExamTableView.swift; sourceTree = "<group>"; };
 		6D83174F1D07BAB400A08DB1 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = ../ScrollView.swift; sourceTree = "<group>"; };
 		6DBD40921D0A7E78000565F3 /* sub2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sub2.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		55AC03DA1C3106B800093A08 = {
 			isa = PBXGroup;
 			children = (
+				6D4123501D2CB076004B3A23 /* MainViewController.swift */,
 				554B33861C8C02F300529306 /* iAd.framework */,
 				553EDAAE1C3A57F50063DD50 /* Social.framework */,
 				55AC03E51C3106B800093A08 /* GPACalculator */,
@@ -177,6 +182,7 @@
 				55AC03E81C3106B800093A08 /* ViewController.swift */,
 				5527CBA31C913B7C009034FC /* SubGPAMenu.swift */,
 				6D1421581D0FC213004982A6 /* Main.storyboard */,
+				6D41234E1D2CA6C3004B3A23 /* CollectionViewController.swift */,
 				6D31F02A1D1F4F120024793A /* CourseTableViewController.swift */,
 				6D31F0281D1E4E850024793A /* SingleCourseDetails.swift */,
 				6D08FF771D16549E0007BBA9 /* EditCourseViewController.swift */,
@@ -371,6 +377,7 @@
 				6D31F0261D1E4E5F0024793A /* Course+CoreDataProperties.swift in Sources */,
 				6D703D601D03712A009E1593 /* FinalExamTableView.swift in Sources */,
 				6D31F0291D1E4E850024793A /* SingleCourseDetails.swift in Sources */,
+				6D4123511D2CB076004B3A23 /* MainViewController.swift in Sources */,
 				55AC03E91C3106B800093A08 /* ViewController.swift in Sources */,
 				6D08FF721D13B1950007BBA9 /* GPACalculator.xcdatamodeld in Sources */,
 				6D1F2A821D24B69D00FD9073 /* HSCourse+CoreDataProperties.swift in Sources */,
@@ -385,6 +392,7 @@
 				5527CBA41C913B7C009034FC /* SubGPAMenu.swift in Sources */,
 				55C1A5591C390443006CFBB0 /* DisplayGPA.swift in Sources */,
 				6DBD409B1D0D2595000565F3 /* CourseCell.swift in Sources */,
+				6D41234F1D2CA6C3004B3A23 /* CollectionViewController.swift in Sources */,
 				6D1F2A831D24B69D00FD9073 /* HSCourse.swift in Sources */,
 				559800D71CB0EBC6007E0D1C /* ContentViewController.swift in Sources */,
 				551E83DC1C326652003CCA4C /* CourseHelpScreen.swift in Sources */,
