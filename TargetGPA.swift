@@ -196,6 +196,42 @@ class TargetGPA: UIViewController{
    
     var isValuesCorrect : Bool = false
     
+    func calculateGPA() -> String {
+        
+        let currentGPADouble:Double = currentGPAToDouble()
+        
+        
+        let currentHoursDouble:Double = currentHoursToDouble()
+        
+        
+        let goalGPADouble:Double = goalGPAToDouble()
+        
+        let hoursRemainingDouble:Double = remaingHoursToDouble()
+        
+        
+        
+        
+        
+        
+        
+        let hourRemaining:Double = remaingHoursToDouble()
+        
+        let currentRawScore:Double = currentGPADouble * currentHoursDouble
+        
+        let totalHours:Double = hoursRemainingDouble + currentHoursDouble
+        
+        let newRawScore:Double = totalHours * goalGPADouble
+        
+        let aim:Double = newRawScore - currentRawScore
+        
+        finalGPA = aim / hourRemaining
+        
+        self.finalGPAString = "\(finalGPA)"
+        return "\(finalGPA)"
+
+        
+    }
+    
     
     
     @IBAction func calculateGPAButton(sender: AnyObject) {
@@ -252,13 +288,15 @@ class TargetGPA: UIViewController{
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "calculate"{
             //bisValuesCorrect = checkValues()
-            //checkGPAFunction()
-            if isValuesCorrect == false {
+            checkValues()
+            if remainingHoursBoolean == true && currentHoursBoolean == true && goalGPABolean == true && currentGPABoolean == true{
+                return true
+
+                
+            } else {
                 print("we have stopped it ")
                 sendAlert()
                 return false
-            } else {
-                return true
             }
             
         }
@@ -279,7 +317,7 @@ class TargetGPA: UIViewController{
             let nextViewController = segue.destinationViewController as! GraduationGPADisplay
             
             nextViewController.goalGPAStringLoad = self.goalGPAString
-            nextViewController.targetGPAStringLoad = self.finalGPAString
+            nextViewController.targetGPAStringLoad = calculateGPA()
             nextViewController.currentGPAStringLoad = self.currentGPAString
             
         }

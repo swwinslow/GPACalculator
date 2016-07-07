@@ -19,6 +19,8 @@ class ViewPageController: UIViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         
+        self.navigationItem.title = "Help"
+        
         //slide show
         
         self.pageTitles = NSArray(objects: "Final Exam", "Graduation GPA")
