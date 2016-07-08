@@ -43,10 +43,7 @@ class TargetGPA: UIViewController{
         
         self.navigationItem.title = "Graduation GPA"
         
-        currentGPATextField.text = "2.76"
-        currentHoursTextField.text = "59"
-        goalGPATextField.text = "3.0"
-        remainingHoursTextField.text = "61"
+        
         
         
     }

@@ -26,12 +26,16 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     @IBOutlet weak var finalWeightTextBox: UITextField!
     
     @IBAction func editingDidEndCurrentGrade(sender: AnyObject) {
-        currentGradeTextBox.text?.appendContentsOf("%")
+        if currentGradeTextBox.text == "" {
+            
+            
+        } else {
+            currentGradeTextBox.text?.appendContentsOf("%")
+            
+        }
+        
     }
    
-    @IBAction func editingDidEndGradePercentage(sender: AnyObject) {
-        percentage.text?.appendContentsOf("%")
-    }
    
     
     
@@ -44,39 +48,46 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
     }
     
     
-    @IBAction func editingDidBeginGradePercentage(sender: AnyObject) {
+    @IBAction func editingDidBeginPercentage(sender: AnyObject) {
         if percentage.text != "" {
             let currentText = percentage.text
             percentage.text = currentText?.substringToIndex((currentText?.endIndex.predecessor())!)
         }
-        
-    }
-    @IBAction func editingDidBeingFinalExamWorth(sender: AnyObject) {
-        if finalWeightTextBox.text != "" {
-            let currentText = finalWeightTextBox.text
-            percentage.text = currentText?.substringToIndex((currentText?.endIndex.predecessor())!)
-        }
     }
     
     
-    
-    @IBAction func editingDidEndFinalExam(sender: AnyObject) {
-        if finalWeightTextBox.text == "" {
+    @IBAction func editingDidEndPercentage(sender: AnyObject) {
+        if percentage.text == "" {
+            
             
         } else {
-            finalWeightTextBox.text?.appendContentsOf("%")
-
+            percentage.text?.appendContentsOf("%")
+            
         }
+        
     }
     
     
-    @IBAction func editingDidBeginFinalExam(sender: AnyObject) {
+    @IBAction func editingDidEndFinalExamTextField(sender: AnyObject) {
+        if finalWeightTextBox.text == "" {
+           
+
+        } else {
+             finalWeightTextBox.text?.appendContentsOf("%")
+            
+        }
+
+    }
+    
+    @IBAction func editingDidBeginFinalExamTextField(sender: AnyObject) {
+        
         if finalWeightTextBox.text != "" {
             let currentText = finalWeightTextBox.text
             finalWeightTextBox.text = currentText?.substringToIndex((currentText?.endIndex.predecessor())!)
         }
-        
     }
+    
+    
     
     func calculate100() -> String{
         //final - 1)for the final... 2) for the course)
@@ -274,25 +285,82 @@ class FinalExamGrade: UIViewController, ADBannerViewDelegate{
         }
     }
     
+    func checkValues(){
+        checkCurrentScore()
+        checkFinalExamScore()
+        checkPercentageScore()
+        
+    }
+    
+    func checkCurrentScore(){
+        currentScoreBoolean = false
+    }
+    
+    func checkFinalExamScore(){
+        finalExamWeightBoolean = false
+    }
+    
+    func checkPercentageScore(){
+        percentageGradeBoolean = false
+    }
+    
+    var currentScoreBoolean : Bool = false
+    var finalExamWeightBoolean : Bool = false
+    var percentageGradeBoolean : Bool = false
+    
+    
+    
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "CalculateFinalExam"{
+            checkValues()
+            if currentScoreBoolean == true && finalExamWeightBoolean == true && percentageGradeBoolean == true{
+                
+                return true
+            } else {
+                sendAlert()
+                return false
+            }
+        }
+        return true
+        
+    }
+    
+    func sendAlert(){
+        
+    }
     
     func checkScore() -> Double {
         
         let currentText = currentGradeTextBox.text
-        let currrentGradeString : String = (currentText?.substringToIndex((currentText?.endIndex.predecessor())!))!
         
-        let x:Bool = isNumeric(currrentGradeString)
-        if(currentGradeTextBox.text != "" && x == true){
-            let doubleCurrentScore:Double = Double(currrentGradeString)!
+        
+        if(currentGradeTextBox.text != ""){
             
-            if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
-            {
-                //needs to issue an alert about the low or the large number
+            let currrentGradeString : String = (currentText?.substringToIndex((currentText?.endIndex.predecessor())!))!
+            
+            let x:Bool = isNumeric(currrentGradeString)
+
+            if (x == true){
+                
+                let doubleCurrentScore:Double = Double(currrentGradeString)!
+            
+                if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
+                {
+                    //needs to issue an alert about the low or the large number
+                }
+                else{
+                    return doubleCurrentScore
+                }
+            } else {
+                
+                let alertView = UIAlertController(title: "No Number", message: "The value you entered is not a number", preferredStyle: .Alert)
+                alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                presentViewController(alertView, animated: true, completion: nil)
             }
-            else{
-                return doubleCurrentScore
-            }
-        }
-        else{
+
+
+        } else{
         
             
             let alertView = UIAlertController(title: "No Number", message: "The value you entered is not a number", preferredStyle: .Alert)
