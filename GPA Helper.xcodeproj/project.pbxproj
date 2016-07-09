@@ -12,8 +12,6 @@
 		551E83DE1C326D71003CCA4C /* CoursePlanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551E83DD1C326D71003CCA4C /* CoursePlanScreen.swift */; };
 		5527CBA41C913B7C009034FC /* SubGPAMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527CBA31C913B7C009034FC /* SubGPAMenu.swift */; };
 		553EDAAD1C3A52200063DD50 /* GraduationGPADisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553EDAAC1C3A52200063DD50 /* GraduationGPADisplay.swift */; };
-		553EDAAF1C3A57F50063DD50 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553EDAAE1C3A57F50063DD50 /* Social.framework */; };
-		554B33871C8C02F300529306 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554B33861C8C02F300529306 /* iAd.framework */; };
 		554B33891C8D487C00529306 /* FinalExamScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B33881C8D487C00529306 /* FinalExamScores.swift */; };
 		557CAEDD1C35F51600309AAB /* FinalExamGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557CAEDC1C35F51600309AAB /* FinalExamGrade.swift */; };
 		559800D51CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559800D41CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift */; };
@@ -75,9 +73,7 @@
 		551E83DD1C326D71003CCA4C /* CoursePlanScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePlanScreen.swift; sourceTree = "<group>"; };
 		5527CBA31C913B7C009034FC /* SubGPAMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubGPAMenu.swift; path = ../SubGPAMenu.swift; sourceTree = "<group>"; };
 		553EDAAC1C3A52200063DD50 /* GraduationGPADisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraduationGPADisplay.swift; sourceTree = "<group>"; };
-		553EDAAE1C3A57F50063DD50 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		553EDAB01C3A5CFB0063DD50 /* GPACalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GPACalculator.entitlements; sourceTree = "<group>"; };
-		554B33861C8C02F300529306 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		554B33881C8D487C00529306 /* FinalExamScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalExamScores.swift; sourceTree = "<group>"; };
 		557CAEDC1C35F51600309AAB /* FinalExamGrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalExamGrade.swift; sourceTree = "<group>"; };
 		559800D41CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAAdditionCourseHS.swift; sourceTree = "<group>"; };
@@ -127,8 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554B33871C8C02F300529306 /* iAd.framework in Frameworks */,
-				553EDAAF1C3A57F50063DD50 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				6D4123501D2CB076004B3A23 /* MainViewController.swift */,
-				554B33861C8C02F300529306 /* iAd.framework */,
-				553EDAAE1C3A57F50063DD50 /* Social.framework */,
 				55AC03E51C3106B800093A08 /* GPACalculator */,
 				55AC03FD1C3106B800093A08 /* GPACalculatorTests */,
 				55AC04081C3106B800093A08 /* GPACalculatorUITests */,

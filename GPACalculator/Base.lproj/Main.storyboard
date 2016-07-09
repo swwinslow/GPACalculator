@@ -10,7 +10,7 @@
         <!--GPA HELPER-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -108,7 +108,7 @@
         <!--DisplayGPA-->
         <scene sceneID="xMc-M9-6R7">
             <objects>
-                <viewController id="utm-kC-cY6" customClass="DisplayGPA" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="utm-kC-cY6" customClass="DisplayGPA" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i9r-dL-peo"/>
                         <viewControllerLayoutGuide type="bottom" id="QmT-rd-R3x"/>
@@ -249,7 +249,7 @@
         <!--Content View Controller-->
         <scene sceneID="Vb8-Tw-ADa">
             <objects>
-                <viewController storyboardIdentifier="ContentViewCotroller" id="QWD-65-kfH" customClass="ContentViewController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentViewCotroller" id="QWD-65-kfH" customClass="ContentViewController" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NDQ-82-Z1d"/>
                         <viewControllerLayoutGuide type="bottom" id="CIX-ev-ded"/>
@@ -299,7 +299,7 @@
         <!--View Page Controller-->
         <scene sceneID="BOK-YT-IQR">
             <objects>
-                <viewController id="uXi-1c-80J" customClass="ViewPageController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uXi-1c-80J" customClass="ViewPageController" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jbl-jm-ZfH"/>
                         <viewControllerLayoutGuide type="bottom" id="Ujy-Py-k7M"/>
@@ -325,7 +325,7 @@
         <!--Title-->
         <scene sceneID="l9Y-ni-H6e">
             <objects>
-                <viewController id="c7d-Ge-yts" customClass="FinalExamGrade" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c7d-Ge-yts" customClass="FinalExamGrade" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3VW-rn-Kpq"/>
                         <viewControllerLayoutGuide type="bottom" id="KJY-5q-xoO"/>
@@ -452,7 +452,7 @@
         <!--Final Exam Table View-->
         <scene sceneID="snH-gn-4GQ">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7JV-D8-7DV" customClass="FinalExamTableView" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7JV-D8-7DV" customClass="FinalExamTableView" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bsy-XZ-mnx"/>
                         <viewControllerLayoutGuide type="bottom" id="Xfz-rO-FP6"/>
@@ -546,7 +546,7 @@
         <!--Title-->
         <scene sceneID="nGr-cB-DxX">
             <objects>
-                <viewController id="h01-Pe-7bW" customClass="TargetGPA" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h01-Pe-7bW" customClass="TargetGPA" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O3g-5o-Ioj"/>
                         <viewControllerLayoutGuide type="bottom" id="N6i-TR-Rq8"/>
@@ -658,7 +658,7 @@
         <!--Title-->
         <scene sceneID="5RZ-fl-t7F">
             <objects>
-                <viewController id="afQ-PP-kGO" customClass="GraduationGPADisplay" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="afQ-PP-kGO" customClass="GraduationGPADisplay" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GkC-mK-C2J"/>
                         <viewControllerLayoutGuide type="bottom" id="g4j-h0-q2D"/>
@@ -774,7 +774,7 @@
         <!--Title-->
         <scene sceneID="v5a-Gy-XId">
             <objects>
-                <viewController id="Oxu-HQ-cFE" customClass="SingleCourseDetails" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Oxu-HQ-cFE" customClass="SingleCourseDetails" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EWh-eJ-Art"/>
                         <viewControllerLayoutGuide type="bottom" id="qwa-rV-FvN"/>
@@ -885,7 +885,7 @@
         <!--Sub2-->
         <scene sceneID="lJg-fd-5Ho">
             <objects>
-                <viewController id="MaT-g2-bHN" customClass="sub2" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MaT-g2-bHN" customClass="sub2" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1XT-l0-Nrz"/>
                         <viewControllerLayoutGuide type="bottom" id="Nh2-EM-iJk"/>
@@ -940,13 +940,13 @@
         <!--Title-->
         <scene sceneID="vV0-y2-2Yl">
             <objects>
-                <tableViewController id="Aeq-7b-amJ" customClass="CourseTableViewController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Aeq-7b-amJ" customClass="CourseTableViewController" customModule="GPA_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" id="QyM-Ym-NN6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="49" id="oPf-Y8-B6U" customClass="CustomCellTableViewCell" customModule="GPACalculator" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="49" id="oPf-Y8-B6U" customClass="CustomCellTableViewCell" customModule="GPA_Helper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oPf-Y8-B6U" id="nEG-k7-ff8">

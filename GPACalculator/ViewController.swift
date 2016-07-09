@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import iAd
+
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var adBanner: ADBannerView?
     override func viewDidLoad() {
         super.viewDidLoad()
     }

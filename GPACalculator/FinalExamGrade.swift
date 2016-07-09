@@ -10,9 +10,8 @@
 // making sure that the % gets deleted and then added again
 
 import UIKit
-import iAd
 
-class FinalExamGrade: UIViewController, ADBannerViewDelegate{
+class FinalExamGrade: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()

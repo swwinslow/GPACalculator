@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import iAd
 
-class DisplayGPA: UIViewController, ADBannerViewDelegate{
+
+class DisplayGPA: UIViewController{
     
     var totalRawScore:Double = 0
     var totalCredits:Double = 0

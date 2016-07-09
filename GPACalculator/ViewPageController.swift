@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import iAd
 
 class ViewPageController: UIViewController, UIPageViewControllerDataSource {
     

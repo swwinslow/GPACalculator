@@ -7,15 +7,13 @@
 //
 
 import UIKit
-import iAd
 
-class GPAAdditionCourseCOLLEGE: UIViewController, ADBannerViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
+class GPAAdditionCourseCOLLEGE: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     var classNumber:String = "0"
     var totalRaw:Double = 0
     var totalCredits:Double = 0
 
-    @IBOutlet weak var adBanner: ADBannerView?
     
     @IBOutlet weak var C1Grade: UITextField!
     @IBOutlet weak var C1Label: UILabel!
