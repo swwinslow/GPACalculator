@@ -45,6 +45,7 @@
 		6D4123511D2CB076004B3A23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4123501D2CB076004B3A23 /* MainViewController.swift */; };
 		6D703D601D03712A009E1593 /* FinalExamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */; };
 		6D8317501D07BAB400A08DB1 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D83174F1D07BAB400A08DB1 /* ScrollView.swift */; };
+		6DBB5A641D30BE930036AB30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB5A631D30BE930036AB30 /* Images.xcassets */; };
 		6DBD40931D0A7E78000565F3 /* sub2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40921D0A7E78000565F3 /* sub2.swift */; };
 		6DBD40951D0D1E74000565F3 /* CourseGrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40941D0D1E74000565F3 /* CourseGrade.swift */; };
 		6DBD40991D0D1FE1000565F3 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40981D0D1FE1000565F3 /* CustomCellTableViewCell.swift */; };
@@ -82,16 +83,16 @@
 		559800D41CB0DDE9007E0D1C /* GPAAdditionCourseHS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPAAdditionCourseHS.swift; sourceTree = "<group>"; };
 		559800D61CB0EBC6007E0D1C /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		559800DC1CB0F687007E0D1C /* ViewPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPageController.swift; sourceTree = "<group>"; };
-		55AC03E31C3106B800093A08 /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AC03E31C3106B800093A08 /* GPA Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC03E61C3106B800093A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55AC03E81C3106B800093A08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55AC03F01C3106B800093A08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55AC03F31C3106B800093A08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55AC03F51C3106B800093A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55AC03FA1C3106B800093A08 /* GPACalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPACalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AC03FA1C3106B800093A08 /* GPA Helper.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPA Helper.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC03FE1C3106B800093A08 /* GPACalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPACalculatorTests.swift; sourceTree = "<group>"; };
 		55AC04001C3106B800093A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55AC04051C3106B800093A08 /* GPACalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPACalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AC04051C3106B800093A08 /* GPA Helper.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPA Helper.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC04091C3106B800093A08 /* GPACalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPACalculatorUITests.swift; sourceTree = "<group>"; };
 		55AC040B1C3106B800093A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C1A5521C38AAA2006CFBB0 /* CourseSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSelection.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		6D4123501D2CB076004B3A23 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalExamTableView.swift; path = ../FinalExamTableView.swift; sourceTree = "<group>"; };
 		6D83174F1D07BAB400A08DB1 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = ../ScrollView.swift; sourceTree = "<group>"; };
+		6DBB5A631D30BE930036AB30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DBD40921D0A7E78000565F3 /* sub2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sub2.swift; sourceTree = "<group>"; };
 		6DBD40941D0D1E74000565F3 /* CourseGrade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseGrade.swift; sourceTree = "<group>"; };
 		6DBD40981D0D1FE1000565F3 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -163,9 +165,9 @@
 		55AC03E41C3106B800093A08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55AC03E31C3106B800093A08 /* GPACalculator.app */,
-				55AC03FA1C3106B800093A08 /* GPACalculatorTests.xctest */,
-				55AC04051C3106B800093A08 /* GPACalculatorUITests.xctest */,
+				55AC03E31C3106B800093A08 /* GPA Helper.app */,
+				55AC03FA1C3106B800093A08 /* GPA Helper.xctest */,
+				55AC04051C3106B800093A08 /* GPA Helper.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,6 +214,7 @@
 				55AC03F51C3106B800093A08 /* Info.plist */,
 				6D08FF701D13B1950007BBA9 /* GPACalculator.xcdatamodeld */,
 				6D08FF6E1D1233980007BBA9 /* DataController.swift */,
+				6DBB5A631D30BE930036AB30 /* Images.xcassets */,
 			);
 			path = GPACalculator;
 			sourceTree = "<group>";
@@ -237,9 +240,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55AC03E21C3106B800093A08 /* GPACalculator */ = {
+		55AC03E21C3106B800093A08 /* GPA Helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55AC040E1C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculator" */;
+			buildConfigurationList = 55AC040E1C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPA Helper" */;
 			buildPhases = (
 				55AC03DF1C3106B800093A08 /* Sources */,
 				55AC03E01C3106B800093A08 /* Frameworks */,
@@ -249,14 +252,14 @@
 			);
 			dependencies = (
 			);
-			name = GPACalculator;
+			name = "GPA Helper";
 			productName = GPACalculator;
-			productReference = 55AC03E31C3106B800093A08 /* GPACalculator.app */;
+			productReference = 55AC03E31C3106B800093A08 /* GPA Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		55AC03F91C3106B800093A08 /* GPACalculatorTests */ = {
+		55AC03F91C3106B800093A08 /* GPA HelperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55AC04111C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculatorTests" */;
+			buildConfigurationList = 55AC04111C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPA HelperTests" */;
 			buildPhases = (
 				55AC03F61C3106B800093A08 /* Sources */,
 				55AC03F71C3106B800093A08 /* Frameworks */,
@@ -267,14 +270,14 @@
 			dependencies = (
 				55AC03FC1C3106B800093A08 /* PBXTargetDependency */,
 			);
-			name = GPACalculatorTests;
+			name = "GPA HelperTests";
 			productName = GPACalculatorTests;
-			productReference = 55AC03FA1C3106B800093A08 /* GPACalculatorTests.xctest */;
+			productReference = 55AC03FA1C3106B800093A08 /* GPA Helper.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		55AC04041C3106B800093A08 /* GPACalculatorUITests */ = {
+		55AC04041C3106B800093A08 /* GPA HelperUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55AC04141C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculatorUITests" */;
+			buildConfigurationList = 55AC04141C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPA HelperUITests" */;
 			buildPhases = (
 				55AC04011C3106B800093A08 /* Sources */,
 				55AC04021C3106B800093A08 /* Frameworks */,
@@ -285,9 +288,9 @@
 			dependencies = (
 				55AC04071C3106B800093A08 /* PBXTargetDependency */,
 			);
-			name = GPACalculatorUITests;
+			name = "GPA HelperUITests";
 			productName = GPACalculatorUITests;
-			productReference = 55AC04051C3106B800093A08 /* GPACalculatorUITests.xctest */;
+			productReference = 55AC04051C3106B800093A08 /* GPA Helper.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -305,7 +308,7 @@
 						DevelopmentTeam = K57G8L8D3Y;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -321,7 +324,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55AC03DE1C3106B800093A08 /* Build configuration list for PBXProject "GPACalculator" */;
+			buildConfigurationList = 55AC03DE1C3106B800093A08 /* Build configuration list for PBXProject "GPA Helper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -334,9 +337,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55AC03E21C3106B800093A08 /* GPACalculator */,
-				55AC03F91C3106B800093A08 /* GPACalculatorTests */,
-				55AC04041C3106B800093A08 /* GPACalculatorUITests */,
+				55AC03E21C3106B800093A08 /* GPA Helper */,
+				55AC03F91C3106B800093A08 /* GPA HelperTests */,
+				55AC04041C3106B800093A08 /* GPA HelperUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D14215A1D0FC213004982A6 /* Main.storyboard in Resources */,
+				6DBB5A641D30BE930036AB30 /* Images.xcassets in Resources */,
 				55AC03F41C3106B800093A08 /* LaunchScreen.storyboard in Resources */,
 				55AC03F11C3106B800093A08 /* Assets.xcassets in Resources */,
 			);
@@ -432,12 +436,12 @@
 /* Begin PBXTargetDependency section */
 		55AC03FC1C3106B800093A08 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55AC03E21C3106B800093A08 /* GPACalculator */;
+			target = 55AC03E21C3106B800093A08 /* GPA Helper */;
 			targetProxy = 55AC03FB1C3106B800093A08 /* PBXContainerItemProxy */;
 		};
 		55AC04071C3106B800093A08 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 55AC03E21C3106B800093A08 /* GPACalculator */;
+			target = 55AC03E21C3106B800093A08 /* GPA Helper */;
 			targetProxy = 55AC04061C3106B800093A08 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -549,17 +553,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageGPA;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GPACalculator/GPACalculator.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GPACalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPAHelper;
+				PRODUCT_NAME = "GPA Helper";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GPACalculator-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -567,16 +574,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageGPA;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GPACalculator/GPACalculator.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GPACalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculator;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPAHelper;
+				PRODUCT_NAME = "GPA Helper";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GPACalculator-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -587,8 +597,8 @@
 				INFOPLIST_FILE = GPACalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPACalculator.app/GPACalculator";
+				PRODUCT_NAME = "GPA Helper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPA Helper.app/GPA Helper";
 			};
 			name = Debug;
 		};
@@ -599,8 +609,8 @@
 				INFOPLIST_FILE = GPACalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculatorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPACalculator.app/GPACalculator";
+				PRODUCT_NAME = "GPA Helper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GPA Helper.app/GPA Helper";
 			};
 			name = Release;
 		};
@@ -610,7 +620,7 @@
 				INFOPLIST_FILE = GPACalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GPA Helper";
 				TEST_TARGET_NAME = GPACalculator;
 				USES_XCTRUNNER = YES;
 			};
@@ -622,7 +632,7 @@
 				INFOPLIST_FILE = GPACalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.GPACalculatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GPA Helper";
 				TEST_TARGET_NAME = GPACalculator;
 				USES_XCTRUNNER = YES;
 			};
@@ -631,7 +641,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55AC03DE1C3106B800093A08 /* Build configuration list for PBXProject "GPACalculator" */ = {
+		55AC03DE1C3106B800093A08 /* Build configuration list for PBXProject "GPA Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55AC040C1C3106B800093A08 /* Debug */,
@@ -640,7 +650,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55AC040E1C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculator" */ = {
+		55AC040E1C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPA Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55AC040F1C3106B800093A08 /* Debug */,
@@ -649,7 +659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55AC04111C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculatorTests" */ = {
+		55AC04111C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPA HelperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55AC04121C3106B800093A08 /* Debug */,
@@ -658,7 +668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55AC04141C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPACalculatorUITests" */ = {
+		55AC04141C3106B800093A08 /* Build configuration list for PBXNativeTarget "GPA HelperUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55AC04151C3106B800093A08 /* Debug */,

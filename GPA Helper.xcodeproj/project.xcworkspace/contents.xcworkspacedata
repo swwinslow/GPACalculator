@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GPACalculator.xcodeproj">
+      location = "self:/Users/sethwinslow/Desktop/GPACalculator/GPA Helper.xcodeproj">
    </FileRef>
 </Workspace>

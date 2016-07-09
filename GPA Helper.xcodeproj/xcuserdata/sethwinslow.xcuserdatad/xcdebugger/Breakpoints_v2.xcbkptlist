@@ -180,12 +180,12 @@
                   moduleName = "GPACalculator"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sethwinslow/Desktop/GPACalculator/GPACalculator/FinalExamGrade.swift"
-                  timestampString = "489708095.748064"
+                  timestampString = "489786621.95651"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "380"
                   endingLineNumber = "380"
-                  offsetFromSymbolStart = "382">
+                  offsetFromSymbolStart = "336">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -195,12 +195,12 @@
                   moduleName = "GPACalculator"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sethwinslow/Desktop/GPACalculator/GPACalculator/FinalExamGrade.swift"
-                  timestampString = "489708095.748188"
+                  timestampString = "489786621.956615"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "380"
                   endingLineNumber = "380"
-                  offsetFromSymbolStart = "2851">
+                  offsetFromSymbolStart = "2296">
                </Location>
             </Locations>
          </BreakpointContent>
