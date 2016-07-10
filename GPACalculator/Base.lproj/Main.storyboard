@@ -919,10 +919,10 @@
             </objects>
             <point key="canvasLocation" x="3806" y="-2705"/>
         </scene>
-        <!--Sub2-->
+        <!--Type Education-->
         <scene sceneID="lJg-fd-5Ho">
             <objects>
-                <viewController id="MaT-g2-bHN" customClass="sub2" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MaT-g2-bHN" customClass="TypeEducation" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1XT-l0-Nrz"/>
                         <viewControllerLayoutGuide type="bottom" id="Nh2-EM-iJk"/>
@@ -1059,7 +1059,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VhQ-50-KmB"/>
-        <segue reference="ufz-Vg-ieM"/>
+        <segue reference="2LP-PU-FWK"/>
         <segue reference="cJt-0S-uOr"/>
         <segue reference="niv-rd-nBo"/>
     </inferredMetricsTieBreakers>

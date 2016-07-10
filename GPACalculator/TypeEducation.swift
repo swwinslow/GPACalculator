@@ -8,7 +8,7 @@
 
 import UIKit
 
-class sub2: UIViewController{
+class TypeEducation: UIViewController{
     override func viewDidLoad() {
         self.navigationItem.title = "GPA's"
         
@@ -16,7 +16,6 @@ class sub2: UIViewController{
     
     override func viewWillAppear(animated: Bool) {
         
-        self.tabBarController?.navigationItem.title = "Profile Settings"
         
     }
     
