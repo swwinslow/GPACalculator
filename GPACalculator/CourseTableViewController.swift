@@ -38,6 +38,10 @@ class CourseTableViewController: UITableViewController {
     var creditArray = [String]()
     var gradeArray = [String]()
     
+    //DEFINE EXTRA CONSTANTS
+    var constantAP : Double = 0.143
+    var constantHonors : Double = 0.096
+    
     override func viewDidAppear(animated: Bool) {
         
         // SETTING THE NAVIAGATION TITLE
@@ -286,6 +290,7 @@ class CourseTableViewController: UITableViewController {
             nextViewController.totalRawScore = calculateGPA().raw
             nextViewController.totalCredits = calculateGPA().credits
             nextViewController.education = education
+            nextViewController.totalExtra = calculateGPA().extra
         }
         
         // IF THE IDENTITIFER IS GOING TO ADD ANOTHER COURSE TO THE DATA
@@ -314,11 +319,13 @@ class CourseTableViewController: UITableViewController {
     }
     
     // FUNCTION TO START THE CALCULATIONS FOR THE GRADE POINT AVERAGE
-    func calculateGPA() -> (credits: Double, raw: Double) {
+    func calculateGPA() -> (credits: Double, raw: Double, extra: Double) {
 
         // SETTING THE RAW AND THE CREDIT VARIABLES
         var totalRaw: Double = 0.0
         var totalCredits: Double = 0.0
+        var totalExtra: Double = 0.0
+
 
         // IF THE EDUCATION IS COLLEGE; PULL OUT OF THE DATA FOR COLLEGE
         if education == "College GPA"{
@@ -339,6 +346,7 @@ class CourseTableViewController: UITableViewController {
                 // ADDING THE RAW AND THE TOTAL CREDITS TO THE ARRAY
                 totalRaw += singleRawCourse
                 totalCredits += singleCreditHour
+                totalExtra = 0
             }
         }
         
@@ -355,14 +363,29 @@ class CourseTableViewController: UITableViewController {
                 let numbericGrade: Double = findNumberToGrade(singleGrade)
                 let representCredit: Double = singleCreditHour
                 let singleRawCourse: Double = numbericGrade * representCredit
+                let singleExtra:Double = checkExtra(singleCourse.courseExtra!)
                 
                 // ADDING THE RAW AND THE TOTAL CREDITS TO THE ARRAY
                 totalRaw += singleRawCourse
                 totalCredits += singleCreditHour
+                totalExtra += singleExtra
+                
             }
         }
         // RETURNING THE TOTAL CREDITS AND THE TOTAL RAW SCORE
-        return (totalCredits, totalRaw)
+        return (totalCredits, totalRaw, totalExtra)
+    }
+    
+    func checkExtra(extra: String)->Double{
+        if extra == "N/A"{
+            return 0;
+        } else if extra == "AP"{
+            return constantAP
+        } else if extra == "Honors"{
+            return constantHonors
+        }
+        
+        return 0;
     }
     
     func findNumberToGrade(grade: String)-> Double{

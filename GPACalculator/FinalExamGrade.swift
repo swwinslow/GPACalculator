@@ -11,15 +11,19 @@
 
 import UIKit
 
-class FinalExamGrade: UIViewController{
+
+class FinalExamGrade: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Final Exam"
     }
+
+
     
     
    
+
     @IBOutlet weak var percentage: UITextField!
     @IBOutlet weak var currentGradeTextBox: UITextField!
     @IBOutlet weak var finalWeightTextBox: UITextField!
@@ -378,7 +382,7 @@ class FinalExamGrade: UIViewController{
         let currentFinalExam = finalWeightTextBox.text
         let currrentFinalString : String = (currentFinalExam?.substringToIndex((currentFinalExam?.endIndex.predecessor())!))!
         
-        var x:Bool = isNumeric(currrentFinalString)
+        let x:Bool = isNumeric(currrentFinalString)
         
         if(finalWeightTextBox.text != "" && x == true){
            
@@ -442,9 +446,11 @@ class FinalExamGrade: UIViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
 
-        var currentCourseScore:Double = checkScore()
-        var score = checkNumbers()
-        var percentNumber = percentCheck()
+        if segue.identifier == "calc" {
+            
+        let currentCourseScore:Double = checkScore()
+        let score = checkNumbers()
+        let percentNumber = percentCheck()
         
         let nextView = segue.destinationViewController as! FinalExamTableView
         
@@ -452,6 +458,9 @@ class FinalExamGrade: UIViewController{
         nextView.finalCourseWorth = score.course
         nextView.orginalScore = currentCourseScore
         nextView.addPercent = percentNumber
+        }
+        if segue.identifier == "help" || segue.identifier == "menu"{
+        }
         
 //
 //        nextView.currentGradeLabel.text = "Current Grade"
