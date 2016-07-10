@@ -52,7 +52,6 @@
 		6DBB5A641D30BE930036AB30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DBB5A631D30BE930036AB30 /* Images.xcassets */; };
 		6DBD40931D0A7E78000565F3 /* TypeEducation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40921D0A7E78000565F3 /* TypeEducation.swift */; };
 		6DBD40991D0D1FE1000565F3 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD40981D0D1FE1000565F3 /* CustomCellTableViewCell.swift */; };
-		6DBD409B1D0D2595000565F3 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBD409A1D0D2595000565F3 /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +124,6 @@
 		6DBB5A631D30BE930036AB30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DBD40921D0A7E78000565F3 /* TypeEducation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeEducation.swift; sourceTree = "<group>"; };
 		6DBD40981D0D1FE1000565F3 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
-		6DBD409A1D0D2595000565F3 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseCell.swift; path = ../CourseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +193,6 @@
 				6D1F2A811D24B69D00FD9073 /* HSCourse.swift */,
 				6D31F0241D1E4E5F0024793A /* Course+CoreDataProperties.swift */,
 				6D31F0251D1E4E5F0024793A /* Course.swift */,
-				6DBD409A1D0D2595000565F3 /* CourseCell.swift */,
 				553EDAB01C3A5CFB0063DD50 /* GPACalculator.entitlements */,
 				6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */,
 				55AC03E61C3106B800093A08 /* AppDelegate.swift */,
@@ -422,7 +419,6 @@
 				6D08FF781D16549E0007BBA9 /* EditCourseViewController.swift in Sources */,
 				5527CBA41C913B7C009034FC /* SubGPAMenu.swift in Sources */,
 				55C1A5591C390443006CFBB0 /* DisplayGPA.swift in Sources */,
-				6DBD409B1D0D2595000565F3 /* CourseCell.swift in Sources */,
 				6D41234F1D2CA6C3004B3A23 /* CollectionViewController.swift in Sources */,
 				6D1F2A831D24B69D00FD9073 /* HSCourse.swift in Sources */,
 				559800D71CB0EBC6007E0D1C /* ContentViewController.swift in Sources */,
