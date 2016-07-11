@@ -18,12 +18,12 @@ class ViewPageController: UIViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         
-        self.navigationItem.title = "Help"
+        self.navigationItem.title = "Final Exam Help"
         
         //slide show
         
-        self.pageTitles = NSArray(objects: "Final Exam", "Graduation GPA")
-        self.pageImages = NSArray(objects: "finalexam","graduationGPA")
+        self.pageTitles = NSArray(objects: "Final Exam")
+        self.pageImages = NSArray(objects: "finalexam")
         
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController

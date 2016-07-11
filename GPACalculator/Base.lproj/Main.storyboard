@@ -49,7 +49,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uXi-1c-80J" kind="show" id="2LP-PU-FWK"/>
+                                    <segue destination="Fbj-Tm-1Nt" kind="show" id="XkJ-8n-akT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9e-Gi-p83">
@@ -189,7 +189,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uXi-1c-80J" kind="show" identifier="help" id="Lhp-Fr-6cu"/>
+                                    <segue destination="Fbj-Tm-1Nt" kind="show" id="9I3-I7-b9K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -263,6 +263,90 @@
             </objects>
             <point key="canvasLocation" x="5183" y="1048"/>
         </scene>
+        <!--Help Main Menu-->
+        <scene sceneID="GLP-ba-Tsa">
+            <objects>
+                <viewController id="Fbj-Tm-1Nt" customClass="HelpMainMenu" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z5z-7f-CKI"/>
+                        <viewControllerLayoutGuide type="bottom" id="WaV-uQ-9Zg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tMn-vH-3Bd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgZ-J8-Ddd">
+                                <rect key="frame" x="20" y="305" width="560" height="128"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="31"/>
+                                <state key="normal" title="Final Exam">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uXi-1c-80J" kind="show" id="uHU-8L-PwJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-gl-71g">
+                                <rect key="frame" x="20" y="169" width="560" height="128"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Graduation GPA">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvV-Hi-1OO">
+                                <rect key="frame" x="20" y="441" width="560" height="128"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="31"/>
+                                <state key="normal" title="Legal Disclaimer">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlg-h7-6nt">
+                                <rect key="frame" x="20" y="52" width="560" height="109"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Semester GPA">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.071741149340000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="m6e-gl-71g" firstAttribute="height" secondItem="TgZ-J8-Ddd" secondAttribute="height" id="1t1-IF-8uS"/>
+                            <constraint firstItem="AvV-Hi-1OO" firstAttribute="top" secondItem="TgZ-J8-Ddd" secondAttribute="bottom" constant="8" id="2eL-UC-fPO"/>
+                            <constraint firstItem="m6e-gl-71g" firstAttribute="height" secondItem="AvV-Hi-1OO" secondAttribute="height" id="Aah-wU-NDg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="AvV-Hi-1OO" secondAttribute="leading" id="BCq-32-VeV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AvV-Hi-1OO" secondAttribute="trailing" id="Bhy-Va-1UL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TgZ-J8-Ddd" secondAttribute="trailing" id="HSw-eV-2vB"/>
+                            <constraint firstItem="TgZ-J8-Ddd" firstAttribute="height" secondItem="AvV-Hi-1OO" secondAttribute="height" id="HqK-Gc-duG"/>
+                            <constraint firstItem="wlg-h7-6nt" firstAttribute="height" secondItem="m6e-gl-71g" secondAttribute="height" id="ITv-iW-1iM"/>
+                            <constraint firstItem="wlg-h7-6nt" firstAttribute="width" secondItem="TgZ-J8-Ddd" secondAttribute="width" id="KpM-cc-SP2"/>
+                            <constraint firstItem="wlg-h7-6nt" firstAttribute="width" secondItem="AvV-Hi-1OO" secondAttribute="width" id="LvY-T2-4h6"/>
+                            <constraint firstItem="m6e-gl-71g" firstAttribute="top" secondItem="wlg-h7-6nt" secondAttribute="bottom" constant="8" id="Nct-vU-cZI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wlg-h7-6nt" secondAttribute="trailing" id="OLp-yr-q8u"/>
+                            <constraint firstItem="WaV-uQ-9Zg" firstAttribute="top" secondItem="AvV-Hi-1OO" secondAttribute="bottom" constant="31" id="STW-m2-Kbl"/>
+                            <constraint firstItem="TgZ-J8-Ddd" firstAttribute="width" secondItem="AvV-Hi-1OO" secondAttribute="width" id="UAU-bl-h3o"/>
+                            <constraint firstItem="wlg-h7-6nt" firstAttribute="height" secondItem="TgZ-J8-Ddd" secondAttribute="height" id="dix-YE-jUL"/>
+                            <constraint firstItem="wlg-h7-6nt" firstAttribute="height" secondItem="AvV-Hi-1OO" secondAttribute="height" id="gdN-dj-xuk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wlg-h7-6nt" secondAttribute="leading" id="h2y-GJ-GKi"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="TgZ-J8-Ddd" secondAttribute="leading" id="hhV-Mx-7fc"/>
+                            <constraint firstItem="wlg-h7-6nt" firstAttribute="width" secondItem="m6e-gl-71g" secondAttribute="width" id="hoF-sp-44O"/>
+                            <constraint firstItem="wlg-h7-6nt" firstAttribute="top" secondItem="Z5z-7f-CKI" secondAttribute="bottom" constant="8" id="iPc-dN-t04"/>
+                            <constraint firstItem="m6e-gl-71g" firstAttribute="width" secondItem="TgZ-J8-Ddd" secondAttribute="width" id="jc3-ZT-LSd"/>
+                            <constraint firstItem="m6e-gl-71g" firstAttribute="width" secondItem="AvV-Hi-1OO" secondAttribute="width" id="kQM-IL-Bfe"/>
+                            <constraint firstItem="TgZ-J8-Ddd" firstAttribute="top" secondItem="m6e-gl-71g" secondAttribute="bottom" constant="8" id="qBJ-hq-ihJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m6e-gl-71g" secondAttribute="trailing" id="sZt-8U-DiN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="m6e-gl-71g" secondAttribute="leading" id="wPP-a0-ezF"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9k-fH-ccV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1483" y="-1267"/>
+        </scene>
         <!--Content View Controller-->
         <scene sceneID="Vb8-Tw-ADa">
             <objects>
@@ -329,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqd-87-Ryh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-720" y="-1099"/>
+            <point key="canvasLocation" x="-814" y="-1093"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="1tW-iH-CX6">
@@ -337,12 +421,11 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Miw-gw-tEq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJM-He-54a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1870" y="-787"/>
+            <point key="canvasLocation" x="-2242" y="-999"/>
         </scene>
         <!--Title-->
         <scene sceneID="l9Y-ni-H6e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wWJ-HF-TJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="c7d-Ge-yts" customClass="FinalExamGrade" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3VW-rn-Kpq"/>
@@ -410,7 +493,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uXi-1c-80J" kind="show" identifier="help" id="mAh-Yw-bbc"/>
+                                    <segue destination="Fbj-Tm-1Nt" kind="show" id="Y1G-3j-gMK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="93" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eKy-An-GKx">
@@ -469,6 +552,7 @@
                         <outlet property="percentage" destination="eKy-An-GKx" id="kIm-fd-DKk"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWJ-HF-TJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="521" y="-1640"/>
         </scene>
@@ -725,17 +809,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w69-wL-J6e">
-                                <rect key="frame" x="316" y="272" width="264" height="57"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
-                                <state key="normal" title="Help">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uXi-1c-80J" kind="show" identifier="help" id="ufz-Vg-ieM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA7-lL-aWp">
                                 <rect key="frame" x="20" y="271" width="288" height="57"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -762,6 +835,17 @@
                                     <constraint firstAttribute="width" constant="320" id="S47-81-U3a"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w69-wL-J6e">
+                                <rect key="frame" x="316" y="272" width="264" height="57"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Fbj-Tm-1Nt" kind="show" id="tIT-3S-BG9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1058,9 +1142,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="If2-bD-QTE"/>
-        <segue reference="2LP-PU-FWK"/>
+        <segue reference="Zk5-LQ-7Mj"/>
         <segue reference="cJt-0S-uOr"/>
         <segue reference="niv-rd-nBo"/>
+        <segue reference="Y1G-3j-gMK"/>
     </inferredMetricsTieBreakers>
 </document>
