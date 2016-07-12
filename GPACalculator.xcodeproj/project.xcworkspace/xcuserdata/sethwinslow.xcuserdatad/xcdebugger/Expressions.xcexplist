@@ -3,48 +3,45 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "CourseTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:CourseTableViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "creditArray">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SingleCourseDetails.viewDidLoad() -&gt; ():SingleCourseDetails.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "education">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "TargetGPA.shouldPerformSegueWithIdentifier(String, sender : AnyObject?) -&gt; Bool:TargetGPA.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "isValuesCorrect">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GraduationGPADisplay.viewDidLoad() -&gt; ():GraduationGPADisplay.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "goalGPAString">
-            </PersistentString>
-            <PersistentString
-               value = "targetGPAStringLoad">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SingleCourseDetails.checkInformation() -&gt; Bool:SingleCourseDetails.swift">
-      </ContextState>
-      <ContextState
          contextName = "FinalExamGrade.editingDidEndFinalExamTextField(AnyObject) -&gt; ():FinalExamGrade.swift">
          <PersistentStrings>
             <PersistentString
                value = "finalWeightTextB">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GPAAdditionCourseHS.textFieldDidBeginEditing(UITextField) -&gt; ():GPAAdditionCourseHS.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "type">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "gradeArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ContentViewController.viewDidLoad() -&gt; ():ContentViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "titleText">
+            </PersistentString>
+            <PersistentString
+               value = "typeOfHelp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CourseTableViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:CourseTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "creditArray">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -66,10 +63,19 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "mach_msg_trap:(null)">
+         contextName = "TargetGPA.checkValues() -&gt; Bool:TargetGPA.swift">
          <PersistentStrings>
             <PersistentString
-               value = "gradeArray">
+               value = "goalGPABolean">
+            </PersistentString>
+            <PersistentString
+               value = "currentGPABoolean">
+            </PersistentString>
+            <PersistentString
+               value = "remainingHoursBoolean">
+            </PersistentString>
+            <PersistentString
+               value = "currentHoursBoolean">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -77,60 +83,29 @@
          contextName = "SingleCourseDetails.saveCourse(AnyObject) -&gt; ():SingleCourseDetails.swift">
          <PersistentStrings>
             <PersistentString
-               value = "singleCourse">
+               value = "education">
             </PersistentString>
             <PersistentString
                value = "oldCourse">
             </PersistentString>
             <PersistentString
-               value = "education">
+               value = "singleCourse">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "TargetGPA.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TargetGPA.swift">
+         contextName = "SingleCourseDetails.viewDidLoad() -&gt; ():SingleCourseDetails.swift">
          <PersistentStrings>
-            <PersistentString
-               value = "currentGPAString">
-            </PersistentString>
-            <PersistentString
-               value = "finalGPAString">
-            </PersistentString>
-            <PersistentString
-               value = "goalGPAString">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GPAAdditionCourseHS.textFieldDidBeginEditing(UITextField) -&gt; ():GPAAdditionCourseHS.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "type">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CourseTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():CourseTableViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "gradeArray">
-            </PersistentString>
-            <PersistentString
-               value = "creditArray">
-            </PersistentString>
             <PersistentString
                value = "education">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "sub2.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():sub2.swift">
-      </ContextState>
-      <ContextState
-         contextName = "FinalExamTableView.shouldCheckArray() -&gt; Bool:FinalExamTableView.swift">
+         contextName = "TargetGPA.shouldPerformSegueWithIdentifier(String, sender : AnyObject?) -&gt; Bool:TargetGPA.swift">
          <PersistentStrings>
             <PersistentString
-               value = "percent">
+               value = "isValuesCorrect">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -152,10 +127,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "TargetGPA.calculateGPA() -&gt; ():TargetGPA.swift">
+         contextName = "TargetGPA.checkCurrentGPACorrect() -&gt; ():TargetGPA.swift">
          <PersistentStrings>
             <PersistentString
-               value = "finalGPAString">
+               value = "currentGPAString">
+            </PersistentString>
+            <PersistentString
+               value = "currentGPABoolean">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "sub2.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():sub2.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FinalExamTableView.shouldCheckArray() -&gt; Bool:FinalExamTableView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "percent">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -168,10 +157,32 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "TargetGPA.checkCurrentGPACorrect() -&gt; ():TargetGPA.swift">
+         contextName = "GraduationGPADisplay.viewDidLoad() -&gt; ():GraduationGPADisplay.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currentGPABoolean">
+               value = "targetGPAStringLoad">
+            </PersistentString>
+            <PersistentString
+               value = "goalGPAString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TargetGPA.calculateGPA() -&gt; ():TargetGPA.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "finalGPAString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TargetGPA.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TargetGPA.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "goalGPAString">
+            </PersistentString>
+            <PersistentString
+               value = "finalGPAString">
             </PersistentString>
             <PersistentString
                value = "currentGPAString">
@@ -179,21 +190,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "TargetGPA.checkValues() -&gt; Bool:TargetGPA.swift">
+         contextName = "CourseTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():CourseTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "goalGPABolean">
+               value = "education">
             </PersistentString>
             <PersistentString
-               value = "currentGPABoolean">
+               value = "creditArray">
             </PersistentString>
             <PersistentString
-               value = "remainingHoursBoolean">
-            </PersistentString>
-            <PersistentString
-               value = "currentHoursBoolean">
+               value = "gradeArray">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SingleCourseDetails.checkInformation() -&gt; Bool:SingleCourseDetails.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

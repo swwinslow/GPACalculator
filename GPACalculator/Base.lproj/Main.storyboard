@@ -283,7 +283,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uXi-1c-80J" kind="show" id="uHU-8L-PwJ"/>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="final" id="3aB-aP-UnJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6e-gl-71g">
@@ -293,6 +293,9 @@
                                 <state key="normal" title="Graduation GPA">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="graduation" id="vL6-SH-Y9m"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvV-Hi-1OO">
                                 <rect key="frame" x="20" y="441" width="560" height="128"/>
@@ -301,6 +304,9 @@
                                 <state key="normal" title="Legal Disclaimer">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="legal" id="XTD-9d-OOT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlg-h7-6nt">
                                 <rect key="frame" x="20" y="52" width="560" height="109"/>
@@ -309,6 +315,9 @@
                                 <state key="normal" title="Semester GPA">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="semester" id="ESP-C0-4AP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.071741149340000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -366,36 +375,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-N3-SCs">
-                                <rect key="frame" x="20" y="57" width="560" height="523"/>
+                                <rect key="frame" x="20" y="52" width="560" height="270"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Your Current Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26m-Lc-mAP">
-                                <rect key="frame" x="20" y="28" width="560" height="21"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dYc-Md-7la">
+                                <rect key="frame" x="20" y="330" width="560" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="26m-Lc-mAP" firstAttribute="top" secondItem="NDQ-82-Z1d" secondAttribute="bottom" constant="8" id="Bnn-dM-xSb"/>
-                            <constraint firstItem="CIX-ev-ded" firstAttribute="top" secondItem="eBb-N3-SCs" secondAttribute="bottom" constant="20" id="M6n-Ae-wgG"/>
-                            <constraint firstItem="eBb-N3-SCs" firstAttribute="top" secondItem="26m-Lc-mAP" secondAttribute="bottom" constant="8" id="OpN-ew-pE1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dYc-Md-7la" secondAttribute="trailing" id="17Q-3P-bLT"/>
+                            <constraint firstItem="CIX-ev-ded" firstAttribute="top" secondItem="dYc-Md-7la" secondAttribute="bottom" constant="20" id="Nod-BQ-Wjs"/>
+                            <constraint firstItem="eBb-N3-SCs" firstAttribute="top" secondItem="NDQ-82-Z1d" secondAttribute="bottom" constant="8" id="QGe-T4-FMx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eBb-N3-SCs" secondAttribute="trailing" id="bNK-Yl-YBD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="26m-Lc-mAP" secondAttribute="trailing" id="eSO-Gs-ZgS"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="26m-Lc-mAP" secondAttribute="leading" id="g35-R3-Qyh"/>
+                            <constraint firstItem="dYc-Md-7la" firstAttribute="top" secondItem="eBb-N3-SCs" secondAttribute="bottom" constant="8" id="d9L-NX-R0w"/>
+                            <constraint firstItem="dYc-Md-7la" firstAttribute="height" secondItem="eBb-N3-SCs" secondAttribute="height" id="fjh-B5-Ca9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dYc-Md-7la" secondAttribute="leading" id="kVW-ys-RwF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eBb-N3-SCs" secondAttribute="leading" id="qbS-P9-AMT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eBb-N3-SCs" secondAttribute="leading" id="u3Z-o7-J7I"/>
+                            <constraint firstItem="dYc-Md-7la" firstAttribute="width" secondItem="eBb-N3-SCs" secondAttribute="width" id="vrJ-lf-6GP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="image" destination="eBb-N3-SCs" id="5YA-Tm-bmF"/>
-                        <outlet property="titleLabel" destination="26m-Lc-mAP" id="6r7-sz-C5x"/>
+                        <outlet property="textArea" destination="dYc-Md-7la" id="AIH-Or-i9U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9e-5k-L28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-419" y="-387"/>
+            <point key="canvasLocation" x="-795" y="-1097"/>
         </scene>
         <!--View Page Controller-->
         <scene sceneID="BOK-YT-IQR">
@@ -413,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqd-87-Ryh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-814" y="-1093"/>
+            <point key="canvasLocation" x="-1288" y="-409"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="1tW-iH-CX6">
@@ -421,7 +431,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Miw-gw-tEq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJM-He-54a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2242" y="-999"/>
+            <point key="canvasLocation" x="-1976" y="-403"/>
         </scene>
         <!--Title-->
         <scene sceneID="l9Y-ni-H6e">
@@ -760,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UN2-pF-6L8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="195" y="-3626"/>
+            <point key="canvasLocation" x="219" y="-3664"/>
         </scene>
         <!--Title-->
         <scene sceneID="5RZ-fl-t7F">
@@ -1143,8 +1153,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Zk5-LQ-7Mj"/>
+        <segue reference="XkJ-8n-akT"/>
         <segue reference="cJt-0S-uOr"/>
         <segue reference="niv-rd-nBo"/>
-        <segue reference="Y1G-3j-gMK"/>
+        <segue reference="XTD-9d-OOT"/>
     </inferredMetricsTieBreakers>
 </document>

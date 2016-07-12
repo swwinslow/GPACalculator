@@ -10,20 +10,50 @@ import UIKit
 
 class ContentViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
       @IBOutlet weak var image: UIImageView!
     
-    var pageIndex:Int!
     var titleText: String!
-    var imageFile: String!
+    
+    var typeOfHelp: String = ""
 
+   
+    @IBOutlet weak var textArea: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if typeOfHelp == "final"{
+            navigationItem.title = "Final Exam Help"
+            
+            image.image = UIImage(named: "graduationGPA")
+            
+            textArea.text = "How To Compute Final Exam: \r\n"
+            textArea.text.appendContentsOf("This is the second line \r\n")
+            
+        } else if typeOfHelp == "semester"{
+            navigationItem.title = "Semester GPA Help"
+            
+            image.image = UIImage(named: "graduationGPA")
+            
+            textArea.text = "How To Compute Semester GPA "
+            
+        } else if typeOfHelp == "graduation"{
+            navigationItem.title = "Graduation Help"
+            
+            image.image = UIImage(named: "graduationGPA")
+            
+            textArea.text = "How To Graduation Final Exam:"
 
-        self.image.image = UIImage(named: self.imageFile)
-        self.titleLabel.text = self.titleText
+        } else if typeOfHelp == "legal"{
+        
+            navigationItem.title = "Legal"
+            
+            image.image = UIImage(named: "GPAHelperIcon")
+            
+            textArea.text = "Legal Information"
+        }
 
+        
         
     }
 
@@ -33,14 +63,6 @@ class ContentViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
