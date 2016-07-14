@@ -377,30 +377,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-N3-SCs">
                                 <rect key="frame" x="20" y="52" width="560" height="270"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dYc-Md-7la">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBv-se-7yp">
                                 <rect key="frame" x="20" y="330" width="560" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntv-p7-NlQ">
+                                        <rect key="frame" x="8" y="8" width="544" height="234"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ntv-p7-NlQ" secondAttribute="bottom" constant="8" id="3q5-q1-i6d"/>
+                                    <constraint firstItem="ntv-p7-NlQ" firstAttribute="top" secondItem="gBv-se-7yp" secondAttribute="top" constant="8" id="LIP-hj-pPU"/>
+                                    <constraint firstItem="ntv-p7-NlQ" firstAttribute="leading" secondItem="gBv-se-7yp" secondAttribute="leading" constant="8" id="dPS-WH-iZE"/>
+                                    <constraint firstAttribute="trailing" secondItem="ntv-p7-NlQ" secondAttribute="trailing" constant="8" id="ehU-50-9yS"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="dYc-Md-7la" secondAttribute="trailing" id="17Q-3P-bLT"/>
-                            <constraint firstItem="CIX-ev-ded" firstAttribute="top" secondItem="dYc-Md-7la" secondAttribute="bottom" constant="20" id="Nod-BQ-Wjs"/>
+                            <constraint firstItem="gBv-se-7yp" firstAttribute="width" secondItem="eBb-N3-SCs" secondAttribute="width" id="0c8-F7-RcK"/>
+                            <constraint firstItem="gBv-se-7yp" firstAttribute="top" secondItem="eBb-N3-SCs" secondAttribute="bottom" constant="8" id="8Tz-1n-a1o"/>
+                            <constraint firstItem="CIX-ev-ded" firstAttribute="top" secondItem="gBv-se-7yp" secondAttribute="bottom" constant="20" id="Jzi-gT-3e0"/>
                             <constraint firstItem="eBb-N3-SCs" firstAttribute="top" secondItem="NDQ-82-Z1d" secondAttribute="bottom" constant="8" id="QGe-T4-FMx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eBb-N3-SCs" secondAttribute="trailing" id="bNK-Yl-YBD"/>
-                            <constraint firstItem="dYc-Md-7la" firstAttribute="top" secondItem="eBb-N3-SCs" secondAttribute="bottom" constant="8" id="d9L-NX-R0w"/>
-                            <constraint firstItem="dYc-Md-7la" firstAttribute="height" secondItem="eBb-N3-SCs" secondAttribute="height" id="fjh-B5-Ca9"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="dYc-Md-7la" secondAttribute="leading" id="kVW-ys-RwF"/>
+                            <constraint firstItem="gBv-se-7yp" firstAttribute="height" secondItem="eBb-N3-SCs" secondAttribute="height" id="cjw-WS-Boa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gBv-se-7yp" secondAttribute="trailing" id="pdm-jO-0hb"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eBb-N3-SCs" secondAttribute="leading" id="qbS-P9-AMT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eBb-N3-SCs" secondAttribute="leading" id="u3Z-o7-J7I"/>
-                            <constraint firstItem="dYc-Md-7la" firstAttribute="width" secondItem="eBb-N3-SCs" secondAttribute="width" id="vrJ-lf-6GP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gBv-se-7yp" secondAttribute="leading" id="wca-As-TsK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="image" destination="eBb-N3-SCs" id="5YA-Tm-bmF"/>
-                        <outlet property="textArea" destination="dYc-Md-7la" id="AIH-Or-i9U"/>
+                        <outlet property="scrollView" destination="gBv-se-7yp" id="TYi-nB-my9"/>
+                        <outlet property="textLabel" destination="ntv-p7-NlQ" id="kAu-jV-kTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9e-5k-L28" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1152,8 +1164,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zk5-LQ-7Mj"/>
-        <segue reference="XkJ-8n-akT"/>
+        <segue reference="tIT-3S-BG9"/>
+        <segue reference="VhQ-50-KmB"/>
         <segue reference="cJt-0S-uOr"/>
         <segue reference="niv-rd-nBo"/>
         <segue reference="XTD-9d-OOT"/>

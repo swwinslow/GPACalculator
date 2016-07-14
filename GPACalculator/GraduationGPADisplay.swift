@@ -30,17 +30,17 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
      override func viewDidLoad() {
         super.viewDidLoad()
        
-        print(self.targetGPAStringLoad)
-        print(self.currentGPAStringLoad)
-        print(self.goalGPAStringLoad)
+        // SET THE TITLE OF THE VIEW
         self.navigationItem.title = "Results"
         
     
-        let doublex: Double = Double(targetGPAStringLoad)!
-       
-        //let targetGPADouble: Double = Double(targetGPAStringLoad)!
+        let targetDouble: Double = Double(targetGPAStringLoad)!
+        let currentDobule: Double = Double(currentGPAStringLoad)!
+        let goalDouble: Double = Double(goalGPAStringLoad)!
         
-        targetGPALabel.text = String(format: "%.2f", doublex)
+       
+
+        
         
        // var currentGPAString:String = (String(format: "%.2f", currentGPAStringLoad))
 

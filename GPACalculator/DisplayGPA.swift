@@ -38,22 +38,31 @@ class DisplayGPA: UIViewController, GADBannerViewDelegate{
         let newRaw:Double = Double(totalRawScore)
         let newCred:Double = Double(totalCredits)
         
-        var a:String = String(format:"%.2f", newCred)
-        var b:String = String(format:"%.2f", newRaw)
-        var total:Double = Double(newRaw / newCred) + totalExtra
+        var newCreditsString:String = String(format:"%.2f", newCred)
+        var newRawScoreString:String = String(format:"%.2f", newRaw)
+        
+        var total:Double = 0
+        
+        if newRaw == 0.0 && newCred == 0.0{
+        } else {
+            total = Double(newRaw/newCred) + totalExtra
+        }
+        
         
         var c:String = String(format:"%.3f", total)
         print("total: \(c)") // c: 1.5
         
         
         if education == "HS GPA"{
-            creditLabel.text = String("\(a)")
+            creditLabel.text = String("\(newCreditsString)")
 
         } else {
-            creditLabel.text = String("\(a)")
+            creditLabel.text = String("\(newCreditsString)")
 
         }
-        GPARaw.text = String("\(b)")
+        GPARaw.text = String("\(newRawScoreString)")
+        
+        
         display.text = String(c)
         
         totalCredits = 0
