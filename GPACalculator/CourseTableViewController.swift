@@ -143,8 +143,16 @@ class CourseTableViewController: UITableViewController {
             // GETTING EACH OF THE FIELDS TO THE COLLEGE DATA
             // NO NEED FOR EXTRA - BANNED FOR COLLEGE COURSE
             let className = collegeSingleCourse.courseName
-            let classCredit = collegeSingleCourse.courseCredit
+            var classCredit = collegeSingleCourse.courseCredit
             let classGrade = collegeSingleCourse.courseGrade
+            
+            if classCredit == "1"{
+                classCredit?.appendContentsOf(" Hour")
+
+            } else {
+                classCredit?.appendContentsOf(" Hours")
+
+            }
             
             // ADDING THE CREDITS AND THE GRADES TO AN ARRAY TO CALCULATE THE GPA
             creditArray.append(classCredit!)
@@ -176,7 +184,7 @@ class CourseTableViewController: UITableViewController {
             gradeArray.append(classGrade!)
             
             // APPENDING HOURS TO THE CREDIT FIELD
-            classCredit?.appendContentsOf(" Hours")
+            classCredit?.appendContentsOf(" Hour")
             
             // SINCE THE EXTRA FEILD IS ENABLED; SET A "*" FOR HONORS AND A "**" FOR AP
             if isAPExtra == true {

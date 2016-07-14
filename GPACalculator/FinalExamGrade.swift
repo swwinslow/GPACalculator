@@ -380,6 +380,9 @@ class FinalExamGrade: UIViewController {
     
     func checkNumbers() ->(final: Double, course: Double){
         let currentFinalExam = finalWeightTextBox.text
+        
+        if currentFinalExam != "" {
+            
         let currrentFinalString : String = (currentFinalExam?.substringToIndex((currentFinalExam?.endIndex.predecessor())!))!
         
         let x:Bool = isNumeric(currrentFinalString)
@@ -404,6 +407,12 @@ class FinalExamGrade: UIViewController {
             alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
             presentViewController(alertView, animated: true, completion: nil)
 
+        }
+        } else {
+            //alert for entering informaton into the textbox
+            let alertView = UIAlertController(title: "No Number", message: "The value you entered is not a number", preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+            presentViewController(alertView, animated: true, completion: nil)
         }
         
         return (0.0, 0.0)
