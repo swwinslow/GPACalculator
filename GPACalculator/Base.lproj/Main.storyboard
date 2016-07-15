@@ -271,42 +271,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-N3-SCs">
                                 <rect key="frame" x="20" y="72" width="560" height="250"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBv-se-7yp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is the text area to get information on how to run the app." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-04-gCc">
                                 <rect key="frame" x="20" y="330" width="560" height="250"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntv-p7-NlQ">
-                                        <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ntv-p7-NlQ" secondAttribute="bottom" constant="8" id="3q5-q1-i6d"/>
-                                    <constraint firstItem="ntv-p7-NlQ" firstAttribute="top" secondItem="gBv-se-7yp" secondAttribute="top" constant="8" id="LIP-hj-pPU"/>
-                                    <constraint firstItem="ntv-p7-NlQ" firstAttribute="leading" secondItem="gBv-se-7yp" secondAttribute="leading" constant="8" id="dPS-WH-iZE"/>
-                                    <constraint firstAttribute="trailing" secondItem="ntv-p7-NlQ" secondAttribute="trailing" constant="8" id="ehU-50-9yS"/>
-                                </constraints>
-                            </scrollView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gBv-se-7yp" firstAttribute="width" secondItem="eBb-N3-SCs" secondAttribute="width" id="0c8-F7-RcK"/>
-                            <constraint firstItem="gBv-se-7yp" firstAttribute="top" secondItem="eBb-N3-SCs" secondAttribute="bottom" constant="8" id="8Tz-1n-a1o"/>
-                            <constraint firstItem="CIX-ev-ded" firstAttribute="top" secondItem="gBv-se-7yp" secondAttribute="bottom" constant="20" id="Jzi-gT-3e0"/>
+                            <constraint firstItem="fBg-04-gCc" firstAttribute="top" secondItem="eBb-N3-SCs" secondAttribute="bottom" constant="8" id="79x-j8-Afx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fBg-04-gCc" secondAttribute="leading" id="EVD-D3-qCz"/>
+                            <constraint firstItem="CIX-ev-ded" firstAttribute="top" secondItem="fBg-04-gCc" secondAttribute="bottom" constant="20" id="Lht-cq-plG"/>
                             <constraint firstItem="eBb-N3-SCs" firstAttribute="top" secondItem="NDQ-82-Z1d" secondAttribute="bottom" constant="8" id="QGe-T4-FMx"/>
+                            <constraint firstItem="eBb-N3-SCs" firstAttribute="height" secondItem="fBg-04-gCc" secondAttribute="height" id="UOQ-WA-OGg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eBb-N3-SCs" secondAttribute="trailing" id="bNK-Yl-YBD"/>
-                            <constraint firstItem="gBv-se-7yp" firstAttribute="height" secondItem="eBb-N3-SCs" secondAttribute="height" id="cjw-WS-Boa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gBv-se-7yp" secondAttribute="trailing" id="pdm-jO-0hb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fBg-04-gCc" secondAttribute="trailing" id="cN6-tg-THv"/>
+                            <constraint firstItem="eBb-N3-SCs" firstAttribute="width" secondItem="fBg-04-gCc" secondAttribute="width" id="jMC-8E-T3t"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eBb-N3-SCs" secondAttribute="leading" id="qbS-P9-AMT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eBb-N3-SCs" secondAttribute="leading" id="u3Z-o7-J7I"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="gBv-se-7yp" secondAttribute="leading" id="wca-As-TsK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextArea" destination="fBg-04-gCc" id="EFa-BG-ThZ"/>
                         <outlet property="image" destination="eBb-N3-SCs" id="5YA-Tm-bmF"/>
-                        <outlet property="scrollView" destination="gBv-se-7yp" id="TYi-nB-my9"/>
-                        <outlet property="textLabel" destination="ntv-p7-NlQ" id="kAu-jV-kTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9e-5k-L28" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqd-87-Ryh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1288" y="-409"/>
+            <point key="canvasLocation" x="-1413" y="-72"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="1tW-iH-CX6">
@@ -1053,7 +1041,7 @@
         <!--GPA HELPER-->
         <scene sceneID="b6g-4b-4jI">
             <objects>
-                <viewController id="G8F-vU-vGN" customClass="ViewController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="G8F-vU-vGN" customClass="HelpMainMenu" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RFl-Xa-LNB"/>
                         <viewControllerLayoutGuide type="bottom" id="hdO-O6-AhW"/>
@@ -1062,7 +1050,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKZ-oa-XkL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKZ-oa-XkL">
                                 <rect key="frame" x="20" y="344" width="560" height="128"/>
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="31"/>
@@ -1070,10 +1058,10 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QWD-65-kfH" kind="show" id="Amk-wL-Oft"/>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="final" id="Amk-wL-Oft"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob6-PF-sKi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob6-PF-sKi">
                                 <rect key="frame" x="20" y="208" width="560" height="128"/>
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
@@ -1081,10 +1069,10 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QWD-65-kfH" kind="show" id="aZU-JS-2HL"/>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="graduation" id="aZU-JS-2HL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gki-w7-8AT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gki-w7-8AT">
                                 <rect key="frame" x="20" y="480" width="560" height="128"/>
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1095,10 +1083,10 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QWD-65-kfH" kind="show" id="jJ2-6h-hEe"/>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="help" id="jJ2-6h-hEe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-M5-cKo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es8-M5-cKo">
                                 <rect key="frame" x="20" y="72" width="560" height="128"/>
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="32"/>
@@ -1106,7 +1094,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QWD-65-kfH" kind="show" id="TF8-QS-vTO"/>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="semester" id="TF8-QS-vTO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1140,7 +1128,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jJ2-6h-hEe"/>
+        <segue reference="Amk-wL-Oft"/>
         <segue reference="VhQ-50-KmB"/>
         <segue reference="cJt-0S-uOr"/>
         <segue reference="niv-rd-nBo"/>
