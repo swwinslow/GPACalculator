@@ -178,6 +178,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="G8F-vU-vGN" kind="show" id="ndW-D8-0oE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZ8-eM-Oky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3806" y="-3626"/>
+            <point key="canvasLocation" x="3806" y="-3609"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pRP-Qr-fin">
@@ -274,7 +277,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is the text area to get information on how to run the app." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-04-gCc">
                                 <rect key="frame" x="20" y="330" width="560" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -664,7 +667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UN2-pF-6L8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219" y="-3664"/>
+            <point key="canvasLocation" x="-325" y="-3548"/>
         </scene>
         <!--Title-->
         <scene sceneID="5RZ-fl-t7F">
@@ -746,6 +749,9 @@
                                 <state key="normal" title="Help">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="G8F-vU-vGN" kind="show" id="JAv-lq-xDD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -791,7 +797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiK-q2-NVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-3626"/>
+            <point key="canvasLocation" x="626" y="-3548"/>
         </scene>
         <!--Title-->
         <scene sceneID="v5a-Gy-XId">
@@ -1131,9 +1137,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="VhQ-50-KmB"/>
+        <segue reference="JAv-lq-xDD"/>
         <segue reference="aZU-JS-2HL"/>
-        <segue reference="mAp-VI-t0l"/>
-        <segue reference="If2-bD-QTE"/>
         <segue reference="cJt-0S-uOr"/>
         <segue reference="niv-rd-nBo"/>
     </inferredMetricsTieBreakers>
