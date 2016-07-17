@@ -50,7 +50,7 @@ class CourseTableViewController: UITableViewController {
         // REQUESTING THE DATA
         
         // INIT AN ERROR
-        let error: NSError?
+        let _: NSError?
         
         // REQUESTING THE HIGH SCHOOL DATA
         if education == "HS GPA"{
@@ -79,7 +79,7 @@ class CourseTableViewController: UITableViewController {
                 // GETTING THE COLEEGE DATA AND PUTTING IT IN THE ARRAY
                 courses = try managedObjectContext.executeFetchRequest(request) as! [Course]
 
-            } catch let error as NSError {
+            } catch let _ as NSError {
                 // ALERT FOR AN ERROR GETTING THE DATA
                 let alert = UIAlertView(title: "Error", message: "Could not get College Data", delegate: nil, cancelButtonTitle: "Close")
                 alert.show()
