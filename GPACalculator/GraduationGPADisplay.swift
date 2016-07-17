@@ -32,17 +32,8 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
        
         // SET THE TITLE OF THE VIEW
         self.navigationItem.title = "Results"
-        
-    
-        let targetDouble: Double = Double(targetGPAStringLoad)!
-        let currentDobule: Double = Double(currentGPAStringLoad)!
-        let goalDouble: Double = Double(goalGPAStringLoad)!
-        
-       
 
-        
-        
-       // var currentGPAString:String = (String(format: "%.2f", currentGPAStringLoad))
+        // var currentGPAString:String = (String(format: "%.2f", currentGPAStringLoad))
 
         currentGPALabel.text = "\(currentGPAStringLoad)"
         

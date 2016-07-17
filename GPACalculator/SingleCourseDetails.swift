@@ -183,8 +183,8 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         var extraBoolean: Bool
         
         // CHECKING THE CREDIT OF THE COURSE
-        var creditString: String = courseCreditTextbox.text!
-        var creditNumber = Int(creditString)
+        let creditString: String = courseCreditTextbox.text!
+        let creditNumber = Int(creditString)
         if creditNumber != nil {
 
             creditBoolean = true
@@ -195,7 +195,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         }
     
         // CHECKING THE NAME OF THE COURSE
-        var name: String = courseNameTextbox.text!
+        let name: String = courseNameTextbox.text!
         if name != ""{
             
             // AS LONG AS THE NAME HAS SOMETHING IN IT
@@ -206,7 +206,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         }
         
         // CHECKING THE GRADE OF THE COURSE
-        var gradeString: String = courseGradeTextbox.text!
+        let gradeString: String = courseGradeTextbox.text!
         
         // IF THE GRADE STRING IS VALID => TRUE
         if gradeString == "A+" || gradeString == "A" || gradeString == "A-" || gradeString == "B+" || gradeString == "B" ||
@@ -219,7 +219,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         }
         
         // CHECKING THE VALUE OF THE EXTRA
-        var extraString: String = courseExtraTextBox.text!
+        let extraString: String = courseExtraTextBox.text!
         
         // IF THE EXTRA STRING IS SET TO SOMETHING VALID
         if extraString == "N/A" || extraString == "AP" || extraString == "Honors"{
@@ -233,47 +233,115 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         // ISSUES THE ALERTS IF A VALUE IS MISSING FROM THE COURSE DETAILS
         
         if(creditBoolean == false && gradeBoolean == false && nameBoolean == false && extraBoolean == false){
-            let alert = UIAlertView(title: "Error", message: "Please enter all Information", delegate: nil, cancelButtonTitle: "Try again")
+            let alertController = UIAlertController(title: "Error", message: "Please enter all Information", preferredStyle: .Alert)
             
-            alert.show()
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+//            let alert = UIAlertView(title: "Error", message: "Please enter all Information", delegate: nil, cancelButtonTitle: "Try again")
+//            
+//            alert.show()
             return false
             
         } else if (creditBoolean == false && nameBoolean == false) {
-            let alert = UIAlertView(title: "Error", message: "Please enter a name and credits", delegate: nil, cancelButtonTitle: "Try again")
             
-            alert.show()
+            let alertController = UIAlertController(title: "Error - Name & Credits", message: "Please enter a name and credits.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+            
             return false
         } else if (creditBoolean == false && gradeBoolean == false){
-        let alert = UIAlertView(title: "Error", message: "Please enter a grade and credits", delegate: nil, cancelButtonTitle: "Try again")
-        
-            alert.show()
+           
+            let alertController = UIAlertController(title: "Error - Grade & Credits", message: "Please enter a grade and credits.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+            
+      
             return false
         } else if (gradeBoolean == false && nameBoolean == false){
-            let alert = UIAlertView(title: "Error", message: "Please enter a grade and name", delegate: nil, cancelButtonTitle: "Try again")
             
-            alert.show()
+            let alertController = UIAlertController(title: "Error - Grade & Name", message: "Please enter a grade and name.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+            
             return false
             
         } else if (gradeBoolean == false && nameBoolean == false && extraBoolean == false){
-            let alert = UIAlertView(title: "Error", message: "Please enter proper grade, name, and extra", delegate: nil, cancelButtonTitle: "Try again")
+            let alertController = UIAlertController(title: "Error - Grade, Credits, Name", message: "Please enter proper grade, name, and extra.", preferredStyle: .Alert)
             
-            alert.show()
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
             return false
             
         } else if (gradeBoolean == false){
-            let alert = UIAlertView(title: "Error", message: "Please enter a grade", delegate: nil, cancelButtonTitle: "Try again")
             
-            alert.show()
+            let alertController = UIAlertController(title: "Error - Grade", message: "Please enter pick a grade.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
             return false
         } else if (nameBoolean == false){
-            let alert = UIAlertView(title: "Error", message: "Please enter a name", delegate: nil, cancelButtonTitle: "Try again")
+            let alertController = UIAlertController(title: "Error - Name", message: "Please enter a name.", preferredStyle: .Alert)
             
-            alert.show()
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
             return false
         } else if (creditBoolean == false){
-            let alert = UIAlertView(title: "Error", message: "Please enter the credits", delegate: nil, cancelButtonTitle: "Try again")
             
-            alert.show()
+            let alertController = UIAlertController(title: "Error - Credits", message: "Please enter credits.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
             return false
         } else {
             return true
@@ -350,7 +418,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
         
         // SENDING ALL OF THE INFORMATION TO FUNCTION
         // IF BOOLEAN IS TRUE; ALL INFORMATION IS TRUE
-        var isCorrectInformation: Bool = isInformationCorrect()
+        let isCorrectInformation: Bool = isInformationCorrect()
         
         if(isCorrectInformation == true){
         
@@ -372,22 +440,34 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                 oldCourse?.courseCredit = courseCreditTextbox.text!
                 oldCourse?.courseExtra = "YES"
             
-                // INIT AN ERROR WITH SAVING
-                var error: NSError?
-            
                 // SAVING THE COURSE TO THE CORE DATA
                 do{
                     // TRY AND SAVE THE DATA
                     try managedObjectContext.save()
                     
                     // THE DATA WAS A SUCCESS; ISSUE AN ALERT TO THE USER
-                    let alert = UIAlertView(title: "Success", message: "Course Updated", delegate: nil, cancelButtonTitle: "Done")
-                    alert.show()
+                    let alertController = UIAlertController(title: "Success", message: "Course Updated.", preferredStyle: .Alert)
                     
+                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                        // ...
+                    }
+                    alertController.addAction(OKAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        
+                    }
                 } catch {
                     // IF THE DATA COULD NOT BE SAVED THE ISSUE ALERT
-                    let alert = UIAlertView(title: "Alert", message: "There is an error saving", delegate: nil, cancelButtonTitle: "Try again")
-                    alert.show()
+                    let alertController = UIAlertController(title: "Error", message: "There is an error saving.", preferredStyle: .Alert)
+                    
+                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                        // ...
+                    }
+                    alertController.addAction(OKAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        
+                    }
                 }
             }
     
@@ -409,23 +489,37 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                 oldHighSchoolCourse?.courseGrade = courseGradeTextbox.text!
                 oldHighSchoolCourse?.courseCredit = "1"
                 oldHighSchoolCourse?.courseExtra = courseExtraTextBox.text!
-                
-                // INIT AN ERROR WITH SAVING
-                var error: NSError?
-            
+
                 // SAVING THE COURSE TO THE CORE DATA
                 do{
                     // TRY AND SAVE THE DATA
                     try managedObjectContext.save()
                     
                     // THE DATA WAS A SUCCESS; ISSUE AN ALERT TO THE USER
-                    let alert = UIAlertView(title: "Success", message: "Course Updated", delegate: nil, cancelButtonTitle: "Done")
-                    alert.show()
+                    let alertController = UIAlertController(title: "Success", message: "Course Updated.", preferredStyle: .Alert)
+                    
+                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                        // ...
+                    }
+                    alertController.addAction(OKAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        
+                    }
                     
                 } catch {
                     // IF THE DATA COULD NOT BE SAVED THE ISSUE ALERT
-                    let alert = UIAlertView(title: "Alert", message: "There is an error saving", delegate: nil, cancelButtonTitle: "Try again")
-                    alert.show()
+                    let alertController = UIAlertController(title: "Error", message: "There is an error saving.", preferredStyle: .Alert)
+                    
+                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                        // ...
+                    }
+                    alertController.addAction(OKAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        
+                    }
+
                 }
             }
             

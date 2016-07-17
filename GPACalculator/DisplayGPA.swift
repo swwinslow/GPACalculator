@@ -38,8 +38,8 @@ class DisplayGPA: UIViewController, GADBannerViewDelegate{
         let newRaw:Double = Double(totalRawScore)
         let newCred:Double = Double(totalCredits)
         
-        var newCreditsString:String = String(format:"%.2f", newCred)
-        var newRawScoreString:String = String(format:"%.2f", newRaw)
+        let newCreditsString:String = String(format:"%.2f", newCred)
+        let newRawScoreString:String = String(format:"%.2f", newRaw)
         
         var total:Double = 0
         
@@ -49,7 +49,7 @@ class DisplayGPA: UIViewController, GADBannerViewDelegate{
         }
         
         
-        var c:String = String(format:"%.3f", total)
+        let c:String = String(format:"%.3f", total)
         print("total: \(c)") // c: 1.5
         
         
