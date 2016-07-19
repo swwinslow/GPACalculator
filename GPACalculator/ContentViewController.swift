@@ -111,23 +111,37 @@ class ContentViewController: UIViewController {
             image.image = UIImage(named: "graduationGPA")
             image.layer.borderColor = UIColor.whiteColor().CGColor
             image.layer.borderWidth = 2
+
             
             var desSemester:String = "Graduation GPA: \r\n"
+            desSemester.appendContentsOf("\r\n")
+
             desSemester.appendContentsOf("How to Calculate your Graduation GPA: \r\n")
             desSemester.appendContentsOf("1) Enter current GPA. \r\n")
-            desSemester.appendContentsOf("In the example I have entered 2.76.")
+
+            desSemester.appendContentsOf("In the example I have entered 2.76.\r\n")
+            desSemester.appendContentsOf("\r\n")
+
             desSemester.appendContentsOf("2) Enter the current hours that have been completed for that GPA. \r\n")
             desSemester.appendContentsOf("In the example, I have entered 59 hours. \r\n")
             desSemester.appendContentsOf("Do NOT include hours that might have transfered that does not affect your GPA. (i.e. AP credits). \r\n")
+            desSemester.appendContentsOf("\r\n")
+
             desSemester.appendContentsOf("3) Enter your goal GPA. This is the one that you want at the end of your time at this instution.")
             desSemester.appendContentsOf("In the example, my goal GPA is 3.0 \r\n")
+            desSemester.appendContentsOf("\r\n")
+
             desSemester.appendContentsOf("4) Enter the amount of hours that are remaining until you are done \r\n")
             desSemester.appendContentsOf("In the example, I have 62 credit hours left to finish \r\n")
+            desSemester.appendContentsOf("\r\n")
+
             desSemester.appendContentsOf("5) Press enter after all the information has been entered. \r\n")
             
             desSemester.appendContentsOf("\r\n")
             
             desSemester.appendContentsOf("What does that GPA mean: \r\n")
+            desSemester.appendContentsOf("\r\n")
+
             desSemester.appendContentsOf("After all the courses have been entered, this GPA is what was calculated with the grade, credit hours, and any extra distinction. \r\n")
             desSemester.appendContentsOf("In other words, this is the current GPA for the semester. \r\n")
             
@@ -137,8 +151,10 @@ class ContentViewController: UIViewController {
             desSemester.appendContentsOf("This GPA is used on a traditional grading system. \r\n")
             desSemester.appendContentsOf("To best figure out your GPA please consult your Professors, Instrcutors, GAs, TAs, counselors, etc.  \r\n")
 
-            descriptionTextArea.text = "\(desSemester)"
+            descriptionTextArea.font = UIFont.systemFontOfSize(20)
 
+            descriptionTextArea.text = "\(desSemester)"
+            descriptionTextArea.font = UIFont(name: "Avenir-Light", size: 15.0)
            
 
         }
@@ -156,7 +172,7 @@ class ContentViewController: UIViewController {
             
             desSemester.appendContentsOf("\r\n")
             
-            desSemester.appendContentsOf("High School Information: \r\n")
+            desSemester.appendContentsOf("High School Scale: \r\n")
             
             desSemester.appendContentsOf("A+ = 4.33 \r\n")
             desSemester.appendContentsOf("A = 4.00 \r\n")
@@ -210,12 +226,13 @@ class ContentViewController: UIViewController {
 
             
             desSemester.appendContentsOf("DISCLAIMER: \r\n")
+            desSemester.appendContentsOf("\r\n")
+ 
             desSemester.appendContentsOf("This GPA is used on a traditional grading system. \r\n")
             desSemester.appendContentsOf("To best figure out your GPA please consult your Professors, Instrcutors, GAs, TAs, counselors, etc.  \r\n")
             
             descriptionTextArea.text = "\(desSemester)"
-            
-           
+            descriptionTextArea.font = descriptionTextArea.font?.fontWithSize(20)
         }
 
         
