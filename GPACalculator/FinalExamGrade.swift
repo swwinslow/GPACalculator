@@ -497,7 +497,13 @@ class FinalExamGrade: UIViewController {
             nextView.addPercent = percentNumber
         }
         
-        if segue.identifier == "help" || segue.identifier == "menu"{
+    if segue.identifier == "final" {
+        var yourNextViewController = segue.destinationViewController as! ContentViewController
+        
+        yourNextViewController.typeOfHelp =  "final"
+    }
+    
+    if segue.identifier == "menu"{
         }
     }
 }
