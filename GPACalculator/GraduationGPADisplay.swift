@@ -18,7 +18,6 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
     @IBOutlet weak var targetGPALabel: UILabel!
     @IBOutlet weak var goalGPALabel: UILabel!
     @IBOutlet weak var currentGPALabel: UILabel!
-    @IBOutlet weak var banner: GADBannerView!
     
     var goalGPADouble:Double = 0.0
     var goalGPAStringLoad:String = "3.0"
@@ -39,25 +38,9 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
         
 
         goalGPALabel.text = "\(goalGPAStringLoad)"
-       
-        
-        //Google Ads
-        
-        banner.hidden = true
-        banner.delegate = self
-        banner.adUnitID = "ca-app-pub-5747194588356444/4251379011"
-        banner.rootViewController = self
-        banner.loadRequest(GADRequest())
-        
-        
-    }
-    func adViewDidReceiveAd(bannerView: GADBannerView!) {
-        banner.hidden = false
-    }
     
-    func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
-        banner.hidden = true
     }
+ 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "menu" || segue.identifier == "help"{
         }

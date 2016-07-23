@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vit-iE-0d8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vit-iE-0d8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -163,14 +163,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vy-Lf-Vll" customClass="GADBannerView">
-                                <rect key="frame" x="140" y="550" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="AG1-ym-nMe"/>
-                                    <constraint firstAttribute="width" constant="320" id="QiI-US-rVq"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-ko-EvA">
                                 <rect key="frame" x="304" y="262" width="276" height="56"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -189,7 +181,6 @@
                             <constraint firstAttribute="leadingMargin" secondItem="g7d-gI-hQn" secondAttribute="leading" id="3dH-NN-2WV"/>
                             <constraint firstItem="UFV-fB-z48" firstAttribute="top" secondItem="i9r-dL-peo" secondAttribute="bottom" constant="9" id="4QQ-H4-nej"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yiM-Tt-fVA" secondAttribute="trailing" id="59Y-MH-rep"/>
-                            <constraint firstItem="7vy-Lf-Vll" firstAttribute="centerX" secondItem="7eJ-oY-P6S" secondAttribute="centerX" id="63l-5D-Xp5"/>
                             <constraint firstItem="g7d-gI-hQn" firstAttribute="width" secondItem="UFV-fB-z48" secondAttribute="width" id="6wg-NI-FqX"/>
                             <constraint firstItem="CNr-ko-EvA" firstAttribute="height" secondItem="ikR-6a-VIh" secondAttribute="height" id="9aq-vg-KPp"/>
                             <constraint firstItem="nuP-nJ-IBt" firstAttribute="width" secondItem="VOi-ah-Tw7" secondAttribute="width" id="A2b-UI-llV"/>
@@ -198,7 +189,6 @@
                             <constraint firstAttribute="leadingMargin" secondItem="nuP-nJ-IBt" secondAttribute="leading" id="HVa-QY-GBg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ikR-6a-VIh" secondAttribute="leading" id="MPM-rJ-Dgv"/>
                             <constraint firstItem="g7d-gI-hQn" firstAttribute="height" secondItem="UFV-fB-z48" secondAttribute="height" id="PnA-7r-BZW"/>
-                            <constraint firstItem="QmT-rd-R3x" firstAttribute="top" secondItem="7vy-Lf-Vll" secondAttribute="bottom" id="SYg-w6-6Od"/>
                             <constraint firstItem="eYZ-pF-VB2" firstAttribute="top" secondItem="yiM-Tt-fVA" secondAttribute="bottom" constant="8" id="SjY-vC-LWW"/>
                             <constraint firstAttribute="leadingMargin" secondItem="eYZ-pF-VB2" secondAttribute="leading" id="Uzn-oq-e8m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CNr-ko-EvA" secondAttribute="trailing" id="WIM-pM-jR2"/>
@@ -218,7 +208,6 @@
                     </view>
                     <connections>
                         <outlet property="GPARaw" destination="UFV-fB-z48" id="R10-Ha-6fH"/>
-                        <outlet property="banner" destination="7vy-Lf-Vll" id="yOj-70-o7n"/>
                         <outlet property="creditLabel" destination="VOi-ah-Tw7" id="7BG-Ko-gFQ"/>
                         <outlet property="display" destination="eYZ-pF-VB2" id="9K4-Vt-Wij"/>
                     </connections>
@@ -734,14 +723,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zku-Q4-2is" customClass="GADBannerView">
-                                <rect key="frame" x="140" y="550" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="CAr-5e-JGK"/>
-                                    <constraint firstAttribute="width" constant="320" id="S47-81-U3a"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w69-wL-J6e">
                                 <rect key="frame" x="304" y="262" width="276" height="56"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -759,7 +740,6 @@
                             <constraint firstItem="GXt-Cu-4gz" firstAttribute="top" secondItem="GkC-mK-C2J" secondAttribute="bottom" constant="9" id="5Mh-3b-AHD"/>
                             <constraint firstItem="KUP-OJ-16m" firstAttribute="top" secondItem="T04-Gr-kpB" secondAttribute="bottom" constant="8" id="5el-j2-fTl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GXt-Cu-4gz" secondAttribute="trailing" id="D6e-3M-STl"/>
-                            <constraint firstItem="g4j-h0-q2D" firstAttribute="top" secondItem="Zku-Q4-2is" secondAttribute="bottom" id="DMI-iR-iJi"/>
                             <constraint firstItem="w69-wL-J6e" firstAttribute="leading" secondItem="jA7-lL-aWp" secondAttribute="trailing" constant="8" id="Dqk-sG-HLs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TyP-Od-mzB" secondAttribute="trailing" id="H3V-PG-gbI"/>
                             <constraint firstItem="w69-wL-J6e" firstAttribute="width" secondItem="jA7-lL-aWp" secondAttribute="width" id="JzL-ek-y3B"/>
@@ -770,7 +750,6 @@
                             <constraint firstAttribute="leadingMargin" secondItem="jA7-lL-aWp" secondAttribute="leading" id="PIs-zx-cqd"/>
                             <constraint firstItem="w69-wL-J6e" firstAttribute="height" secondItem="jA7-lL-aWp" secondAttribute="height" id="Ra0-wk-Mjo"/>
                             <constraint firstItem="GXt-Cu-4gz" firstAttribute="leading" secondItem="Daj-7j-DXH" secondAttribute="trailing" constant="8" id="Tsl-fX-7l1"/>
-                            <constraint firstItem="Zku-Q4-2is" firstAttribute="centerX" secondItem="gmn-IZ-XjO" secondAttribute="centerX" id="VCj-tN-vZm"/>
                             <constraint firstItem="T04-Gr-kpB" firstAttribute="height" secondItem="S13-Pn-DGM" secondAttribute="height" id="WJs-MQ-BQk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S13-Pn-DGM" secondAttribute="trailing" id="Ws9-pw-HOB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="KUP-OJ-16m" secondAttribute="leading" id="X7k-Ou-mJp"/>
@@ -789,7 +768,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="b7U-j6-Ekn"/>
                     <connections>
-                        <outlet property="banner" destination="Zku-Q4-2is" id="HgF-mJ-Gza"/>
                         <outlet property="currentGPALabel" destination="GXt-Cu-4gz" id="Ng3-IP-5rI"/>
                         <outlet property="goalGPALabel" destination="S13-Pn-DGM" id="tRq-KP-4UO"/>
                         <outlet property="targetGPALabel" destination="TyP-Od-mzB" id="Qz1-SI-znM"/>
@@ -1137,10 +1115,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zk5-LQ-7Mj"/>
         <segue reference="cJt-0S-uOr"/>
-        <segue reference="niv-rd-nBo"/>
-        <segue reference="JAv-lq-xDD"/>
+        <segue reference="uBK-s5-yh9"/>
+        <segue reference="ndW-D8-0oE"/>
         <segue reference="jJ2-6h-hEe"/>
+        <segue reference="niv-rd-nBo"/>
     </inferredMetricsTieBreakers>
 </document>

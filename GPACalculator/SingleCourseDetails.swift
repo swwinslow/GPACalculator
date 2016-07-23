@@ -448,7 +448,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                     // THE DATA WAS A SUCCESS; ISSUE AN ALERT TO THE USER
                     let alertController = UIAlertController(title: "Success", message: "Course Updated.", preferredStyle: .Alert)
                     
-                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                    let OKAction = UIAlertAction(title: "Done", style: .Default) { (action) in
                         // ...
                     }
                     alertController.addAction(OKAction)
@@ -498,7 +498,7 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
                     // THE DATA WAS A SUCCESS; ISSUE AN ALERT TO THE USER
                     let alertController = UIAlertController(title: "Success", message: "Course Updated.", preferredStyle: .Alert)
                     
-                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                    let OKAction = UIAlertAction(title: "Done", style: .Default) { (action) in
                         // ...
                     }
                     alertController.addAction(OKAction)

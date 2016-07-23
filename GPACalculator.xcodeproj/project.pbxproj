@@ -30,19 +30,6 @@
 		6D31F02B1D1F4F120024793A /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31F02A1D1F4F120024793A /* CourseTableViewController.swift */; };
 		6D41234F1D2CA6C3004B3A23 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D41234E1D2CA6C3004B3A23 /* CollectionViewController.swift */; };
 		6D4123511D2CB076004B3A23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4123501D2CB076004B3A23 /* MainViewController.swift */; };
-		6D60C0751D31D8A6009F0CED /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C0741D31D8A6009F0CED /* GoogleMobileAds.framework */; };
-		6D60C0771D31D8DE009F0CED /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C0761D31D8DE009F0CED /* AdSupport.framework */; };
-		6D60C0791D31D8EC009F0CED /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C0781D31D8EC009F0CED /* AudioToolbox.framework */; };
-		6D60C07B1D31D8F7009F0CED /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C07A1D31D8F7009F0CED /* AVFoundation.framework */; };
-		6D60C07F1D31D903009F0CED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C07C1D31D903009F0CED /* CoreGraphics.framework */; };
-		6D60C0801D31D903009F0CED /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C07D1D31D903009F0CED /* CoreMedia.framework */; };
-		6D60C0811D31D903009F0CED /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C07E1D31D903009F0CED /* CoreTelephony.framework */; };
-		6D60C0841D31D912009F0CED /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C0821D31D912009F0CED /* EventKit.framework */; };
-		6D60C0851D31D912009F0CED /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C0831D31D912009F0CED /* EventKitUI.framework */; };
-		6D60C0871D31D91E009F0CED /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C0861D31D91E009F0CED /* MediaPlayer.framework */; };
-		6D60C0891D31D926009F0CED /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C0881D31D926009F0CED /* MessageUI.framework */; };
-		6D60C08B1D31D92F009F0CED /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C08A1D31D92F009F0CED /* StoreKit.framework */; };
-		6D60C08D1D31D939009F0CED /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D60C08C1D31D939009F0CED /* SystemConfiguration.framework */; };
 		6D60C08F1D321E16009F0CED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60C08E1D321E16009F0CED /* ViewController.swift */; };
 		6D703D601D03712A009E1593 /* FinalExamTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */; };
 		6D8317501D07BAB400A08DB1 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D83174F1D07BAB400A08DB1 /* ScrollView.swift */; };
@@ -99,19 +86,6 @@
 		6D31F02A1D1F4F120024793A /* CourseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		6D41234E1D2CA6C3004B3A23 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		6D4123501D2CB076004B3A23 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
-		6D60C0741D31D8A6009F0CED /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		6D60C0761D31D8DE009F0CED /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		6D60C0781D31D8EC009F0CED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		6D60C07A1D31D8F7009F0CED /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		6D60C07C1D31D903009F0CED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6D60C07D1D31D903009F0CED /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		6D60C07E1D31D903009F0CED /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		6D60C0821D31D912009F0CED /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		6D60C0831D31D912009F0CED /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
-		6D60C0861D31D91E009F0CED /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		6D60C0881D31D926009F0CED /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		6D60C08A1D31D92F009F0CED /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		6D60C08C1D31D939009F0CED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6D60C08E1D321E16009F0CED /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D703D5F1D03712A009E1593 /* FinalExamTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalExamTableView.swift; path = ../FinalExamTableView.swift; sourceTree = "<group>"; };
 		6D83174F1D07BAB400A08DB1 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = ../ScrollView.swift; sourceTree = "<group>"; };
@@ -125,19 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D60C08D1D31D939009F0CED /* SystemConfiguration.framework in Frameworks */,
-				6D60C08B1D31D92F009F0CED /* StoreKit.framework in Frameworks */,
-				6D60C0891D31D926009F0CED /* MessageUI.framework in Frameworks */,
-				6D60C0871D31D91E009F0CED /* MediaPlayer.framework in Frameworks */,
-				6D60C0841D31D912009F0CED /* EventKit.framework in Frameworks */,
-				6D60C0851D31D912009F0CED /* EventKitUI.framework in Frameworks */,
-				6D60C07F1D31D903009F0CED /* CoreGraphics.framework in Frameworks */,
-				6D60C0801D31D903009F0CED /* CoreMedia.framework in Frameworks */,
-				6D60C0811D31D903009F0CED /* CoreTelephony.framework in Frameworks */,
-				6D60C07B1D31D8F7009F0CED /* AVFoundation.framework in Frameworks */,
-				6D60C0791D31D8EC009F0CED /* AudioToolbox.framework in Frameworks */,
-				6D60C0771D31D8DE009F0CED /* AdSupport.framework in Frameworks */,
-				6D60C0751D31D8A6009F0CED /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +142,6 @@
 		55AC03E51C3106B800093A08 /* GPACalculator */ = {
 			isa = PBXGroup;
 			children = (
-				6D60C0731D31D753009F0CED /* Admob */,
 				6D1F2A801D24B69D00FD9073 /* HSCourse+CoreDataProperties.swift */,
 				6D0753F81D334C0C00EA3408 /* HelpMainMenu.swift */,
 				6D4123501D2CB076004B3A23 /* MainViewController.swift */,
@@ -231,26 +191,6 @@
 				55AC040B1C3106B800093A08 /* Info.plist */,
 			);
 			path = GPACalculatorUITests;
-			sourceTree = "<group>";
-		};
-		6D60C0731D31D753009F0CED /* Admob */ = {
-			isa = PBXGroup;
-			children = (
-				6D60C08C1D31D939009F0CED /* SystemConfiguration.framework */,
-				6D60C08A1D31D92F009F0CED /* StoreKit.framework */,
-				6D60C0881D31D926009F0CED /* MessageUI.framework */,
-				6D60C0861D31D91E009F0CED /* MediaPlayer.framework */,
-				6D60C0821D31D912009F0CED /* EventKit.framework */,
-				6D60C0831D31D912009F0CED /* EventKitUI.framework */,
-				6D60C07C1D31D903009F0CED /* CoreGraphics.framework */,
-				6D60C07D1D31D903009F0CED /* CoreMedia.framework */,
-				6D60C07E1D31D903009F0CED /* CoreTelephony.framework */,
-				6D60C07A1D31D8F7009F0CED /* AVFoundation.framework */,
-				6D60C0781D31D8EC009F0CED /* AudioToolbox.framework */,
-				6D60C0761D31D8DE009F0CED /* AdSupport.framework */,
-				6D60C0741D31D8A6009F0CED /* GoogleMobileAds.framework */,
-			);
-			name = Admob;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,6 +503,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GPACalculator",
@@ -588,6 +530,8 @@
 				CODE_SIGN_ENTITLEMENTS = GPACalculator/GPACalculator.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GPACalculator",
