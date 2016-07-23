@@ -57,6 +57,8 @@ class ContentViewController: UIViewController {
             
             
             descriptionTextArea.text = "\(desFinalExam)"
+            descriptionTextArea.font = UIFont(name: "Avenir-Light", size: 15.0)
+
 
             
             
@@ -100,6 +102,8 @@ class ContentViewController: UIViewController {
             
             
             descriptionTextArea.text = "\(desFinalExam)"
+            descriptionTextArea.font = UIFont(name: "Avenir-Light", size: 15.0)
+
 
             
            
@@ -233,6 +237,8 @@ class ContentViewController: UIViewController {
             
             descriptionTextArea.text = "\(desSemester)"
             descriptionTextArea.font = descriptionTextArea.font?.fontWithSize(20)
+            descriptionTextArea.font = UIFont(name: "Avenir-Light", size: 15.0)
+
         }
 
         

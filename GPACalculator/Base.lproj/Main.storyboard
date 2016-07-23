@@ -7,7 +7,7 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--GPA HELPER-->
+        <!--Helper-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GPACalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,7 +94,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0KF-h9-dMp" secondAttribute="trailing" id="yjK-GL-Wr7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="GPA HELPER" id="t6n-vU-IXr"/>
+                    <navigationItem key="navigationItem" title="Helper" id="t6n-vU-IXr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
