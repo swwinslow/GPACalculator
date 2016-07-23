@@ -94,8 +94,10 @@ class SingleCourseDetails : UIViewController, UIPickerViewDataSource, UIPickerVi
             
             // SETTING THE TEXT FIELD
             
-            var setExtra : String = ""
-            var setGrade : String = ""
+            var setExtra : String = "N/A"
+            var setGrade : String = "A+"
+            self.courseGradeTextbox.text = "\(setGrade)"
+            self.courseExtraTextBox.text = "\(setExtra)"
             
             
             // SEE IF PULLING IN SINLGE HIGH SCHOOL DATA COURSE

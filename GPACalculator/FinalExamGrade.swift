@@ -263,6 +263,10 @@ class FinalExamGrade: UIViewController {
         }
     }
     
+    var currentScoreBoolean : Bool = true
+    var finalExamWeightBoolean : Bool = true
+    var percentageGradeBoolean : Bool = true
+    
     func checkValues(){
         checkCurrentScore()
         checkFinalExamScore()
@@ -271,31 +275,92 @@ class FinalExamGrade: UIViewController {
     }
     
     func checkCurrentScore(){
-        currentScoreBoolean = false
+        let currentText = currentGradeTextBox.text
+        if(currentGradeTextBox.text != ""){
+            
+            let currrentGradeString : String = (currentText?.substringToIndex((currentText?.endIndex.predecessor())!))!
+            
+            let x:Bool = isNumeric(currrentGradeString)
+            
+            if (x == true){
+                
+                let doubleCurrentScore:Double = Double(currrentGradeString)!
+                
+                if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
+                {
+                    currentScoreBoolean = false;
+                } else {
+                    currentScoreBoolean = true
+                }
+            } else {
+                currentScoreBoolean = false;
+            }
+        } else {
+            currentScoreBoolean = false;
+        }
     }
     
     func checkFinalExamScore(){
-        finalExamWeightBoolean = false
+        let currentFinalExam = finalWeightTextBox.text
+        
+        if currentFinalExam != "" {
+            
+            let currrentFinalString : String = (currentFinalExam?.substringToIndex((currentFinalExam?.endIndex.predecessor())!))!
+            
+            let x:Bool = isNumeric(currrentFinalString)
+            
+            if(finalWeightTextBox.text != "" && x == true){
+                
+                let doubleFinalExamPercentage:Double = Double(currrentFinalString)!
+                
+                if(doubleFinalExamPercentage < 0 || doubleFinalExamPercentage > 100 )
+                {
+                    finalExamWeightBoolean = false
+                } else {
+                    finalExamWeightBoolean = true
+                }
+            } else {
+                finalExamWeightBoolean = false;
+            }
+        } else {
+            finalExamWeightBoolean = false
+        }
     }
     
     func checkPercentageScore(){
-        percentageGradeBoolean = false
+        let percent = percentage.text
+        
+        let x:Bool = isNumeric(percent!)
+        if(percentage.text != "" && x == true){
+            let currentGrade = percentage.text! as String
+            let doubleCurrentScore:Double = Double(currentGrade)!
+            
+            if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
+            {
+                percentageGradeBoolean = false
+
+            } else {
+                percentageGradeBoolean = true
+            }
+        } else {
+            percentageGradeBoolean = false
+        }
+        
     }
     
-    var currentScoreBoolean : Bool = false
-    var finalExamWeightBoolean : Bool = false
-    var percentageGradeBoolean : Bool = false
+    
     
     
     
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if identifier == "CalculateFinalExam"{
+        if identifier == "calc"{
             checkValues()
             if currentScoreBoolean == true && finalExamWeightBoolean == true && percentageGradeBoolean == true{
                 
                 return true
             } else {
+                checkValues()
                 sendAlert()
                 return false
             }
@@ -304,17 +369,87 @@ class FinalExamGrade: UIViewController {
     }
     
     func sendAlert(){
-        let alertController = UIAlertController(title: "Error", message: "There is an error", preferredStyle: .Alert)
         
-        let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-            // ...
-        }
-        alertController.addAction(OKAction)
-        
-        self.presentViewController(alertController, animated: true) {
+        if currentScoreBoolean == false && finalExamWeightBoolean == false && percentageGradeBoolean == false {
+            let alertController = UIAlertController(title: "Error", message: "Fill out all the information", preferredStyle: .Alert)
             
-        }
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
 
+        } else if currentScoreBoolean == false && finalExamWeightBoolean == false && percentageGradeBoolean == true{
+            let alertController = UIAlertController(title: "Error - Score & Final", message: "Score & Final are incorrect styles.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+        } else if currentScoreBoolean == false && finalExamWeightBoolean == true && percentageGradeBoolean == false{
+            let alertController = UIAlertController(title: "Error - Score & Percentage", message: "Score & Percentage are incorrect styles.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+        } else if currentScoreBoolean == true && finalExamWeightBoolean == false && percentageGradeBoolean == false{
+            let alertController = UIAlertController(title: "Error - Final & Percentage", message: "Final & Percentage are incorrect styles.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+        }else if currentScoreBoolean == false && finalExamWeightBoolean == true && percentageGradeBoolean == true{
+            let alertController = UIAlertController(title: "Error - Score", message: "The score is an incorrect style.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+        } else if currentScoreBoolean == true && finalExamWeightBoolean == false && percentageGradeBoolean == true {
+            let alertController = UIAlertController(title: "Error - Final", message: "The final is an incorrect style.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+        } else if currentScoreBoolean == true && finalExamWeightBoolean == true && percentageGradeBoolean == false {
+            let alertController = UIAlertController(title: "Error - Percentage", message: "The percentage is an incorrect style.", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                
+            }
+        }
+        
         
     }
     
@@ -335,46 +470,18 @@ class FinalExamGrade: UIViewController {
             
                 if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
                 {
-                    let alertController = UIAlertController(title: "Error - Number", message: "The number you entered needs to be between 0 and 100", preferredStyle: .Alert)
-                    
-                    let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                        // ...
-                    }
-                    alertController.addAction(OKAction)
-                    
-                    self.presentViewController(alertController, animated: true) {
-                        
-                    }
-
+                 
                 }
                 else{
                     return doubleCurrentScore
                 }
             } else {
     
-                let alertController = UIAlertController(title: "No Number", message: "The value you entered is not a number.", preferredStyle: .Alert)
-                
-                let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                    // ...
-                }
-                alertController.addAction(OKAction)
-                self.presentViewController(alertController, animated: true) {
-                }
             }
 
 
         } else{
             
-            let alertController = UIAlertController(title: "No Number", message: "The value you entered is not a number", preferredStyle: .Alert)
-            
-            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                // ...
-            }
-            alertController.addAction(OKAction)
-            
-            self.presentViewController(alertController, animated: true) {
-                
-            }
         }
         return 0.0
     }
@@ -399,14 +506,6 @@ class FinalExamGrade: UIViewController {
             
                     if(doubleFinalExamPercentage < 0 || doubleFinalExamPercentage > 100 )
                     {
-                        let alertController = UIAlertController(title: "Error - Number", message: "The number you entered needs to be between 0 and 100", preferredStyle: .Alert)
-                
-                        let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                            // ...
-                    }
-                        alertController.addAction(OKAction)
-                        self.presentViewController(alertController, animated: true) {
-                        }
                     } else {
                         let c:Double = 100.0 - doubleFinalExamPercentage
                         return (doubleFinalExamPercentage, c)
@@ -414,27 +513,11 @@ class FinalExamGrade: UIViewController {
 
             } else {
            
-                //alert for entering informaton into the textbox
-                let alertController = UIAlertController(title: "Error", message: "The value you entered is not a number.", preferredStyle: .Alert)
-            
-                let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                    // ...
-                }
-                alertController.addAction(OKAction)
-                self.presentViewController(alertController, animated: true) {
-                }
+                
             }
             
         } else {
-            //alert for entering informaton into the textbox
-            let alertController = UIAlertController(title: "No Number", message: "The value you entered is not a number.", preferredStyle: .Alert)
             
-            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                // ...
-            }
-            alertController.addAction(OKAction)
-            self.presentViewController(alertController, animated: true) {
-            }
         }
         return (0.0, 0.0)
     }
@@ -450,16 +533,7 @@ class FinalExamGrade: UIViewController {
             
             if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
             {
-                let alertController = UIAlertController(title: "Error - Number", message: "The number you entered needs to be between 0 and 100", preferredStyle: .Alert)
-                
-                let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                    // ...
-                }
-                alertController.addAction(OKAction)
-                
-                self.presentViewController(alertController, animated: true) {
-                    
-                }
+               
 
             }
             else{
@@ -468,16 +542,8 @@ class FinalExamGrade: UIViewController {
         }
         else{
             
-            let alertController = UIAlertController(title: "No Number", message: "The value you entered is not a number.", preferredStyle: .Alert)
-            
-            let OKAction = UIAlertAction(title: "Try Again", style: .Default) { (action) in
-                // ...
-            }
-            alertController.addAction(OKAction)
-            
-            self.presentViewController(alertController, animated: true) {
-                
-            }
+           
+        
         }
         return 0.0
     }
