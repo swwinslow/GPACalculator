@@ -69,24 +69,29 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="BrM-Wt-k4q" firstAttribute="top" secondItem="A9e-Gi-p83" secondAttribute="bottom" constant="8" id="36Y-kf-xZU"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="1ZR-I5-gbm" secondAttribute="leading" id="7xr-oH-PQE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A9e-Gi-p83" secondAttribute="trailing" id="8nf-IA-mBU"/>
-                            <constraint firstItem="A9e-Gi-p83" firstAttribute="width" secondItem="1ZR-I5-gbm" secondAttribute="width" id="JUK-43-ZPv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0KF-h9-dMp" secondAttribute="trailing" id="Kdu-uM-DJP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BrM-Wt-k4q" secondAttribute="trailing" id="TBR-JG-kkr"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="0KF-h9-dMp" secondAttribute="leading" id="Tx4-UG-m9p"/>
-                            <constraint firstItem="A9e-Gi-p83" firstAttribute="width" secondItem="BrM-Wt-k4q" secondAttribute="width" id="ZFC-je-S4H"/>
-                            <constraint firstItem="A9e-Gi-p83" firstAttribute="height" secondItem="BrM-Wt-k4q" secondAttribute="height" id="ajU-ZN-eiy"/>
-                            <constraint firstItem="A9e-Gi-p83" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gho-vZ-NUc"/>
-                            <constraint firstItem="A9e-Gi-p83" firstAttribute="height" secondItem="0KF-h9-dMp" secondAttribute="height" id="i0h-Yx-chT"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="A9e-Gi-p83" secondAttribute="leading" id="rzp-WW-LFG"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="BrM-Wt-k4q" secondAttribute="leading" id="sHl-qr-hvN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1ZR-I5-gbm" secondAttribute="trailing" id="ukT-Hn-7lR"/>
-                            <constraint firstItem="A9e-Gi-p83" firstAttribute="width" secondItem="0KF-h9-dMp" secondAttribute="width" id="vPt-9U-9Kz"/>
-                            <constraint firstItem="1ZR-I5-gbm" firstAttribute="top" secondItem="BrM-Wt-k4q" secondAttribute="bottom" constant="8" id="vf2-20-ydd"/>
-                            <constraint firstItem="0KF-h9-dMp" firstAttribute="top" secondItem="1ZR-I5-gbm" secondAttribute="bottom" constant="8" id="wqN-2G-3Wg"/>
-                            <constraint firstItem="A9e-Gi-p83" firstAttribute="height" secondItem="1ZR-I5-gbm" secondAttribute="height" id="xAm-zU-u1t"/>
+                            <constraint firstItem="BrM-Wt-k4q" firstAttribute="top" secondItem="A9e-Gi-p83" secondAttribute="bottom" constant="8" id="1Tf-ld-KzU"/>
+                            <constraint firstItem="A9e-Gi-p83" firstAttribute="width" secondItem="BrM-Wt-k4q" secondAttribute="width" id="1sc-vt-fru"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1ZR-I5-gbm" secondAttribute="leading" id="2Tg-Fj-Zjq"/>
+                            <constraint firstItem="A9e-Gi-p83" firstAttribute="height" secondItem="1ZR-I5-gbm" secondAttribute="height" id="3QN-vH-Rrf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0KF-h9-dMp" secondAttribute="leading" id="Alw-Jc-6aH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ZR-I5-gbm" secondAttribute="trailing" id="Amq-Db-pJB"/>
+                            <constraint firstItem="0KF-h9-dMp" firstAttribute="width" secondItem="1ZR-I5-gbm" secondAttribute="width" id="CDR-PG-YXS"/>
+                            <constraint firstItem="A9e-Gi-p83" firstAttribute="width" secondItem="1ZR-I5-gbm" secondAttribute="width" id="Ji6-SQ-7Z0"/>
+                            <constraint firstItem="0KF-h9-dMp" firstAttribute="width" secondItem="BrM-Wt-k4q" secondAttribute="width" id="KFW-TZ-VOx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="A9e-Gi-p83" secondAttribute="leading" id="Qge-nE-G8X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BrM-Wt-k4q" secondAttribute="trailing" id="RRg-WC-eS8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0KF-h9-dMp" secondAttribute="bottom" constant="-8" id="VuC-i3-qgf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="BrM-Wt-k4q" secondAttribute="leading" id="Wox-bZ-9Ks"/>
+                            <constraint firstItem="A9e-Gi-p83" firstAttribute="width" secondItem="0KF-h9-dMp" secondAttribute="width" id="ZrH-V5-fBx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A9e-Gi-p83" secondAttribute="trailing" id="aT1-F4-DBa"/>
+                            <constraint firstItem="0KF-h9-dMp" firstAttribute="height" secondItem="BrM-Wt-k4q" secondAttribute="height" id="bcZ-F1-qHm"/>
+                            <constraint firstItem="0KF-h9-dMp" firstAttribute="height" secondItem="1ZR-I5-gbm" secondAttribute="height" id="eXE-QA-kXG"/>
+                            <constraint firstItem="A9e-Gi-p83" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="kFa-aC-iai"/>
+                            <constraint firstItem="1ZR-I5-gbm" firstAttribute="top" secondItem="BrM-Wt-k4q" secondAttribute="bottom" constant="8" id="poM-TZ-5Fx"/>
+                            <constraint firstItem="A9e-Gi-p83" firstAttribute="height" secondItem="0KF-h9-dMp" secondAttribute="height" id="vNv-Or-All"/>
+                            <constraint firstItem="A9e-Gi-p83" firstAttribute="height" secondItem="BrM-Wt-k4q" secondAttribute="height" id="wPV-IT-nDV"/>
+                            <constraint firstItem="0KF-h9-dMp" firstAttribute="top" secondItem="1ZR-I5-gbm" secondAttribute="bottom" constant="8" id="xPx-lq-d1e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0KF-h9-dMp" secondAttribute="trailing" id="yjK-GL-Wr7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GPA HELPER" id="t6n-vU-IXr"/>
@@ -1087,24 +1092,31 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="yKZ-oa-XkL" secondAttribute="leading" id="08Q-45-7Gs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ob6-PF-sKi" secondAttribute="trailing" id="2A5-HJ-Zbp"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Gki-w7-8AT" secondAttribute="leading" id="5ZP-er-BiT"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Es8-M5-cKo" secondAttribute="leading" id="68a-uD-ncC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Es8-M5-cKo" secondAttribute="trailing" id="6nY-xd-8Xq"/>
-                            <constraint firstItem="Es8-M5-cKo" firstAttribute="width" secondItem="yKZ-oa-XkL" secondAttribute="width" id="7Wm-QU-gfL"/>
-                            <constraint firstItem="Es8-M5-cKo" firstAttribute="width" secondItem="Ob6-PF-sKi" secondAttribute="width" id="E6n-OZ-Aj7"/>
-                            <constraint firstItem="Es8-M5-cKo" firstAttribute="height" secondItem="Gki-w7-8AT" secondAttribute="height" id="FQ3-js-8Ku"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yKZ-oa-XkL" secondAttribute="trailing" id="FuW-5l-OSI"/>
-                            <constraint firstItem="Ob6-PF-sKi" firstAttribute="top" secondItem="Es8-M5-cKo" secondAttribute="bottom" constant="8" id="QEN-Cr-WjC"/>
-                            <constraint firstItem="Es8-M5-cKo" firstAttribute="height" secondItem="yKZ-oa-XkL" secondAttribute="height" id="TaR-EK-1fc"/>
-                            <constraint firstItem="Es8-M5-cKo" firstAttribute="width" secondItem="Gki-w7-8AT" secondAttribute="width" id="YsU-gN-yw1"/>
-                            <constraint firstItem="Es8-M5-cKo" firstAttribute="height" secondItem="Ob6-PF-sKi" secondAttribute="height" id="cHf-A0-WGU"/>
-                            <constraint firstItem="Es8-M5-cKo" firstAttribute="top" secondItem="RFl-Xa-LNB" secondAttribute="bottom" constant="8" id="fnM-4f-Vky"/>
-                            <constraint firstItem="Gki-w7-8AT" firstAttribute="top" secondItem="yKZ-oa-XkL" secondAttribute="bottom" constant="8" id="jLj-aR-zlF"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Ob6-PF-sKi" secondAttribute="leading" id="pmE-XN-zor"/>
-                            <constraint firstItem="yKZ-oa-XkL" firstAttribute="top" secondItem="Ob6-PF-sKi" secondAttribute="bottom" constant="8" id="ttm-Bt-Bx8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Gki-w7-8AT" secondAttribute="trailing" id="ylB-PS-YEY"/>
+                            <constraint firstItem="Es8-M5-cKo" firstAttribute="top" secondItem="RFl-Xa-LNB" secondAttribute="bottom" constant="8" id="02w-95-ugV"/>
+                            <constraint firstItem="Es8-M5-cKo" firstAttribute="height" secondItem="Gki-w7-8AT" secondAttribute="height" id="0fM-aR-6NP"/>
+                            <constraint firstItem="Es8-M5-cKo" firstAttribute="width" secondItem="Gki-w7-8AT" secondAttribute="width" id="1Nt-PV-sou"/>
+                            <constraint firstItem="Gki-w7-8AT" firstAttribute="top" secondItem="yKZ-oa-XkL" secondAttribute="bottom" constant="8" id="2jv-60-W0j"/>
+                            <constraint firstItem="hdO-O6-AhW" firstAttribute="top" secondItem="Gki-w7-8AT" secondAttribute="bottom" constant="-8" id="5Ug-Fr-2Rm"/>
+                            <constraint firstItem="yKZ-oa-XkL" firstAttribute="top" secondItem="Ob6-PF-sKi" secondAttribute="bottom" constant="8" id="6Os-kf-FgY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yKZ-oa-XkL" secondAttribute="leading" id="6aX-96-gdO"/>
+                            <constraint firstItem="Ob6-PF-sKi" firstAttribute="width" secondItem="Gki-w7-8AT" secondAttribute="width" id="6pW-5J-I8U"/>
+                            <constraint firstItem="Ob6-PF-sKi" firstAttribute="height" secondItem="yKZ-oa-XkL" secondAttribute="height" id="8Jj-em-eVo"/>
+                            <constraint firstItem="Es8-M5-cKo" firstAttribute="height" secondItem="Ob6-PF-sKi" secondAttribute="height" id="Dmm-b9-IbO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yKZ-oa-XkL" secondAttribute="trailing" id="I3C-87-aRz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Gki-w7-8AT" secondAttribute="leading" id="L3x-CF-VeM"/>
+                            <constraint firstItem="Es8-M5-cKo" firstAttribute="width" secondItem="Ob6-PF-sKi" secondAttribute="width" id="Lr1-SX-p9Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Es8-M5-cKo" secondAttribute="trailing" id="Lwy-Ss-3nJ"/>
+                            <constraint firstItem="yKZ-oa-XkL" firstAttribute="width" secondItem="Gki-w7-8AT" secondAttribute="width" id="OJp-gs-CVX"/>
+                            <constraint firstItem="Ob6-PF-sKi" firstAttribute="height" secondItem="Gki-w7-8AT" secondAttribute="height" id="RRA-nS-rA3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ob6-PF-sKi" secondAttribute="leading" id="TDT-XK-Ajw"/>
+                            <constraint firstItem="yKZ-oa-XkL" firstAttribute="height" secondItem="Gki-w7-8AT" secondAttribute="height" id="UWd-rV-qyO"/>
+                            <constraint firstItem="Es8-M5-cKo" firstAttribute="width" secondItem="yKZ-oa-XkL" secondAttribute="width" id="X5t-q1-XfY"/>
+                            <constraint firstItem="Ob6-PF-sKi" firstAttribute="top" secondItem="Es8-M5-cKo" secondAttribute="bottom" constant="8" id="auP-jJ-aAu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gki-w7-8AT" secondAttribute="trailing" id="eqX-cy-ae6"/>
+                            <constraint firstItem="Ob6-PF-sKi" firstAttribute="width" secondItem="yKZ-oa-XkL" secondAttribute="width" id="kJw-UC-jiN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Es8-M5-cKo" secondAttribute="leading" id="ptp-Q5-NJe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ob6-PF-sKi" secondAttribute="trailing" id="vKZ-gh-kCM"/>
+                            <constraint firstItem="Es8-M5-cKo" firstAttribute="height" secondItem="yKZ-oa-XkL" secondAttribute="height" id="x03-PS-A51"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GPA HELPER" id="LNe-hf-5OX"/>
@@ -1117,7 +1129,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="cJt-0S-uOr"/>
         <segue reference="uBK-s5-yh9"/>
-        <segue reference="ndW-D8-0oE"/>
+        <segue reference="mAp-VI-t0l"/>
         <segue reference="jJ2-6h-hEe"/>
         <segue reference="niv-rd-nBo"/>
     </inferredMetricsTieBreakers>
