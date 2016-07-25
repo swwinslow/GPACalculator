@@ -328,31 +328,41 @@ class FinalExamGrade: UIViewController {
     }
     
     func checkPercentageScore(){
-        let percent = percentage.text
+        let percentScore = percentage.text
         
-        let x:Bool = isNumeric(percent!)
-        if(percentage.text != "" && x == true){
-            let currentGrade = percentage.text! as String
-            let doubleCurrentScore:Double = Double(currentGrade)!
+        if percentScore != "" {
+            var percentString : String = ""
             
-            if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
-            {
-                percentageGradeBoolean = false
-
+            if percentScore?.characters.last == "%"{
+                
+            
+            percentString = (percentScore?.substringToIndex((percentScore?.endIndex.predecessor())!))!
+                
             } else {
-                percentageGradeBoolean = true
+            percentString = percentScore!
+            }
+            
+            let x:Bool = isNumeric(percentString)
+            
+            if(finalWeightTextBox.text != "" && x == true){
+                
+                let doublePercent:Double = Double(percentString)!
+                
+                if(doublePercent < 0 || doublePercent > 100 )
+                {
+                    percentageGradeBoolean = false
+                } else {
+                    percentageGradeBoolean = true
+                }
+            } else {
+                percentageGradeBoolean = false;
             }
         } else {
             percentageGradeBoolean = false
         }
         
     }
-    
-    
-    
-    
-    
-    
+
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "calc"{
             checkValues()
@@ -456,17 +466,24 @@ class FinalExamGrade: UIViewController {
     func checkScore() -> Double {
         
         let currentText = currentGradeTextBox.text
-        
+        var currrentCurrentString : String = ""
         
         if(currentGradeTextBox.text != ""){
+
+            if currentText?.characters.last == "%"{
+                
+                
+                currrentCurrentString = (currentText?.substringToIndex((currentText?.endIndex.predecessor())!))!
+                
+            } else {
+                currrentCurrentString = currentText!
+            }
             
-            let currrentGradeString : String = (currentText?.substringToIndex((currentText?.endIndex.predecessor())!))!
-            
-            let x:Bool = isNumeric(currrentGradeString)
+            let x:Bool = isNumeric(currrentCurrentString)
 
             if (x == true){
                 
-                let doubleCurrentScore:Double = Double(currrentGradeString)!
+                let doubleCurrentScore:Double = Double(currrentCurrentString)!
             
                 if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
                 {
@@ -493,10 +510,20 @@ class FinalExamGrade: UIViewController {
     
     func checkNumbers() ->(final: Double, course: Double){
         let currentFinalExam = finalWeightTextBox.text
+        var currrentFinalString : String = ""
         
         if currentFinalExam != "" {
             
-            let currrentFinalString : String = (currentFinalExam?.substringToIndex((currentFinalExam?.endIndex.predecessor())!))!
+            if currentFinalExam?.characters.last == "%"{
+                
+                
+                currrentFinalString = (currentFinalExam?.substringToIndex((currentFinalExam?.endIndex.predecessor())!))!
+                
+            } else {
+                currrentFinalString = currentFinalExam!
+            }
+            
+             (currentFinalExam?.substringToIndex((currentFinalExam?.endIndex.predecessor())!))!
         
             let x:Bool = isNumeric(currrentFinalString)
         
@@ -524,28 +551,23 @@ class FinalExamGrade: UIViewController {
     
     func percentCheck() -> Double {
         
-        let percent = percentage.text
+        let percentScore = percentage.text
         
-        let x:Bool = isNumeric(percent!)
-        if(percentage.text != "" && x == true){
-            let currentGrade = percentage.text! as String
-            let doubleCurrentScore:Double = Double(currentGrade)!
-            
-            if(doubleCurrentScore < 0 || doubleCurrentScore > 100 )
-            {
-               
 
-            }
-            else{
-                return doubleCurrentScore
-            }
-        }
-        else{
+            var percentString : String = ""
             
-           
-        
+            if percentScore?.characters.last == "%"{
+                
+                
+                percentString = (percentScore?.substringToIndex((percentScore?.endIndex.predecessor())!))!
+                
+            } else {
+                percentString = percentScore!
         }
-        return 0.0
+            
+            return Double(percentString)!
+        
+        
     }
     
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
