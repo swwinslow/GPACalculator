@@ -736,7 +736,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="G8F-vU-vGN" kind="show" id="JAv-lq-xDD"/>
+                                    <segue destination="QWD-65-kfH" kind="show" identifier="graduation" id="UMb-Vh-B7e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -780,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiK-q2-NVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626" y="-3548"/>
+            <point key="canvasLocation" x="381" y="-3548"/>
         </scene>
         <!--Title-->
         <scene sceneID="v5a-Gy-XId">
@@ -1127,10 +1127,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cJt-0S-uOr"/>
-        <segue reference="If2-bD-QTE"/>
-        <segue reference="aRP-DA-wsi"/>
-        <segue reference="G3E-ea-Kl6"/>
         <segue reference="niv-rd-nBo"/>
+        <segue reference="cJt-0S-uOr"/>
+        <segue reference="VhQ-50-KmB"/>
+        <segue reference="UMb-Vh-B7e"/>
     </inferredMetricsTieBreakers>
 </document>

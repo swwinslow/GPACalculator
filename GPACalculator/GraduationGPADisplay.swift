@@ -42,9 +42,13 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
     }
  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "menu" || segue.identifier == "help"{
+        if segue.identifier == "menu" {
         }
-        
+        if segue.identifier == "graduation"{
+            var yourNextViewController = segue.destinationViewController as! ContentViewController
+            
+            yourNextViewController.typeOfHelp =  "graduation"
+        }
     }
    
   
