@@ -36,10 +36,10 @@
          contextName = "mach_msg_trap:(null)">
          <PersistentStrings>
             <PersistentString
-               value = "gradeArray">
+               value = "typeOfHelp">
             </PersistentString>
             <PersistentString
-               value = "typeOfHelp">
+               value = "gradeArray">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -47,10 +47,10 @@
          contextName = "ContentViewController.viewDidLoad() -&gt; ():ContentViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "titleText">
+               value = "typeOfHelp">
             </PersistentString>
             <PersistentString
-               value = "typeOfHelp">
+               value = "titleText">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -83,13 +83,13 @@
          contextName = "SingleCourseDetails.saveCourse(AnyObject) -&gt; ():SingleCourseDetails.swift">
          <PersistentStrings>
             <PersistentString
-               value = "education">
+               value = "singleCourse">
             </PersistentString>
             <PersistentString
                value = "oldCourse">
             </PersistentString>
             <PersistentString
-               value = "singleCourse">
+               value = "education">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -130,10 +130,10 @@
          contextName = "TargetGPA.checkCurrentGPACorrect() -&gt; ():TargetGPA.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currentGPAString">
+               value = "currentGPABoolean">
             </PersistentString>
             <PersistentString
-               value = "currentGPABoolean">
+               value = "currentGPAString">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -177,10 +177,10 @@
          contextName = "GraduationGPADisplay.viewDidLoad() -&gt; ():GraduationGPADisplay.swift">
          <PersistentStrings>
             <PersistentString
-               value = "targetGPAStringLoad">
+               value = "goalGPAString">
             </PersistentString>
             <PersistentString
-               value = "goalGPAString">
+               value = "targetGPAStringLoad">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -196,13 +196,13 @@
          contextName = "TargetGPA.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():TargetGPA.swift">
          <PersistentStrings>
             <PersistentString
-               value = "goalGPAString">
+               value = "currentGPAString">
             </PersistentString>
             <PersistentString
                value = "finalGPAString">
             </PersistentString>
             <PersistentString
-               value = "currentGPAString">
+               value = "goalGPAString">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -210,13 +210,13 @@
          contextName = "CourseTableViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():CourseTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "education">
+               value = "gradeArray">
             </PersistentString>
             <PersistentString
                value = "creditArray">
             </PersistentString>
             <PersistentString
-               value = "gradeArray">
+               value = "education">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -224,13 +224,21 @@
          contextName = "FinalExamGrade.checkCurrentScore() -&gt; ():FinalExamGrade.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currrentGradeString">
-            </PersistentString>
-            <PersistentString
                value = "x">
             </PersistentString>
             <PersistentString
                value = "doubleCurrentScore">
+            </PersistentString>
+            <PersistentString
+               value = "currrentGradeString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TargetGPA.calculateGPA() -&gt; String:TargetGPA.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "finalGPA">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -23,7 +23,7 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
     var goalGPAStringLoad:String = "3.0"
     var currentGPADouble:Double = 0.0
     var currentGPAStringLoad:String = "2.76"
-    var targerGPADouble:Double = 0.0
+    var targetGPADouble:Double = 0.0
     var targetGPAStringLoad:String = ""
     
      override func viewDidLoad() {
@@ -38,6 +38,11 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
         
 
         goalGPALabel.text = "\(goalGPAStringLoad)"
+        targetGPADouble = Double(targetGPAStringLoad)!;
+        let displayString = NSString(format: "%.2f", targetGPADouble)
+
+        
+        targetGPALabel.text = "\(displayString)"
     
     }
  

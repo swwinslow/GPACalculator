@@ -74,7 +74,7 @@ class TargetGPA: UIViewController{
             self.goalGPAString = goalGPATextField.text!
             
             if let goalGPADouble = Double(goalGPAString) {
-                if goalGPADouble >= 0 {
+                if goalGPADouble >= 0 && goalGPADouble <= 5 {
                     goalGPABolean = true
                 } else {
                     goalGPABolean = false
