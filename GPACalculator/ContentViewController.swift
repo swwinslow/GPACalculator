@@ -71,6 +71,8 @@ class ContentViewController: UIViewController {
             image.layer.borderWidth = 2
             
             var desFinalExam:String = "Semester GPA: \r\n"
+            desFinalExam.appendContentsOf("\r\n")
+
             desFinalExam.appendContentsOf("How to calculate your semester grade: \r\n")
             desFinalExam.appendContentsOf("1) Pick either 'College' or 'High School.' \r\n")
             desFinalExam.appendContentsOf("2) Press the '+' symbol to add courses in the right hand corner. \r\n")
@@ -222,6 +224,9 @@ class ContentViewController: UIViewController {
             image.image = UIImage(named: "GPAHelperIcon")
             
             var desSemester:String = "Information on GPA Helper: \r\n"
+            desSemester.appendContentsOf("\r\n")
+
+            
             desSemester.appendContentsOf("What is GPA Helper: \r\n")
             desSemester.appendContentsOf("GPA Helper is a calculator that can calculate your final exam, graduation, and also semester GPA. \r\n")
             

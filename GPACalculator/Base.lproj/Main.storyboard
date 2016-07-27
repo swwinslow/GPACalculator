@@ -1071,7 +1071,7 @@
                                     <constraint firstAttribute="height" constant="128" id="mu5-wr-z0P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-BookOblique" family="Avenir" pointSize="31"/>
-                                <state key="normal" title="Help">
+                                <state key="normal" title="Info">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1129,7 +1129,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="niv-rd-nBo"/>
         <segue reference="cJt-0S-uOr"/>
-        <segue reference="VhQ-50-KmB"/>
-        <segue reference="UMb-Vh-B7e"/>
+        <segue reference="uBK-s5-yh9"/>
+        <segue reference="aZU-JS-2HL"/>
     </inferredMetricsTieBreakers>
 </document>

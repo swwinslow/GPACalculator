@@ -50,7 +50,7 @@ class GraduationGPADisplay: UIViewController, GADBannerViewDelegate  {
         if segue.identifier == "menu" {
         }
         if segue.identifier == "graduation"{
-            var yourNextViewController = segue.destinationViewController as! ContentViewController
+            let yourNextViewController = segue.destinationViewController as! ContentViewController
             
             yourNextViewController.typeOfHelp =  "graduation"
         }

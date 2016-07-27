@@ -586,7 +586,7 @@ class FinalExamGrade: UIViewController {
         }
         
     if segue.identifier == "final" {
-        var yourNextViewController = segue.destinationViewController as! ContentViewController
+        let yourNextViewController = segue.destinationViewController as! ContentViewController
         
         yourNextViewController.typeOfHelp =  "final"
     }

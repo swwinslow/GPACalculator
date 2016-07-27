@@ -38,14 +38,7 @@ class TargetGPA: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
-        
         self.navigationItem.title = "Graduation GPA"
-        
-        
-        
-        
     }
 
 
@@ -178,7 +171,7 @@ class TargetGPA: UIViewController{
                     alert.show()
                 } else {
                     if currentHoursBoolean == false || remainingHoursBoolean == false {
-                        var alert = UIAlertView(title: "Error - Hours", message: "Hours are not in range", delegate: nil, cancelButtonTitle: "Try again")
+                        let alert = UIAlertView(title: "Error - Hours", message: "Hours are not in range", delegate: nil, cancelButtonTitle: "Try again")
                         alert.show()
                     }  else {
                     }
